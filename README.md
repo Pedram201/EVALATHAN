@@ -23,7 +23,7 @@ Sixteen engines always appear. Hydra is the conductor and is not a seventeenth s
 | Engine | What it runs |
 |--------|----------------|
 | Devly | Commit count when git history exists. No SFIA (Skills Framework for the Information Age) level. |
-| Archly | 97 software archetechture principles from 53+ MoE veterans. |
+| Archly | 97 software architecture principles from 53+ MoE veterans. |
 | Codely | Counts Python branch nodes. Other language packs are named and left unrun. An unknown language is not a pass. |
 | Refactorly | Identical file bytes, unreferenced Python names, and git churn. |
 | Mixly | File share by language. A rewrite stays with the maintainer. |
