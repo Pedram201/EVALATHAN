@@ -4,7 +4,7 @@
 
 <h1 align="center">E V A L A T H A N</h1>
 
-The one-stop evaluation platform for software, languages, compilers, and engines.
+The one-stop evaluation platform for software, languages, compilers, and engines (and of course agentics, in good time.
 
 Evalathan grades a product across its life cycle. One conductor, Hydra, opens only the engines whose evidence exists, and the report shows the blanks.
 
