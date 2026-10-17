@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from evalathan.engines import ALL
+from evalathan.evalers import ALL
 from evalathan.model import Cell, Status
 from evalathan.subject import Subject, load
 
@@ -29,7 +29,7 @@ class Report:
 
     def headline(self) -> str:
         return (
-            f"{len(self.ran)} of {len(self.cells)} engines ran. "
+            f"{len(self.ran)} of {len(self.cells)} evalers ran. "
             f"{len(self.passed)} passed their own gate. "
             f"{len(self.deferred)} are deferred, and they are listed."
         )
@@ -65,14 +65,14 @@ class Report:
 def conduct(root: Path, subject: Subject | None = None) -> Report:
     seen = subject if subject is not None else load(root)
     cells = []
-    for engine in ALL:
-        if getattr(engine, "ACCEPTS_PRIOR", False):
-            cells.append(engine.run(seen, cells))
+    for evaler in ALL:
+        if getattr(evaler, "ACCEPTS_PRIOR", False):
+            cells.append(evaler.run(seen, cells))
         else:
-            cells.append(engine.run(seen))
+            cells.append(evaler.run(seen))
     if len(cells) != 16:
-        raise RuntimeError(f"Hydra expected 16 engines, got {len(cells)}")
+        raise RuntimeError(f"Hydra expected 16 evalers, got {len(cells)}")
     names = [cell.agent for cell in cells]
     if len(set(names)) != 16:
-        raise RuntimeError("Duplicate engine name")
+        raise RuntimeError("Duplicate evaler name")
     return Report(root=str(seen.root), cells=cells)

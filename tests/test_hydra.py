@@ -56,6 +56,26 @@ def test_unknown_language_is_not_a_codely_pass(tmp_path: Path) -> None:
     assert "not a pass" in cell.summary
 
 
+def test_naming_m3_is_not_a_declared_order(tmp_path: Path) -> None:
+    (tmp_path / "README.md").write_text(
+        "Triadly records an M3 order (cost, speed, impact).\n",
+        encoding="utf-8",
+    )
+    report = conduct(tmp_path)
+    cell = next(c for c in report.cells if c.agent == "Triadly")
+    assert cell.status is Status.DEFERRED
+
+
+def test_detector_source_is_not_a_menschly_timer(tmp_path: Path) -> None:
+    (tmp_path / "menschly.py").write_text(
+        'TIMER_MARKS = ("session_limit_minutes",)\n',
+        encoding="utf-8",
+    )
+    report = conduct(tmp_path)
+    cell = next(c for c in report.cells if c.agent == "Menschly")
+    assert cell.passed is not True
+
+
 def test_stop_language_does_not_require_fuss(tmp_path: Path) -> None:
     (tmp_path / "README.md").write_text(
         "Session limit: leave after twenty five minutes.\n",

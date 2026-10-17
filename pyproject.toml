@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "evalathan"
 version = "0.2.0"
-description = "Hydra conducts sixteen engines that grade a software tree only where the artifact exists."
+description = "Hydra conducts sixteen evalers that grade a software tree only where the artifact exists."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"

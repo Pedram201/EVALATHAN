@@ -11,7 +11,7 @@ QUESTION = "What size, time, and quality number did the compressor print?"
 PATTERNS = {
     "SSIM": re.compile(r"ssim[=:\s]+([0-9]+(?:\.[0-9]+)?)", re.I),
     "VMAF": re.compile(r"vmaf[=:\s]+([0-9]+(?:\.[0-9]+)?)", re.I),
-    "bytes": re.compile(r"(?:size|bytes)[=:\s]+([0-9]+)", re.I),
+    "bytes": re.compile(r"(?:size|bytes)\s*[=:]\s*([0-9]+)", re.I),
 }
 
 
@@ -43,7 +43,7 @@ def run(subject: Subject) -> Cell:
         "Pressly",
         GATE,
         QUESTION,
-        "Compressor printout: " + "; ".join(hits) + ". This number is not a token saving.",
+        "Printed figure: " + "; ".join(hits) + ". A byte count in a text file is not a quality grade and not a token saving.",
         evidence,
         passed=None,
     )

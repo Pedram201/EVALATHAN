@@ -21,7 +21,7 @@ def test_tokex_pair_reports_savings_including_a_legal_zero(tmp_path: Path) -> No
         json.dumps({"tokex": {"total_tokex": 10, "tokex_this_run": 10}}),
         encoding="utf-8",
     )
-    cell = next(c for c in conduct(tmp_path).cells if c.agent == "Tokly")
+    cell = next(c for c in conduct(tmp_path).cells if c.agent == "Tokely")
     assert cell.status is Status.SCORED
     assert "savings 0" in cell.summary
 

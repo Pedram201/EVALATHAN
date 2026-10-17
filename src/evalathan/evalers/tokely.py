@@ -36,7 +36,7 @@ def run(subject: Subject) -> Cell:
         before, after = pair
         savings = max(0, before - after)
         return scored(
-            "Tokly",
+            "Tokely",
             GATE,
             QUESTION,
             f"Sealed pair in {subject.rel(path)}: before {before}, after {after}, savings {savings}. A measured zero is a result.",
@@ -44,7 +44,7 @@ def run(subject: Subject) -> Cell:
             passed=None,
         )
     return deferred(
-        "Tokly",
+        "Tokely",
         GATE,
         QUESTION,
         "No sealed before/after token record in this tree. A compiler with no token claim stays deferred.",

@@ -18,8 +18,8 @@ def run(subject: Subject) -> Cell:
     for label, blob in blobs:
         compact = blob.lower().replace(" ", "")
         hits = [order for order in ORDERS if order in compact]
-        if "m3" in blob.lower() or hits:
-            found.extend(hits or ["m3"])
+        if hits:
+            found.extend(hits)
             evidence.append(label)
     if not found:
         return deferred(

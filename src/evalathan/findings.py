@@ -1,4 +1,4 @@
-"""Shared readers. Engines measure files. They do not invent a grade."""
+"""Shared readers. Evalers measure files. They do not invent a grade."""
 
 from __future__ import annotations
 

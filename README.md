@@ -7,7 +7,6 @@
 The one-stop evaluation platform for software, languages, compilers, and engines (and of course agentics, in good time).
 
 Evalathan grades a product across its life cycle. Evalathan is one evaluation harness; Hydra is the conductor - it orchestrates sixteen evaluators ('evalers'); each evaluator reports against a life-cycle gate.
-.
 
 **v0.2** is a local runner. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero.
 
@@ -19,7 +18,7 @@ evalathan scan path\to\tree --json report.json
 
 ## What v0.2 runs
 
-Sixteen engines always appear. Hydra is the conductor and is not a seventeenth score. Point the scan at the tree you want graded. A record that lives in another repository is read when that repository is the path you pass.
+Sixteen evalers always appear. Hydra is the conductor and is not a seventeenth score. Point the scan at the tree you want graded. A record that lives in another repository is read when that repository is the path you pass.
 
 | Evaler | What it runs |
 |--------|----------------|
@@ -31,7 +30,7 @@ Sixteen engines always appear. Hydra is the conductor and is not a seventeenth s
 | Runly | A 200000-step microbench on Python trees, plus SPEC, LLVM test-suite, or pyperformance files when those files are present. |
 | Levi | A 4Uvals (Ultimate User-User-User evaluations) JSON record with a gate. ISO/IEC 42001 is not the sitting grade. |
 | Menschly | A timer in source, including an optional FUSS (For-User Session Switch) file. README wording alone stays provisional. |
-| Tokly | A sealed before/after or TOKEX (Token Expenditure) pair. Savings are max(0, before - after). |
+| Tokely | A sealed before/after or TOKEX (Token Expenditure) pair. Savings are max(0, before - after). |
 | Pressly | SSIM, VMAF, or byte-size numbers printed in a log. |
 | Triadly | A declared M3 order (cost, speed, impact). |
 | Chorely | An agent roster. SASPIANT (Specific and Specialized, Pain-In-the-Ass, Non-critical Tasks) counts rows. |
@@ -44,7 +43,7 @@ Menschly accepts any real stop. FUSS (For-User Session Switch) is an optional ti
 
 ## License
 
-Apache-2.0 for this runner and these rules. The name Evalathan is the product name. Hosted runs are not part of v0.1.
+Apache-2.0 for this runner and these rules. The name Evalathan is the product name. Hosted runs are not part of v0.2.
 
 ## Not in this version
 

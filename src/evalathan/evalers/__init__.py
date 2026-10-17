@@ -1,6 +1,6 @@
-"""Sixteen scoring engines. Hydra is not in this list."""
+"""Sixteen evalers. Hydra is not in this list."""
 
-from evalathan.engines import (
+from evalathan.evalers import (
     archly,
     chorely,
     codely,
@@ -13,7 +13,7 @@ from evalathan.engines import (
     refactorly,
     runly,
     stackly,
-    tokly,
+    tokely,
     trajectly,
     triadly,
     warrantly,
@@ -28,7 +28,7 @@ ALL = (
     runly,
     levi,
     menschly,
-    tokly,
+    tokely,
     pressly,
     triadly,
     chorely,
