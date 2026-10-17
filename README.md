@@ -6,7 +6,8 @@
 
 The one-stop evaluation platform for software, languages, compilers, and engines (and of course agentics, in good time).
 
-Evalathan grades a product across its life cycle. One conductor, Hydra, opens only the engines whose evidence exists, and the report shows the blanks.
+Evalathan grades a product across its life cycle. Evalathan is one evaluation harness; Hydra is the conductor - it orchestrates sixteen evaluators ('evalers'); each evaluator reports against a life-cycle gate.
+.
 
 **v0.2** is a local runner. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero.
 
@@ -20,7 +21,7 @@ evalathan scan path\to\tree --json report.json
 
 Sixteen engines always appear. Hydra is the conductor and is not a seventeenth score. Point the scan at the tree you want graded. A record that lives in another repository is read when that repository is the path you pass.
 
-| Engine | What it runs |
+| Evaler | What it runs |
 |--------|----------------|
 | Devly | Commit count when git history exists. No SFIA (Skills Framework for the Information Age) level. |
 | Archly | 97 software architecture principles from 53+ MoE veterans. |
