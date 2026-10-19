@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evalathan</title>
+  <meta name="description" content="Evalathan grades a software tree with sixteen evalers. A missing record stays blank.">
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Calibri, "Segoe UI", sans-serif;
+      color: #0b1220;
+      background: #f4f7fa;
+      line-height: 1.45;
+    }
+    header, main { width: min(880px, calc(100% - 32px)); margin: 0 auto; }
+    header { text-align: center; padding: 40px 0 8px; }
+    header img { width: 168px; height: auto; }
+    h1 {
+      margin: 12px 0 8px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      font-size: 28px;
+    }
+    .claim { margin: 0 auto 8px; max-width: 40rem; }
+    h2 { font-size: 20px; margin: 28px 0 8px; }
+    .card {
+      background: #fff;
+      border: 1px solid #d5dde6;
+      padding: 16px 18px;
+      margin: 12px 0 20px;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e3e8ee; vertical-align: top; }
+    th { background: #0b1220; color: #f8fafc; font-weight: 600; }
+    code, pre {
+      font-family: Consolas, "Cascadia Mono", monospace;
+      font-size: 14px;
+    }
+    pre {
+      background: #0b1220;
+      color: #f8fafc;
+      padding: 12px 14px;
+      overflow-x: auto;
+      margin: 8px 0 0;
+    }
+    .note { color: #5a636e; font-size: 14px; }
+    footer { width: min(880px, calc(100% - 32px)); margin: 8px auto 40px; color: #5a636e; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="evalathan-logo.png" alt="Evalathan logo: a red dragon curled into an e" width="168">
+    <h1>EVALATHAN</h1>
+    <p class="claim">The one-stop evaluation platform for software, languages, compilers, and engines.</p>
+    <p class="claim">Evalathan is one evaluation harness. Hydra is the conductor. It calls sixteen evaluators, short name evalers. Each evaler reports against a life-cycle gate. A blank stays a blank. It is not a fail and it is not a zero.</p>
+  </header>
+  <main>
+    <h2>Sample result</h2>
+    <p class="note">Local scan of the SEISMO tree on this machine, 18 Oct 2026. Eleven evalers ran. Two passed their own gate. Five stayed blank. This is one folder's vector, not a public ranking.</p>
+    <div class="card">
+      <table>
+        <thead>
+          <tr><th>Evaler</th><th>Result</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Devly</td><td>356 git commits. No skill level is assigned.</td></tr>
+          <tr><td>Archly</td><td>Prior Evalev file found. This run did not re-score the 97 principles.</td></tr>
+          <tr><td>Codely</td><td>2,164 Python functions, 3,728 branch nodes, mean 1.72. Tests seen: 61. pytest, coverage, radon, and ISO/IEC 5055 were not launched.</td></tr>
+          <tr><td>Refactorly</td><td>32 identical-byte groups among 874 files. 140 unreferenced Python names.</td></tr>
+          <tr><td>Mixly</td><td>Python 281 files (99.3%). JavaScript 2 files (0.7%).</td></tr>
+          <tr><td>Runly</td><td>Local microbench 12.1 ms for 200,000 steps. No SPEC or LLVM result file.</td></tr>
+          <tr><td>Levi</td><td>Passed. 4Uvals mean 3.4 out of 4, gate PASS. The file's own note is 9 of 10 Solid or Strong.</td></tr>
+          <tr><td>Menschly</td><td>Passed. A stop timer is in the interface script.</td></tr>
+          <tr><td>Tokely</td><td>Blank. No sealed before/after token file.</td></tr>
+          <tr><td>Pressly</td><td>A byte figure was printed in a text file. That is not a quality grade.</td></tr>
+          <tr><td>Triadly</td><td>Blank. No declared cost, speed, and impact order.</td></tr>
+          <tr><td>Chorely</td><td>7 roster files, 35 rows.</td></tr>
+          <tr><td>Trajectly</td><td>Blank. No saved agent trace.</td></tr>
+          <tr><td>Warrantly</td><td>Blank. No claim register.</td></tr>
+          <tr><td>Domly</td><td>Blank. No question bank.</td></tr>
+          <tr><td>Stackly</td><td>10 measurements, 2 passes, 5 blanks. No single combined score.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Install</h2>
+    <p>You need Python 3.10 or newer. The Windows release (10 or 11) and the Mac release do not matter beyond that. Evalathan is not on the public Python package index yet. Install it from the GitHub repository.</p>
+    <p><strong>Windows</strong></p>
+    <pre>py -m pip install "evalathan @ git+https://github.com/Pedram201/EVALATHAN.git"
+evalathan scan C:\path\to\tree</pre>
+    <p><strong>Mac</strong></p>
+    <pre>python3 -m pip install "evalathan @ git+https://github.com/Pedram201/EVALATHAN.git"
+evalathan scan ~/path/to/tree</pre>
+    <p class="note">Add <code>--json report.json</code> to write the same result to a file. The grade stays on your machine.</p>
+  </main>
+  <footer>Apache-2.0 for the runner and these rules. The name Evalathan is the product name.</footer>
+</body>
+</html>
