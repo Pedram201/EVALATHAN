@@ -1,4 +1,8 @@
-# FUSS
+<p align="center">
+  <img src="fuss-logo.png" alt="FUSS logo: an older woman with round glasses" width="280">
+</p>
+
+<h1 align="center">F U S S</h1>
 
 FUSS (For-User Session Switch) is a timer a person can turn on inside software they use for a long time. It is not an agent, not medical advice, and not a lock.
 

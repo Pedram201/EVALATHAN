@@ -43,7 +43,7 @@ Each name opens its glossary entry. An entry has three parts: what is counted, s
 
 ## SELFBELT
 
-[SELFBELT](docs/SELFBELT.pdf) is the seatbelt write-up for people who sit with software for a long time. The practice inside the PDF is called SELFBELTING. It is not a seventeenth score. [Menschly](GLOSSARY.md#menschly) is the evaler that can see a timer. The analogy is the early car: lights and laws arrived before the belt. FUSS is a belt a developer can clip into a product.
+[SELFBELT](docs/SELFBELT.md) is the seatbelt write-up for people who sit with software for a long time. The practice on that page is called SELFBELTING. The PDF itself is too large for GitHub to open in the browser, so the link shows the pages. It is not a seventeenth score. [Menschly](GLOSSARY.md#menschly) is the evaler that can see a timer. The analogy is the early car: lights and laws arrived before the belt. FUSS is a belt a developer can clip into a product.
 
 ## FUSS
 
