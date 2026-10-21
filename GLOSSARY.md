@@ -1,6 +1,6 @@
 # Evalathan glossary
 
-Evalathan is one evaluation harness. Hydra is the conductor. It calls sixteen evaluators, short name evalers. Each entry below has the same three parts.
+Evalathan is one evaluation harness. Hydra is the conductor. She governs and calls sixteen evaluators, short name evalers. Each entry below has the same three parts.
 
 **Score constitution.** What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.
 
