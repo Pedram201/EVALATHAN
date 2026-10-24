@@ -4,7 +4,7 @@
 
 <h1 align="center">E V A L A T H A N</h1>
 
-Making your PLGs (product-lead-growth) more superb and sellable.
+<p align="center"> ## Making your PLGs (product-lead-growth) more superb and sellable.
 
 The one-stop evaluation platform for software, languages, compilers, and engines.
 
