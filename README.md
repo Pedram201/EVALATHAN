@@ -4,7 +4,9 @@
 
 <h1 align="center">E V A L A T H A N</h1>
 
-The one-stop evaluation platform for software, languages, compilers, and engines (and of course agentics, in good time).
+Making your PLGs (product-lead-growth) more superb and sellable.
+
+The one-stop evaluation platform for software, languages, compilers, and engines.
 
 Evalathan grades a product across its life cycle. Evalathan is one evaluation harness; Hydra is the conductor - she orchestrates sixteen evaluators ('evalers'); each evaluator reports against a life-cycle gate.
 
