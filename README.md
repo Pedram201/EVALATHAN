@@ -27,7 +27,7 @@ The tool positions itself as a local runner (v0.2) aimed at Product-Led Growth (
 
 EVALATHAN evaluates a project by passing a local directory path (`evalathan scan <path> [--json report.json]`). Its 16 evaluators span four distinct operational categories:
 
-| Category | Evaluators | Functionality |
+| Category | Evalers | Functionality |
 | :--- | :--- | :--- |
 | Code Health & Repository Metrics | Devly, Archly, Codely, Refactorly, Mixly | Inspects Git history (commits), presence of architectural documentation, cyclomatic/branching complexity, dead code, code churn/duplication, and language breakdown. |
 | Performance & Trade-offs | Runly, Pressly, Triadly | Times micro-benchmarks, reads compression and asset quality logs (image/video/file sizes), and documents the project's prioritization order across cost, latency, and impact. |
