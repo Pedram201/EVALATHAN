@@ -20,7 +20,7 @@ The life-cycle gate on each evaler (G0 through G12) is the station's place in th
 
 Scans the repository's .git tree. Counts total historical commits, change intervals, and branch merges. Requires a valid local git history; repositories without git metadata return a Deferred status. This is an objective measurement of repository activity, not an assessment of developer ability or code quality.
 
-<p align="center"><img src="assets/glossary/cards/devly-revised.jpg" alt="Devly counts commits, branches and rhythm, and does not judge the developer." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/devly-revised.jpg" alt="Devly counts commits, branches and rhythm, and does not judge the developer." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -40,7 +40,7 @@ The scan runs `git rev-list --count HEAD` when a `.git` folder is present and wr
 
 Scans root and documentation directories for dedicated architectural manifests (e.g., ARCHITECTURE.md, /docs/architecture, C4 models, or ADR logs). Returns Pass if an architectural document exists, Fail if absent, and Deferred if docs are unparsable. It does not grade whether the architecture itself is optimal.
 
-<p align="center"><img src="assets/glossary/cards/archly.jpg" alt="The plans exist. That is all I require." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/archly-revised.jpg" alt="The plans exist. That is all I require." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -62,7 +62,7 @@ The scan treats these as a write-up: a README, or markdown inside a folder named
 
 Parses supported Abstract Syntax Trees (ASTs) to compute cyclomatic and decision complexity points (counting if, elif, switch/match, for, while branches). Files in unsupported languages remain Blank/Deferred (which does not count as a pass or zero).
 
-<p align="center"><img src="assets/glossary/cards/codely.jpg" alt="Codely counts the forks and turns in the code." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/codely-revised.jpg" alt="Codely counts the forks and turns in the code." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -82,7 +82,7 @@ The Python pack walks the syntax tree and counts `if`, `for`, `while`, `except`,
 
 Analyzes token-similarity and line duplication across files, cross-references internal function/class call graphs for orphaned/dead declarations, and tallies git change frequency per file. Flags files with high churn-to-complexity ratios as refactoring liabilities.
 
-<p align="center"><img src="assets/glossary/cards/refactorly.jpg" alt="Duplicates, a hotspot, and dead code." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/refactorly-revised.jpg" alt="Duplicates, a hotspot, and dead code." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -102,7 +102,7 @@ Identical-byte groups are SHA-256 matches among files between 1 and 200,000 byte
 
 Scans the project tree, aggregates Source Lines of Code (SLOC) by file extension, and calculates the exact percentage distribution across languages while ignoring third-party vendor directories (e.g., node_modules/, site-packages/). Reports pure data without prescribing stack changes.
 
-<p align="center"><img src="assets/glossary/cards/mixly.jpg" alt="Mixly shows exactly what languages the project is made of." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/mixly-revised.jpg" alt="Mixly shows exactly what languages the project is made of." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -122,7 +122,7 @@ Suffixes map to a language name: Python, JavaScript, TypeScript, C, C++, Rust, G
 
 Measures wall-clock execution time for defined micro-benchmark routines or parses valid, pre-computed benchmark artifacts (e.g., pytest-benchmark JSON output). Defers execution if no executable targets or saved logs are present in the target directory.
 
-<p align="center"><img src="assets/glossary/cards/runly.jpg" alt="Runly times the code for real instead of trusting the brochure." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/runly-revised.jpg" alt="Runly times the code for real instead of trusting the brochure." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -142,7 +142,7 @@ Any tree with Python source gets a local microbench: 200,000 integer steps, repo
 
 Scans for structured usability audit records, heuristic evaluations, or accessibility scorecards (e.g., WCAG compliance logs, UX benchmark JSONs). Marketing sentences or vague promises of "great UX" in a README yield no score.
 
-<p align="center"><img src="assets/glossary/cards/levi.jpg" alt="Real usability evidence, not a great UX promise." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/levi-revised.jpg" alt="Real usability evidence, not a great UX promise." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -162,7 +162,7 @@ The file must be JSON whose family or brand contains `4uval`, with a `gate` obje
 
 Inspects client-facing components for actual code-level pacing controls, break intervals, or integrated session switches (such as the repository's fuss/ module). General wellness advice written in markdown does not count as an implementation.
 
-<p align="center"><img src="assets/glossary/cards/menschly.jpg" alt="Menschly wants real break-timer code, not wellness advice in a README." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/menschly-revised.jpg" alt="Menschly wants real break-timer code, not wellness advice in a README." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -182,7 +182,7 @@ A Python function named `bind_fuss` or `bindfuss`, or an assignment to `session_
 
 Ingests structured LLM transaction logs containing baseline and optimized token usage pairs. Calculates the net token delta (Tokens before - Tokens after). If token records are not saved in the target path, the cell is marked Deferred rather than zero.
 
-<p align="center"><img src="assets/glossary/cards/tokely.jpg" alt="Tokely measures tokens before and after you optimized." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/tokely-revised.jpg" alt="Tokely measures tokens before and after you optimized." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -202,7 +202,7 @@ JSON may use `before` and `after`, or `total_tokex` and `tokex_this_run`, includ
 
 Extracts metrics from existing compression logs, specifically recording raw byte reduction alongside objective image/video quality scores (e.g., SSIM, PSNR, VMAF, or CRF values). Pressly does not execute the compression pipelines during the evaluation scan.
 
-<p align="center"><img src="assets/glossary/cards/pressly.jpg" alt="Pressly reads compression logs to confirm things got smaller without losing quality." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/pressly-revised.jpg" alt="Pressly reads compression logs to confirm things got smaller without losing quality." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -222,7 +222,7 @@ Logs, text, JSON, and markdown are scanned for `ssim`, `vmaf`, or `bytes`/`size`
 
 Validates the presence of an explicit Engineering Priority Triad declaration that orders Cost, Speed/Latency, and Impact. Evaluates whether the team has officially declared which compromise comes first when system constraints collide.
 
-<p align="center"><img src="assets/glossary/cards/triadly.jpg" alt="Triadly checks which matters first: cost, speed or impact." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/triadly-revised.jpg" alt="Triadly checks which matters first: cost, speed or impact." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -246,7 +246,7 @@ The accepted compact orders are `mcmemi`, `mcmime`, `memcmi`, `memimc`, `mimcme`
 
 Parses agent orchestrator configurations (e.g., YAML/JSON agent rosters) to tally registered agent identities, designated system prompts, and tool authorizations. Identifies unassigned workers or overlapping, ambiguous responsibilities.
 
-<p align="center"><img src="assets/glossary/cards/chorely.jpg" alt="Mapping tasks. AI agents. Pass, fail, and deferred." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/chorely-revised.jpg" alt="Mapping tasks. AI agents. Pass, fail, and deferred." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -266,7 +266,7 @@ Roster files are `agent_registry.md`, `agents.md`, `agentic_registry.md`, or any
 
 Analyzes sequential execution logs of agentic tasks. Counts total steps taken, tool call frequencies, backtracking loops, and final task resolution states. Disregards third-party leaderboard claims that lack inspectable raw trace files.
 
-<p align="center"><img src="assets/glossary/cards/trajectly.jpg" alt="Trajectly replays an agent's recorded journey, steps, loops and all." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/trajectly-revised.jpg" alt="Trajectly replays an agent's recorded journey, steps, loops and all." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -286,7 +286,7 @@ File names containing `trace`, `trajectory`, or `passk` are read. JSONL lines th
 
 Cross-references listed performance claims and product assertions against linked source code, test seeds, external dataset URLs, or academic citations. Claims without verifiable backing artifacts fail the check.
 
-<p align="center"><img src="assets/glossary/cards/warrantly.jpg" alt="Warrantly: claims need evidence attached, and unbacked ones fail." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/warrantly-revised.jpg" alt="Warrantly: claims need evidence attached, and unbacked ones fail." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -306,7 +306,7 @@ JSON may be a list of objects with a `claim` key, or an object with `claims` or 
 
 Evaluates project-supplied question-and-answer manifests. Computes the coverage ratio and exact match/similarity score against a validated golden dataset. Distinct from generic unit tests - focuses on domain/subject-matter accuracy.
 
-<p align="center"><img src="assets/glossary/cards/domly.jpg" alt="Domly quizzes the app on its subject and grades it against an answer key." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/domly-revised.jpg" alt="Domly quizzes the app on its subject and grades it against an answer key." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -326,7 +326,7 @@ JSON or YAML files whose names contain `question` or `answer` are read. Question
 
 Aggregates findings from the other 15 evaluators into a clean report matrix. Explicitly prohibits flattening heterogeneous measurements into a misleading single 0–100 score. Preserves Pass, Fail, and Deferred states as independent data points.
 
-<p align="center"><img src="assets/glossary/cards/stackly.jpg" alt="Stackly shows the full status matrix, not one fake score." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/stackly-revised.jpg" alt="Stackly shows the full status matrix, not one fake score." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
