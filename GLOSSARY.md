@@ -102,7 +102,7 @@ Identical-byte groups are SHA-256 matches among files between 1 and 200,000 byte
 
 Scans the project tree, aggregates Source Lines of Code (SLOC) by file extension, and calculates the exact percentage distribution across languages while ignoring third-party vendor directories (e.g., node_modules/, site-packages/). Reports pure data without prescribing stack changes.
 
-<p align="center"><img src="assets/glossary/cards/mixly-revised.jpg" alt="Mixly shows exactly what languages the project is made of." width="541"></p>
+<p align="center"><img src="assets/glossary/cards/mixly-card.jpg" alt="Mixly shows exactly what languages the project is made of." width="541"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
