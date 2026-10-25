@@ -20,7 +20,7 @@ The life-cycle gate on each evaler (G0 through G12) is the station's place in th
 
 Scans the repository's .git tree. Counts total historical commits, change intervals, and branch merges. Requires a valid local git history; repositories without git metadata return a Deferred status. This is an objective measurement of repository activity, not an assessment of developer ability or code quality.
 
-<p align="center"><img src="assets/glossary/cards/devly.jpg" alt="Devly counts commits, branches and rhythm, and does not judge the developer." width="520"></p>
+<p align="center"><img src="assets/glossary/cards/devly-revised.jpg" alt="Devly counts commits, branches and rhythm, and does not judge the developer." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
