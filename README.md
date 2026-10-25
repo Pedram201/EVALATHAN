@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">E V A L A T H A N</h1>
-<p align="center"><i>Making your Product-led Growth (PLG) more efficient, robust, and user-friendly!</i></p>
+<p align="center"><i>Making your Product-led growth (PLG) more efficient, robust, and user-friendly!</i></p>
 
 <p align="center">The one-stop evaluation platform for software, engines, agentics, codebases, compilers and languages.</p>
 
@@ -21,7 +21,7 @@ evalathan scan path\to\tree --json report.json
 
 EVALATHAN is an open-source (Apache-2.0), Python-based evaluation harness designed to audit and score software projects, codebases, compilers, and AI agent pipelines across their entire lifecycle.
 
-The tool positions itself as a local runner (v0.2) aimed at Product-Led Growth (PLG) and codebase verification. Rather than generating a single aggregated or opaque score, EVALATHAN uses a conductor engine named Hydra to orchestrate 16 distinct evaluators ("evalers") and output a transparent status matrix.
+The tool positions itself as a local runner (v0.2) aimed at Product-led growth (PLG) and codebase verification. Rather than generating a single aggregated or opaque score, EVALATHAN uses a conductor engine named Hydra to orchestrate 16 distinct evaluators ("evalers") and output a transparent status matrix.
 
 ## Architecture & The 16 Evaluators
 
