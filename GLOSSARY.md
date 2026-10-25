@@ -4,9 +4,9 @@ Evalathan is one evaluation harness. Hydra is the conductor. She governs and cal
 
 <img src="assets/glossary/score-constitution-dot.png" alt="Score Constitution." height="14"> What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.
 
-<img src="assets/glossary/simplespeak-dot.png" alt="Simplespeak." height="17"> The same job in ordinary words.
+<img src="assets/glossary/simplespeak-dot.png" alt="Simplespeak." height="17"> Explanations in simple terms.
 
-<img src="assets/glossary/techspeak-dot.png" alt="Techspeak." height="17"> What the code actually reads, and the standard it cites when that standard is really in play. A link is the public text of that standard. Citing it is not a certificate.
+<img src="assets/glossary/techspeak-dot.png" alt="Techspeak." height="17"> More technically detailed explanations.
 
 The life-cycle gate on each evaler (G0 through G12) is the station's place in the life of a product. There are not sixteen gates. There are sixteen evalers.
 
