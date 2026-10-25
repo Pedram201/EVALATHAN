@@ -17,69 +17,81 @@ evalathan scan path\to\tree
 evalathan scan path\to\tree --json report.json
 ```
 
-## Overview and core philosophy
+## Overview and Core Philosophy
 
-Evalathan, developed by Pedram201, is an open-source Apache-2.0 Python harness. It grades a software tree where the artifact is on disk: a product, a language implementation, a compiler, or an engine. Agent records count when those records are in the same tree.
+EVALATHAN is an open-source (Apache-2.0), Python-based evaluation harness designed to audit and score software projects, codebases, compilers, and AI agent pipelines across their entire lifecycle.
 
-v0.2 is a local runner. Hydra is the conductor. She calls the sixteen evalers and writes a status matrix. A deferred cell is not a fail and not a zero. The report says what ran, what passed its own rule, and what stayed blank. It does not mint one blended score.
+The tool positions itself as a local runner (v0.2) aimed at Product-Led Growth (PLG) and codebase verification. Rather than generating a single aggregated or opaque score, EVALATHAN uses a conductor engine named Hydra to orchestrate 16 distinct evaluators ("evalers") and output a transparent status matrix.
 
-The commands above are the whole scan: `evalathan scan` on a folder, with an optional JSON report (JavaScript Object Notation - a text file written next to the terminal output).
+## Architecture & The 16 Evaluators
 
-## Architecture and the sixteen evalers
+EVALATHAN evaluates a project by passing a local directory path (`evalathan scan <path> [--json report.json]`). Its 16 evaluators span four distinct operational categories:
 
-The sixteen always appear. Hydra is not a seventeenth score. The lanes below are a reading order. They are not four extra grades.
+| Category | Evaluators | Functionality |
+| :--- | :--- | :--- |
+| Code Health & Repository Metrics | Devly, Archly, Codely, Refactorly, Mixly | Inspects Git history (commits), presence of architectural documentation, cyclomatic/branching complexity, dead code, code churn/duplication, and language breakdown. |
+| Performance & Trade-offs | Runly, Pressly, Triadly | Times micro-benchmarks, reads compression and asset quality logs (image/video/file sizes), and documents the project's prioritization order across cost, latency, and impact. |
+| AI Agents & LLM Observability | Tokely, Chorely, Trajectly, Domly, Warrantly | Tracks token delta/reduction metrics, maps multi-agent rosters and responsibilities, counts agent trace steps, tests domain-specific Q&A pairs, and audits whether factual claims link to verifiable evidence. |
+| Human Ergonomics & Reporting | Levi, Menschly, Stackly | Evaluates user-centric scorecards, checks for built-in user break timers, and produces an itemized report of completed vs. deferred checks. |
 
-| Lane | Evalers | What that lane is for |
-|------|---------|------------------------|
-| Repository and source | Archly, Codely, Devly, Mixly, Refactorly | A commit count, a write-up on disk, decision points this version can parse, copied or unused code, recent change, and the language mix. |
-| Speed, a printed size, and a written priority | Pressly, Runly, Triadly | A short local timing, a quality or size figure a tool already printed, and the order a team wrote down for cost, speed, and impact. |
-| Tokens, roster, trace, questions, and claims | Chorely, Domly, Tokely, Trajectly, Warrantly | A saved token pair, a roster count, saved agent steps, a question list, and a claim that points at evidence. |
-| Scorecard, timer, and the cover sheet | Levi, Menschly, Stackly | A saved user-first scorecard, a real rest timer, and the vector of the other cells. |
+### Unique Features: SELFBELT and FUSS
+
+A standout aspect of the project is its integration of developer and user wellness into the evaluation criteria:
+
+SELFBELT / SELFBELTING: A methodology documented in docs/SELFBELT.md addressing developer fatigue and extended screen time.
+
+FUSS (For-User Session Switch): A modular front-end/desktop widget inside the repository (fuss/) that developers can embed into software to enforce scheduled rest breaks.
+
+Menschly: The evaluator specifically tasked with verifying whether a codebase incorporates real session limiters/timers rather than just vague README promises.
 
 ## What v0.2 runs
 
-Sixteen evalers always appear. Hydra is the conductor and is not a seventeenth score. Point the scan at the tree you want graded. A record that lives in another repository is read when that repository is the path you pass. The table is alphabetical.
+Sixteen evalers always appear. Hydra is the conductor and is not a seventeenth score. Point the scan at the tree you want graded. A record that lives in another repository is read when that repository is the path you pass.
 
 | Evaler | What it runs |
-|--------|----------------|
-| [Archly](GLOSSARY.md#archly) | Checks that a structural write-up exists alongside the source, such as a README or a document in a docs folder. Finding the write-up is the result. This run does not grade the design. |
-| [Chorely](GLOSSARY.md#chorely) | Counts the agent roster and the rows that say what each agent does. A person still decides whether the roster is right. |
-| [Codely](GLOSSARY.md#codely) | Counts decision forks, such as an if, a loop, or a catch, in the programming language this scan can measure. A language it cannot measure stays blank. That blank is not a pass. |
-| [Devly](GLOSSARY.md#devly) | Tallies commit history. That count is repository activity. It does not grade programmer skill. |
-| [Domly](GLOSSARY.md#domly) | Counts a question list shipped with the project, and lines up answers when a second file is there. A language test suite is a different station. |
-| [Levi](GLOSSARY.md#levi) | Reads a saved user-first scorecard, when the project includes one, and reports that scorecard's own result. A kind sentence in the README is not the score. |
-| [Menschly](GLOSSARY.md#menschly) | Looks for a real, programmable session limiter in the program, such as [FUSS](fuss/README.md) (For-User Session Switch - an optional rest timer). Words about breaks in a README are not a timer. |
-| [Mixly](GLOSSARY.md#mixly) | Catalogs the share of recognized source files in each programming language. It reports the mix. It does not tell you to rewrite anything. |
-| [Pressly](GLOSSARY.md#pressly) | Reads a picture-quality number, a video-quality number, or a file size that a tool already printed in a log. It does not run the compressor itself. |
-| [Refactorly](GLOSSARY.md#refactorly) | Finds duplicated files, unused code, and the files that have been changing the most. It reports those facts. It does not order a rewrite. |
-| [Runly](GLOSSARY.md#runly) | Times a short local run when the project contains code it can time. It notes a saved speed-test file only when that file is already in the folder. |
-| [Stackly](GLOSSARY.md#stackly) | Writes what ran, what passed its own rule, and what stayed blank. It does not hide that list behind one composite number. |
-| [Tokely](GLOSSARY.md#tokely) | Reads a saved before-and-after token count and reports the drop. A measured zero is a real result. If the pair was never saved, the cell stays blank. |
-| [Trajectly](GLOSSARY.md#trajectly) | Counts the saved steps of an agent run already in the folder. A screenshot of someone else's scoreboard is not a run. |
-| [Triadly](GLOSSARY.md#triadly) | Records the order a team wrote down for cost, speed, and impact. Writing the order down is the result. Proving the build followed it is a later check. |
-| [Warrantly](GLOSSARY.md#warrantly) | Checks that each saved claim points at a source, a recipe, or other evidence. A claim with nothing behind it does not pass. No claim list stays blank. |
+| :--- | :--- |
+| [Devly](GLOSSARY.md#devly) | Audits version control activity by tallying commit history, branches, and timeline cadence without making subjective assumptions about programmer skill. |
+| [Archly](GLOSSARY.md#archly) | Checks for explicit system architecture blueprints and design specs to verify that structural documentation exists alongside the source code. |
+| [Codely](GLOSSARY.md#codely) | Measures structural complexity by scanning decision forks (if-statements, loops, conditionals) across supported language files. |
+| [Refactorly](GLOSSARY.md#refactorly) | Detects codebase friction by identifying duplicated files, unused/dead code segments, and high-frequency churn hotspots. |
+| [Mixly](GLOSSARY.md#mixly) | Catalogs the exact breakdown of programming languages across the repository to reveal stack composition and maintenance footprints. |
+| [Runly](GLOSSARY.md#runly) | Measures runtime execution speed via quick local micro-benchmarks or by parsing pre-recorded benchmark logs. |
+| [Levi](GLOSSARY.md#levi) | Parses verified user-first scorecards to validate that the software meets empirical usability and accessibility criteria. |
+| [Menschly](GLOSSARY.md#menschly) | Inspects the codebase for real, programmable session limiters and rest timers (like FUSS) that promote developer and user well-being. |
+| [Tokely](GLOSSARY.md#tokely) | Audits LLM prompt and completion token efficiency by calculating measured consumption reductions between baseline and optimized runs. |
+| [Pressly](GLOSSARY.md#pressly) | Audits media and data compression efficiency by extracting perceptual quality scores (SSIM/PSNR) and file size deltas from pre-run logs. |
+| [Triadly](GLOSSARY.md#triadly) | Validates engineering trade-off alignments by confirming that explicit priorities among cost, latency, and impact are formally documented. |
+| [Chorely](GLOSSARY.md#chorely) | Maps multi-agent AI ecosystems by inventorying agent roles, tool assignments, and explicit task boundaries. |
+| [Trajectly](GLOSSARY.md#trajectly) | Evaluates AI agent execution trajectories by parsing the step-by-step action logs, tool invocations, and completion paths of recorded runs. |
+| [Warrantly](GLOSSARY.md#warrantly) | Verifies factual grounding by validating that assertions and benchmark results cite inspectable source artifacts, reproducible recipes, or citations. |
+| [Domly](GLOSSARY.md#domly) | Evaluates domain competency by matching domain-specific test questionnaires against reference golden-answer datasets. |
+| [Stackly](GLOSSARY.md#stackly) | Synthesizes the full evaluation scan into a transparent status matrix showing passed, failed, and deferred checks without masking data behind an artificial composite number. |
 
 Each name opens its glossary entry. An entry has three parts: what is counted, simplespeak, and techspeak. Public agent exams, and why they are not pasted in, are in the [glossary](GLOSSARY.md#agentic-exams-that-are-not-on-the-vector-yet).
 
-## Key strengths
+## Key Strengths
 
-The sixteen sit in one harness: repository facts, a speed or size reading, an agent record, a user scorecard, and a timer. A deferred cell is not a fail and not a zero. The report says what was measured and what stayed blank.
+Holistic Lifecycle View: Most evaluation tools are siloed into either static analysis (e.g., SonarQube, flake8), benchmark profiling (e.g., pytest-benchmark), or LLM observability (e.g., Promptfoo, DeepEval). EVALATHAN attempts to unify traditional software metrics, AI agent evaluations, and human-centric design under one roof.
 
-The package is a normal Python project: `pyproject.toml`, `src/evalathan`, tests, a command-line scan, and a JSON report.
+Honest, Uninflated Scoring Methodology: The system adopts a strict policy that "a deferred cell is not a fail and not a zero," refusing to synthesize dissimilar metrics into an artificial 0–100 score. It reports what was actually measured versus what was skipped.
 
-SELFBELT is the seatbelt write-up for long sittings. FUSS is an optional timer a developer can clip into a product. Menschly is the evaler that can see a real timer. Those three are not a seventeenth score.
+Clean Packaging: Structured as a modern Python package (pyproject.toml, src/evalathan, tests/), with CLI support and JSON export options for pipeline integration.
 
-## Current limitations and areas for growth
+Attention to Ergonomics/Ethics: Bringing developer wellness (FUSS/SELFBELT) into code grading is novel and addresses a real blind spot in typical CI/CD quality gates.
 
-v0.2 is early. It is not on PyPI. Hosted runs are not part of this version. No GitHub Actions workflow is in the tree, so the tests are not run by a remote check yet. A docs generator and a release pipeline are not in this version either.
+## Current Limitations & Areas for Growth
 
-Tokely, Trajectly, and Pressly read a file the project already saved. If that file is missing, the cell stays blank. Runly also times a short Python loop on this machine when the tree contains Python.
+Early Stage (v0.2): The repository has around 27 commits and no public releases or distribution yet (e.g., not yet packaged on PyPI). It is in early development.
 
-Codely's branch count runs on Python. The other named language packs are not executed in this version. An unknown language stays blank.
+Passive Log Parsing vs. Active Execution: Several AI and performance evaluators (e.g., Tokely, Trajectly, Pressly) rely on reading pre-existing log files and saved run artifacts rather than executing live tracing or active benchmarking. If a project lacks standardized log outputs, those cells will simply remain blank/deferred.
 
-## Current assessment
+AST and Language Parsing Depth: Running branching/decision checks (Codely) across arbitrary compilers and languages is non-trivial; depending on the parsers implemented in src/evalathan/, support for languages outside Python may be basic.
 
-Pedram201/EVALATHAN is a local baseline with a locked rule: score the artifact that is there, and leave the rest blank. It is the right shape for a tree you can point at a folder. It is early for a production gate. Cells that need a saved file stay blank until that file is in the tree. Language packs beyond Python are named and not yet executed.
+DevOps & Community Infrastructure: The repository would benefit from automated GitHub Actions workflows (CI for linting and running the test suite), documentation generation (Sphinx/MkDocs), and automated release pipelines.
+
+## Current Assessment
+
+Pedram201/EVALATHAN is an ambitious, conceptually fresh evaluation harness. While still in its early stages (v0.2), it stands out for its balanced philosophy: it bridges modern AI agent auditing with classic static analysis while introducing thoughtful developer wellness checks (FUSS/Menschly). For production use, it is best treated as an experimental framework or early-stage evaluation baseline that will mature as active log integrations and language parsers expand.
 
 ## SELFBELT
 

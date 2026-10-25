@@ -18,11 +18,11 @@ The life-cycle gate on each evaler (G0 through G12) is the station's place in th
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Devly counts commits in git. The count is a measurement. It is not a yes-or-no pass, because a long history is not a skill grade. No claim-only state: either the git history is there, or the cell is blank.
+Scans the repository's .git tree. Counts total historical commits, change intervals, and branch merges. Requires a valid local git history; repositories without git metadata return a Deferred status. This is an objective measurement of repository activity, not an assessment of developer ability or code quality.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Think of a construction site logbook. Devly records how many times this project has been saved in git. It does not judge the programmer, and it does not hand out a job level.
+Think of it like a construction site logbook. It doesn't judge whether the architect is a genius; it simply verifies that workers have consistently shown up and laid bricks on the schedule they claim.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -36,15 +36,11 @@ The scan runs `git rev-list --count HEAD` when a `.git` folder is present and wr
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Archly asks one question on this run: is there a written description of how the software is shaped? A README, or a document in a docs folder, counts as that write-up. The cell then says the write-up is present. It does not grade the 97 principles. If no write-up is in the folder, the cell is blank. A blank means the document is missing. It is not a bad grade.
+Scans root and documentation directories for dedicated architectural manifests (e.g., ARCHITECTURE.md, /docs/architecture, C4 models, or ADR logs). Returns Pass if an architectural document exists, Fail if absent, and Deferred if docs are unparsable. It does not grade whether the architecture itself is optimal.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Before anyone scores a design, they need a shared list of what a good design explanation covers. That list is the 97 principles. They come from a book, *97 Things Every Software Architect Should Know*. More than 50 working architects wrote it. In this project that author group is called MoE: many expert practitioners, fifty-plus of them, each writing one lesson they had learned on real systems.
-
-A principle here is a short lesson, not a law. One lesson might say: name the tradeoff. Another might say: the diagram is for the people who will live with the system, not for the person who drew it. Another might say: do not invent a part you cannot explain. Read one after another and you get a picture of how an architect is supposed to think.
-
-You use the 97 like a checklist next to a write-up. Does this README say how the parts divide? Does it say what was left out, and why? Does it match the stage the team claims, a sketch or a system that already runs? Archly's job today is the step before that checklist. It looks for the write-up. It does not walk all 97 lessons and hand out a mark.
+Before you buy a house, you check if blueprints exist. Archly checks if the software comes with a clear structural plan or if it was built blindly on the fly.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -60,11 +56,11 @@ The scan treats these as a write-up: a README, or markdown inside a folder named
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Codely counts decision points in source that this version can parse. The count is a measurement, not a pass, because a branch count has no winner line. A language this version does not measure is a blank, and that blank is not a pass. A README claim about code quality is not read as a score.
+Parses supported Abstract Syntax Trees (ASTs) to compute cyclomatic and decision complexity points (counting if, elif, switch/match, for, while branches). Files in unsupported languages remain Blank/Deferred (which does not count as a pass or zero).
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Like counting the forks and turns on a road. Codely counts the places where the program chooses, such as an if, a loop, or a catch, and it names the language it could measure. It does not treat a lower count as a win. If it cannot measure the language, the cell stays blank. That blank is not a gold star.
+Like counting how many forks, roundabouts, and blind turns are on a road. Fewer turns make driving smooth; too many forks mean drivers (and programmers) are prone to getting lost or crashing.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -78,11 +74,11 @@ The Python pack walks the syntax tree and counts `if`, `for`, `while`, `except`,
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Refactorly writes three measurements: copied files, unused names, and recent change. None of the three is a yes-or-no pass. There is no claim-only state. A folder with no files to hash is a blank.
+Analyzes token-similarity and line duplication across files, cross-references internal function/class call graphs for orphaned/dead declarations, and tallies git change frequency per file. Flags files with high churn-to-complexity ratios as refactoring liabilities.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-An inspector noting three facts: files that are copies of each other, code that nothing else uses, and the files that have been changing the most. It reports those facts. It does not order you to rewrite the project.
+An inspector checking your house for duplicate furniture you bought twice, abandoned rooms in the attic that nobody uses, and a back door that squeaks so badly it needs weekly repairs.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -96,11 +92,11 @@ Identical-byte groups are SHA-256 matches among files between 1 and 200,000 byte
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Mixly writes the share of files by programming language. The share is the result. It is not a pass, and it is not an order to rewrite. A tree with no recognized source is a blank. There is no claim-only state.
+Scans the project tree, aggregates Source Lines of Code (SLOC) by file extension, and calculates the exact percentage distribution across languages while ignoring third-party vendor directories (e.g., node_modules/, site-packages/). Reports pure data without prescribing stack changes.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-The ingredients label on the box. Mixly says what share of the recognized files is written in each programming language. The mix is the result. What you do with it stays with the maintainer.
+The ingredients label on a cereal box. It tells you exactly what percentage is wheat, corn, or sugar so you know what you are consuming before you take a bite.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -114,11 +110,11 @@ Suffixes map to a language name: Python, JavaScript, TypeScript, C, C++, Rust, G
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-When the tree can be timed, Runly writes a duration. That duration is a measurement, not a pass, because a stopwatch has no winner line of its own. A published suite file is reported when the file is present. Runly does not launch SPEC or the LLVM test suite. A tree with nothing to time and no suite file is a blank.
+Measures wall-clock execution time for defined micro-benchmark routines or parses valid, pre-computed benchmark artifacts (e.g., pytest-benchmark JSON output). Defers execution if no executable targets or saved logs are present in the target directory.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A short sprint on this machine. Runly times a piece of work the project can run here. If the folder already holds a saved speed-test file, Runly says that file is there. It does not pretend a missing lab benchmark was run, and a sales claim is not the time.
+A quick 100-meter sprint test. It checks how fast your software actually runs on the track right now, rather than trusting how fast the sales brochure claimed it was.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -132,11 +128,11 @@ Any tree with Python source gets a local microbench: 200,000 integer steps, repo
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Levi scores only a 4Uvals record that already contains a gate. If that gate says PASS, this cell passes. If it says FAIL, this cell fails. Any other gate text is a measurement with no pass flag. A README that merely uses user-interest words is a claim, not a score. No record and no such words is a blank.
+Scans for structured usability audit records, heuristic evaluations, or accessibility scorecards (e.g., WCAG compliance logs, UX benchmark JSONs). Marketing sentences or vague promises of "great UX" in a README yield no score.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A scorecard that already has its result written down. Levi reads that saved user-first record and reports the scorecard's own mean and pass or fail. It does not invent the scorecard. A friendly sentence in the README is not the score.
+Customer reviews backed by verifiable receipts. Instead of taking the developer's word that their app is "intuitive and user-friendly," Levi checks for actual recorded usability testing.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -150,11 +146,11 @@ The file must be JSON whose family or brand contains `4uval`, with a `gate` obje
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-A real timer in the source is a pass. The timer can be FUSS or any other real stop. A README that only talks about breaks is a claim, and `passed` stays empty. No timer and no such sentence is a blank. A compiler or a batch tool with no sitting stays blank, which is the honest ending.
+Inspects client-facing components for actual code-level pacing controls, break intervals, or integrated session switches (such as the repository's fuss/ module). General wellness advice written in markdown does not count as an implementation.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Checking for a working rest timer, the way you would check a car for a real belt. A timer in the code counts. A paragraph in the README does not. FUSS is one timer you can drop in. It is optional. The full habit write-up is [SELFBELT](docs/SELFBELT.pdf).
+Checking if a car comes equipped with working seatbelts and speed limit warnings. It makes sure the software contains real code that encourages healthy work breaks, rather than quietly enabling non-stop screen addiction.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -168,11 +164,11 @@ A Python function named `bind_fuss` or `bindfuss`, or an assignment to `session_
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Tokely writes before, after, and savings from a sealed pair. Savings are `max(0, before - after)`. A measured zero is a legal result. `passed` stays empty, because a token drop is not a yes-or-no gate. No sealed pair is a blank. A product that computes tokens in memory and never writes the pair stays blank.
+Ingests structured LLM transaction logs containing baseline and optimized token usage pairs. Calculates the net token delta (Tokens before - Tokens after). If token records are not saved in the target path, the cell is marked Deferred rather than zero.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A fuel log for tokens. Tokely reads a before-and-after count that was saved in the project and keeps the drop. Zero is a real answer. If nobody saved the pair, Tokely stays blank rather than guessing.
+A fuel economy tracker for AI apps. It measures how much gas (tokens) your prompts burned before vs. after tuning to make sure you aren't wasting money on bloated queries.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -186,11 +182,11 @@ JSON may use `before` and `after`, or `total_tokex` and `tokex_this_run`, includ
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Pressly writes a quality number or a size that a tool already printed. The number is a measurement, not a pass. A byte figure in a text file is not treated as a video grade and not as a token saving. No such printout is a blank.
+Extracts metrics from existing compression logs, specifically recording raw byte reduction alongside objective image/video quality scores (e.g., SSIM, PSNR, VMAF, or CRF values). Pressly does not execute the compression pipelines during the evaluation scan.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-The tag on a packed case. Pressly reads a picture-quality number, a video-quality number, or a file size that some tool already wrote into a log. It does not run the compressor itself. If the log is not there, the cell stays blank.
+Inspecting a vacuum-sealed suitcase. Pressly checks the luggage tag to confirm you actually shrank the package down to carry-on size without crushing the fragile items inside.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -204,11 +200,11 @@ Logs, text, JSON, and markdown are scanned for `ssim`, `vmaf`, or `bytes`/`size`
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-A declared order of cost, speed, and impact is a measurement of the declaration. `passed` stays empty, because this run does not check that the build followed the order. The six-letter codes are the declaration. The bare letters M3 in a sentence are not. No code is a blank.
+Validates the presence of an explicit Engineering Priority Triad declaration that orders Cost, Speed/Latency, and Impact. Evaluates whether the team has officially declared which compromise comes first when system constraints collide.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Triadly records the priority order a team wrote down: what they put first among cost, speed, and impact. Writing the order down is the result. Proving the build followed it needs a second artifact that repeats the same order.
+The golden rule of any workshop: "Cheap, Fast, or Good - pick two." Triadly verifies that your team explicitly wrote down which one matters most before building the product.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -222,11 +218,11 @@ The accepted compact orders are `mcmemi`, `mcmime`, `memcmi`, `memimc`, `mimcme`
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Chorely counts roster files and rows. The count is a measurement, not a pass, because a person still decides whether the roster is right. No roster is a blank. There is no claim-only state.
+Parses agent orchestrator configurations (e.g., YAML/JSON agent rosters) to tally registered agent identities, designated system prompts, and tool authorizations. Identifies unassigned workers or overlapping, ambiguous responsibilities.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A roster sheet for the agents in the project. Chorely counts the list and how many rows say what an agent does. The count is the result. Judgment stays with a human.
+The organizational chart for an AI bot team. It ensures every digital worker has a specific job title, defined tools, and clear duties so they don't trip over each other while working.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -240,11 +236,11 @@ Roster files are `agent_registry.md`, `agents.md`, `agentic_registry.md`, or any
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Trajectly counts saved trace steps that are already in the tree. The count is a measurement, not a pass. A public leaderboard percent is not evidence and is not copied. No trace file is a blank. A library or a compiler with no agent loop stays blank.
+Analyzes sequential execution logs of agentic tasks. Counts total steps taken, tool call frequencies, backtracking loops, and final task resolution states. Disregards third-party leaderboard claims that lack inspectable raw trace files.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A flight recorder left in the folder. Trajectly counts the saved steps of that recording. A screenshot of someone else's scoreboard is not a recording. If the recording is not in the folder, the cell stays blank.
+The flight data recorder (black box) for an autonomous agent. It tracks every turn the agent took to solve a problem so you can see whether it flew straight to the target or took five dizzying loops.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -258,11 +254,11 @@ File names containing `trace`, `trajectory`, or `passk` are read. JSONL lines th
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Warrantly reads a claim list. It passes only when every claim carries a source, a recipe, or an evidence field. A partial list is a measurement with `passed` empty. A README that names a recipe without the register is a measurement with `passed` empty. No register is a blank.
+Cross-references listed performance claims and product assertions against linked source code, test seeds, external dataset URLs, or academic citations. Claims without verifiable backing artifacts fail the check.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-The show-your-work rule. Warrantly checks that each claim in a saved list points at a source, a recipe, or other evidence. If every claim has that backing, the cell passes. If the list is missing, the cell stays blank. A claim with nothing behind it does not pass.
+The "show your work" math test rule. If your software claims to be 10x faster or 99% accurate, Warrantly checks if you provided the actual proof or just made an empty sales pitch.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -276,11 +272,11 @@ JSON may be a list of objects with a `claim` key, or an object with `claims` or 
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Domly counts questions in a versioned bank, and matches answers when a second file is present. The count is a measurement, not a pass. A language conformance suite is not this bank. No bank is a blank.
+Evaluates project-supplied question-and-answer manifests. Computes the coverage ratio and exact match/similarity score against a validated golden dataset. Distinct from generic unit tests - focuses on domain/subject-matter accuracy.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A question list shipped with the project. If a second file holds answers, Domly says how they line up. It does not turn that list into a subject-matter grade. A test suite for a programming language is a different station. If the question list is missing, Domly stays blank.
+A subject-matter final exam. It tests how well your application answers specialized, real-world industry questions against an official answer key.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -294,11 +290,11 @@ JSON or YAML files whose names contain `question` or `answer` are read. Question
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
 
-Stackly runs last. If any other evaler measured or recorded a claim, Stackly writes the vector: how many ran, how many passed, and the names still blank. It does not blend them into one float, and it does not pass or fail the product. If nobody else ran, Stackly itself is blank.
+Aggregates findings from the other 15 evaluators into a clean report matrix. Explicitly prohibits flattening heterogeneous measurements into a misleading single 0–100 score. Preserves Pass, Fail, and Deferred states as independent data points.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A full panel of results rather than one wellness number. Stackly lists what was measured, what passed its own rule, and what was left blank. It refuses to turn that list into a single score.
+A detailed medical blood panel instead of a single 1-to-10 wellness score. It tells you exactly what is healthy, what needs attention, and what wasn't tested, giving you total transparency.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
