@@ -208,6 +208,10 @@ The golden rule of any workshop: "Cheap, Fast, or Good - pick two." Triadly veri
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
+<img src="assets/glossary/m3-triad.jpg" alt="M3 Triad. Mc is min cost, Me is max efficiency, Mi is max impact. The six orders run from a cheap interceptor drone to a NASA rocket and a Patriot missile." width="100%">
+
+Mc (Min Cost) · Me (Max Efficiency/speed) · Mi (Max Impact/quality); order = priority left-to-right. Six orders: McMeMi cheap interceptor drone; McMiMe Shahed-style (SEISMO PoC today); MeMcMi ambulance drone; MeMiMc fighter scramble; MiMcMe SEISMO MVP target, impact then cost; MiMeMc NASA rocket and Patriot missile, impact then speed.
+
 The accepted compact orders are `mcmemi`, `mcmime`, `memcmi`, `memimc`, `mimcme`, and `mimemc`, read from the README and from markdown, JSON, and text. The scan looks for those codes with spaces removed. It does not treat the word M3, by itself, as an order.
 
 
