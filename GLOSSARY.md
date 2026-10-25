@@ -22,7 +22,7 @@ Devly counts commits in git. The count is a measurement. It is not a yes-or-no p
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Devly tells you how many times this project has been saved in git. That is a fact about the history. It does not grade the programmer, and it does not hand out a job level.
+Think of a construction site logbook. Devly records how many times this project has been saved in git. It does not judge the programmer, and it does not hand out a job level.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -64,7 +64,7 @@ Codely counts decision points in source that this version can parse. The count i
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Codely looks through the code and counts the places where the program chooses, such as an if, a loop, or a catch. It reports the programming language it was able to measure. If it cannot measure the language you used, it says so and leaves the cell blank. That blank is not a gold star.
+Like counting the forks and turns on a road. Codely counts the places where the program chooses, such as an if, a loop, or a catch, and it names the language it could measure. It does not treat a lower count as a win. If it cannot measure the language, the cell stays blank. That blank is not a gold star.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -82,7 +82,7 @@ Refactorly writes three measurements: copied files, unused names, and recent cha
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Refactorly looks for files that are copies of each other, for code that nothing else uses, and for the files that have been changing the most. It reports those facts. It does not order you to rewrite the project.
+An inspector noting three facts: files that are copies of each other, code that nothing else uses, and the files that have been changing the most. It reports those facts. It does not order you to rewrite the project.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -100,7 +100,7 @@ Mixly writes the share of files by programming language. The share is the result
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Mixly tells you what portion of the project is written in each programming language it recognizes. The number is the mix. What you do with that mix stays with the maintainer.
+The ingredients label on the box. Mixly says what share of the recognized files is written in each programming language. The mix is the result. What you do with it stays with the maintainer.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -118,7 +118,7 @@ When the tree can be timed, Runly writes a duration. That duration is a measurem
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Runly times a short piece of work on this machine when the project contains code it can time. If the folder also contains a saved speed-test file, Runly says that file is there. It does not pretend a missing lab benchmark was run.
+A short sprint on this machine. Runly times a piece of work the project can run here. If the folder already holds a saved speed-test file, Runly says that file is there. It does not pretend a missing lab benchmark was run, and a sales claim is not the time.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -136,7 +136,7 @@ Levi scores only a 4Uvals record that already contains a gate. If that gate says
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Levi reads a saved user-first scorecard if the project includes one. It reports that scorecard's own result, including the mean and the pass or fail. It does not invent the scorecard. A friendly sentence in the README is not the score.
+A scorecard that already has its result written down. Levi reads that saved user-first record and reports the scorecard's own mean and pass or fail. It does not invent the scorecard. A friendly sentence in the README is not the score.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -154,7 +154,7 @@ A real timer in the source is a pass. The timer can be FUSS or any other real st
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Menschly asks whether the program can tell a person to stop. A timer in the code counts. A paragraph in the README does not. FUSS is one timer you can drop in. It is optional. The full habit write-up is [SELFBELT](docs/SELFBELT.pdf).
+Checking for a working rest timer, the way you would check a car for a real belt. A timer in the code counts. A paragraph in the README does not. FUSS is one timer you can drop in. It is optional. The full habit write-up is [SELFBELT](docs/SELFBELT.pdf).
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -172,7 +172,7 @@ Tokely writes before, after, and savings from a sealed pair. Savings are `max(0,
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Tokely reads a before-and-after token count that was saved in the project. It subtracts and keeps the drop. Zero is a real answer. If nobody saved the pair, Tokely stays blank rather than guessing.
+A fuel log for tokens. Tokely reads a before-and-after count that was saved in the project and keeps the drop. Zero is a real answer. If nobody saved the pair, Tokely stays blank rather than guessing.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -190,7 +190,7 @@ Pressly writes a quality number or a size that a tool already printed. The numbe
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Pressly looks for a picture-quality number, a video-quality number, or a file size that some tool already wrote into a log. It does not run the compressor itself. If the log is not there, the cell stays blank.
+The tag on a packed case. Pressly reads a picture-quality number, a video-quality number, or a file size that some tool already wrote into a log. It does not run the compressor itself. If the log is not there, the cell stays blank.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -226,7 +226,7 @@ Chorely counts roster files and rows. The count is a measurement, not a pass, be
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Chorely counts the list of agents in the project and how many rows say what that agent does. The count is the result. Judgment stays with a human.
+A roster sheet for the agents in the project. Chorely counts the list and how many rows say what an agent does. The count is the result. Judgment stays with a human.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -244,7 +244,7 @@ Trajectly counts saved trace steps that are already in the tree. The count is a 
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Trajectly looks for a recording of an agent run that was saved in the project, and it counts the steps. A screenshot of someone else's scoreboard is not a recording. If the recording is not in the folder, the cell stays blank.
+A flight recorder left in the folder. Trajectly counts the saved steps of that recording. A screenshot of someone else's scoreboard is not a recording. If the recording is not in the folder, the cell stays blank.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -262,7 +262,7 @@ Warrantly reads a claim list. It passes only when every claim carries a source, 
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Warrantly checks that each claim in a saved list points at something behind it: a source, a recipe, or other evidence. If every claim has that backing, the cell passes. A claim with nothing behind it does not.
+The show-your-work rule. Warrantly checks that each claim in a saved list points at a source, a recipe, or other evidence. If every claim has that backing, the cell passes. If the list is missing, the cell stays blank. A claim with nothing behind it does not pass.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -280,7 +280,7 @@ Domly counts questions in a versioned bank, and matches answers when a second fi
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Domly looks for a list of questions shipped with the project. If a second file holds answers, it says how they line up. A test suite for a programming language is a different station. If the question list is missing, Domly stays blank.
+A question list shipped with the project. If a second file holds answers, Domly says how they line up. It does not turn that list into a subject-matter grade. A test suite for a programming language is a different station. If the question list is missing, Domly stays blank.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -298,7 +298,7 @@ Stackly runs last. If any other evaler measured or recorded a claim, Stackly wri
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Stackly is the cover sheet. It lists what was measured, what passed its own rule, and what was left blank. It refuses to turn that list into a single score.
+A full panel of results rather than one wellness number. Stackly lists what was measured, what passed its own rule, and what was left blank. It refuses to turn that list into a single score.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
