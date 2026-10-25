@@ -17,7 +17,7 @@ evalathan scan path\to\tree
 evalathan scan path\to\tree --json report.json
 ```
 
-## Overview and Core Philosophy
+## Overview & Core Philosophy
 
 EVALATHAN is an open-source (Apache-2.0), Python-based evaluation harness designed to audit and score software projects, codebases, compilers, and AI agent pipelines across their entire lifecycle.
 
