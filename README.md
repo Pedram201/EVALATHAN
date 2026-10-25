@@ -50,22 +50,22 @@ Sixteen evalers always appear. Hydra is the conductor and is not a seventeenth s
 
 | Evaler | What it runs |
 | :--- | :--- |
-| [Devly](GLOSSARY.md#devly) | Audits version control activity by tallying commit history, branches, and timeline cadence without making subjective assumptions about programmer skill. |
 | [Archly](GLOSSARY.md#archly) | Checks for explicit system architecture blueprints and design specs to verify that structural documentation exists alongside the source code. |
+| [Chorely](GLOSSARY.md#chorely) | Maps multi-agent AI ecosystems by inventorying agent roles, tool assignments, and explicit task boundaries. |
 | [Codely](GLOSSARY.md#codely) | Measures structural complexity by scanning decision forks (if-statements, loops, conditionals) across supported language files. |
-| [Refactorly](GLOSSARY.md#refactorly) | Detects codebase friction by identifying duplicated files, unused/dead code segments, and high-frequency churn hotspots. |
-| [Mixly](GLOSSARY.md#mixly) | Catalogs the exact breakdown of programming languages across the repository to reveal stack composition and maintenance footprints. |
-| [Runly](GLOSSARY.md#runly) | Measures runtime execution speed via quick local micro-benchmarks or by parsing pre-recorded benchmark logs. |
+| [Devly](GLOSSARY.md#devly) | Audits version control activity by tallying commit history, branches, and timeline cadence without making subjective assumptions about programmer skill. |
+| [Domly](GLOSSARY.md#domly) | Evaluates domain competency by matching domain-specific test questionnaires against reference golden-answer datasets. |
 | [Levi](GLOSSARY.md#levi) | Parses verified user-first scorecards to validate that the software meets empirical usability and accessibility criteria. |
 | [Menschly](GLOSSARY.md#menschly) | Inspects the codebase for real, programmable session limiters and rest timers (like FUSS) that promote developer and user well-being. |
-| [Tokely](GLOSSARY.md#tokely) | Audits LLM prompt and completion token efficiency by calculating measured consumption reductions between baseline and optimized runs. |
+| [Mixly](GLOSSARY.md#mixly) | Catalogs the exact breakdown of programming languages across the repository to reveal stack composition and maintenance footprints. |
 | [Pressly](GLOSSARY.md#pressly) | Audits media and data compression efficiency by extracting perceptual quality scores (SSIM/PSNR) and file size deltas from pre-run logs. |
-| [Triadly](GLOSSARY.md#triadly) | Validates engineering trade-off alignments by confirming that explicit priorities among cost, latency, and impact are formally documented. |
-| [Chorely](GLOSSARY.md#chorely) | Maps multi-agent AI ecosystems by inventorying agent roles, tool assignments, and explicit task boundaries. |
-| [Trajectly](GLOSSARY.md#trajectly) | Evaluates AI agent execution trajectories by parsing the step-by-step action logs, tool invocations, and completion paths of recorded runs. |
-| [Warrantly](GLOSSARY.md#warrantly) | Verifies factual grounding by validating that assertions and benchmark results cite inspectable source artifacts, reproducible recipes, or citations. |
-| [Domly](GLOSSARY.md#domly) | Evaluates domain competency by matching domain-specific test questionnaires against reference golden-answer datasets. |
+| [Refactorly](GLOSSARY.md#refactorly) | Detects codebase friction by identifying duplicated files, unused/dead code segments, and high-frequency churn hotspots. |
+| [Runly](GLOSSARY.md#runly) | Measures runtime execution speed via quick local micro-benchmarks or by parsing pre-recorded benchmark logs. |
 | [Stackly](GLOSSARY.md#stackly) | Synthesizes the full evaluation scan into a transparent status matrix showing passed, failed, and deferred checks without masking data behind an artificial composite number. |
+| [Tokely](GLOSSARY.md#tokely) | Audits LLM prompt and completion token efficiency by calculating measured consumption reductions between baseline and optimized runs. |
+| [Trajectly](GLOSSARY.md#trajectly) | Evaluates AI agent execution trajectories by parsing the step-by-step action logs, tool invocations, and completion paths of recorded runs. |
+| [Triadly](GLOSSARY.md#triadly) | Validates engineering trade-off alignments by confirming that explicit priorities among cost, latency, and impact are formally documented. |
+| [Warrantly](GLOSSARY.md#warrantly) | Verifies factual grounding by validating that assertions and benchmark results cite inspectable source artifacts, reproducible recipes, or citations. |
 
 Each name opens its glossary entry. An entry has three parts: what is counted, simplespeak, and techspeak. Public agent exams, and why they are not pasted in, are in the [glossary](GLOSSARY.md#agentic-exams-that-are-not-on-the-vector-yet).
 

@@ -2,7 +2,7 @@
 
 Evalathan is one evaluation harness. Hydra is the conductor. She governs and calls sixteen evaluators, short name evalers. Each entry below has the same three parts.
 
-<img src="assets/glossary/score-constitution-dot.png" alt="Score constitution." height="14"> What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.
+<img src="assets/glossary/score-constitution-dot.png" alt="Score Constitution." height="14"> What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.
 
 <img src="assets/glossary/simplespeak-dot.png" alt="Simplespeak." height="17"> The same job in ordinary words.
 
@@ -16,9 +16,11 @@ The life-cycle gate on each evaler (G0 through G12) is the station's place in th
 <a id="devly" name="devly"></a>
 <h2><img src="assets/glossary/devly.png" alt="Devly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Scans the repository's .git tree. Counts total historical commits, change intervals, and branch merges. Requires a valid local git history; repositories without git metadata return a Deferred status. This is an objective measurement of repository activity, not an assessment of developer ability or code quality.
+
+<p align="center"><img src="assets/glossary/cards/devly.jpg" alt="Devly counts commits, branches and rhythm, and does not judge the developer." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -34,9 +36,11 @@ The scan runs `git rev-list --count HEAD` when a `.git` folder is present and wr
 <a id="archly" name="archly"></a>
 <h2><img src="assets/glossary/archly.png" alt="Archly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Scans root and documentation directories for dedicated architectural manifests (e.g., ARCHITECTURE.md, /docs/architecture, C4 models, or ADR logs). Returns Pass if an architectural document exists, Fail if absent, and Deferred if docs are unparsable. It does not grade whether the architecture itself is optimal.
+
+<p align="center"><img src="assets/glossary/cards/archly.jpg" alt="The plans exist. That is all I require." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -54,9 +58,11 @@ The scan treats these as a write-up: a README, or markdown inside a folder named
 <a id="codely" name="codely"></a>
 <h2><img src="assets/glossary/codely.png" alt="Codely" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Parses supported Abstract Syntax Trees (ASTs) to compute cyclomatic and decision complexity points (counting if, elif, switch/match, for, while branches). Files in unsupported languages remain Blank/Deferred (which does not count as a pass or zero).
+
+<p align="center"><img src="assets/glossary/cards/codely.jpg" alt="Codely counts the forks and turns in the code." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -72,9 +78,11 @@ The Python pack walks the syntax tree and counts `if`, `for`, `while`, `except`,
 <a id="refactorly" name="refactorly"></a>
 <h2><img src="assets/glossary/refactorly.png" alt="Refactorly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Analyzes token-similarity and line duplication across files, cross-references internal function/class call graphs for orphaned/dead declarations, and tallies git change frequency per file. Flags files with high churn-to-complexity ratios as refactoring liabilities.
+
+<p align="center"><img src="assets/glossary/cards/refactorly.jpg" alt="Duplicates, a hotspot, and dead code." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -90,9 +98,11 @@ Identical-byte groups are SHA-256 matches among files between 1 and 200,000 byte
 <a id="mixly" name="mixly"></a>
 <h2><img src="assets/glossary/mixly.png" alt="Mixly" height="26"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Scans the project tree, aggregates Source Lines of Code (SLOC) by file extension, and calculates the exact percentage distribution across languages while ignoring third-party vendor directories (e.g., node_modules/, site-packages/). Reports pure data without prescribing stack changes.
+
+<p align="center"><img src="assets/glossary/cards/mixly.jpg" alt="Mixly shows exactly what languages the project is made of." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -108,9 +118,11 @@ Suffixes map to a language name: Python, JavaScript, TypeScript, C, C++, Rust, G
 <a id="runly" name="runly"></a>
 <h2><img src="assets/glossary/runly.png" alt="Runly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Measures wall-clock execution time for defined micro-benchmark routines or parses valid, pre-computed benchmark artifacts (e.g., pytest-benchmark JSON output). Defers execution if no executable targets or saved logs are present in the target directory.
+
+<p align="center"><img src="assets/glossary/cards/runly.jpg" alt="Runly times the code for real instead of trusting the brochure." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -126,9 +138,11 @@ Any tree with Python source gets a local microbench: 200,000 integer steps, repo
 <a id="levi" name="levi"></a>
 <h2><img src="assets/glossary/levi.png" alt="Levi" height="20"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Scans for structured usability audit records, heuristic evaluations, or accessibility scorecards (e.g., WCAG compliance logs, UX benchmark JSONs). Marketing sentences or vague promises of "great UX" in a README yield no score.
+
+<p align="center"><img src="assets/glossary/cards/levi.jpg" alt="Real usability evidence, not a great UX promise." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -144,9 +158,11 @@ The file must be JSON whose family or brand contains `4uval`, with a `gate` obje
 <a id="menschly" name="menschly"></a>
 <h2><img src="assets/glossary/menschly.png" alt="Menschly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Inspects client-facing components for actual code-level pacing controls, break intervals, or integrated session switches (such as the repository's fuss/ module). General wellness advice written in markdown does not count as an implementation.
+
+<p align="center"><img src="assets/glossary/cards/menschly.jpg" alt="Menschly wants real break-timer code, not wellness advice in a README." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -162,9 +178,11 @@ A Python function named `bind_fuss` or `bindfuss`, or an assignment to `session_
 <a id="tokely" name="tokely"></a>
 <h2><img src="assets/glossary/tokely.png" alt="Tokely" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Ingests structured LLM transaction logs containing baseline and optimized token usage pairs. Calculates the net token delta (Tokens before - Tokens after). If token records are not saved in the target path, the cell is marked Deferred rather than zero.
+
+<p align="center"><img src="assets/glossary/cards/tokely.jpg" alt="Tokely measures tokens before and after you optimized." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -180,9 +198,11 @@ JSON may use `before` and `after`, or `total_tokex` and `tokex_this_run`, includ
 <a id="pressly" name="pressly"></a>
 <h2><img src="assets/glossary/pressly.png" alt="Pressly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Extracts metrics from existing compression logs, specifically recording raw byte reduction alongside objective image/video quality scores (e.g., SSIM, PSNR, VMAF, or CRF values). Pressly does not execute the compression pipelines during the evaluation scan.
+
+<p align="center"><img src="assets/glossary/cards/pressly.jpg" alt="Pressly reads compression logs to confirm things got smaller without losing quality." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -198,9 +218,11 @@ Logs, text, JSON, and markdown are scanned for `ssim`, `vmaf`, or `bytes`/`size`
 <a id="triadly" name="triadly"></a>
 <h2><img src="assets/glossary/triadly.png" alt="Triadly" height="26"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Validates the presence of an explicit Engineering Priority Triad declaration that orders Cost, Speed/Latency, and Impact. Evaluates whether the team has officially declared which compromise comes first when system constraints collide.
+
+<p align="center"><img src="assets/glossary/cards/triadly.jpg" alt="Triadly checks which matters first: cost, speed or impact." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -220,9 +242,11 @@ The accepted compact orders are `mcmemi`, `mcmime`, `memcmi`, `memimc`, `mimcme`
 <a id="chorely" name="chorely"></a>
 <h2><img src="assets/glossary/chorely.png" alt="Chorely" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Parses agent orchestrator configurations (e.g., YAML/JSON agent rosters) to tally registered agent identities, designated system prompts, and tool authorizations. Identifies unassigned workers or overlapping, ambiguous responsibilities.
+
+<p align="center"><img src="assets/glossary/cards/chorely.jpg" alt="Mapping tasks. AI agents. Pass, fail, and deferred." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -238,9 +262,11 @@ Roster files are `agent_registry.md`, `agents.md`, `agentic_registry.md`, or any
 <a id="trajectly" name="trajectly"></a>
 <h2><img src="assets/glossary/trajectly.png" alt="Trajectly" height="26"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Analyzes sequential execution logs of agentic tasks. Counts total steps taken, tool call frequencies, backtracking loops, and final task resolution states. Disregards third-party leaderboard claims that lack inspectable raw trace files.
+
+<p align="center"><img src="assets/glossary/cards/trajectly.jpg" alt="Trajectly replays an agent's recorded journey, steps, loops and all." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -256,9 +282,11 @@ File names containing `trace`, `trajectory`, or `passk` are read. JSONL lines th
 <a id="warrantly" name="warrantly"></a>
 <h2><img src="assets/glossary/warrantly.png" alt="Warrantly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Cross-references listed performance claims and product assertions against linked source code, test seeds, external dataset URLs, or academic citations. Claims without verifiable backing artifacts fail the check.
+
+<p align="center"><img src="assets/glossary/cards/warrantly.jpg" alt="Warrantly: claims need evidence attached, and unbacked ones fail." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -274,9 +302,11 @@ JSON may be a list of objects with a `claim` key, or an object with `claims` or 
 <a id="domly" name="domly"></a>
 <h2><img src="assets/glossary/domly.png" alt="Domly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Evaluates project-supplied question-and-answer manifests. Computes the coverage ratio and exact match/similarity score against a validated golden dataset. Distinct from generic unit tests - focuses on domain/subject-matter accuracy.
+
+<p align="center"><img src="assets/glossary/cards/domly.jpg" alt="Domly quizzes the app on its subject and grades it against an answer key." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -292,9 +322,11 @@ JSON or YAML files whose names contain `question` or `answer` are read. Question
 <a id="stackly" name="stackly"></a>
 <h2><img src="assets/glossary/stackly.png" alt="Stackly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Aggregates findings from the other 15 evaluators into a clean report matrix. Explicitly prohibits flattening heterogeneous measurements into a misleading single 0–100 score. Preserves Pass, Fail, and Deferred states as independent data points.
+
+<p align="center"><img src="assets/glossary/cards/stackly.jpg" alt="Stackly shows the full status matrix, not one fake score." width="520"></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
@@ -312,7 +344,7 @@ A detailed medical blood panel instead of a single 1-to-10 wellness score. It te
 
 SELFBELT is the seatbelt write-up for people who sit with software, including AI tools, for a long time. The pages are on [SELFBELT](docs/SELFBELT.md). The practice named inside the document is SELFBELTING. The button name and the page name are SELFBELT.
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 SELFBELT is not one of the sixteen evalers and it does not add a seventeenth score. Menschly is the evaler that can see a timer. The PDF is the explanation a developer can read and, if they choose, ship beside their own software.
 
@@ -340,7 +372,7 @@ These are public exams for coding agents and for chat models. They matter in thi
 <a id="swe-bench" name="swe-bench"></a>
 <h2><img src="assets/glossary/swe-bench.png" alt="SWE-bench" height="20"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 No Evalathan score. The public board is someone else's number. The cell stays off the vector until a trace file from a run is in the tree.
 
@@ -358,7 +390,7 @@ The project site is [swebench.com](https://www.swebench.com/). A short public ac
 <a id="swe-bench-pro" name="swe-bench-pro"></a>
 <h2><img src="assets/glossary/swe-bench-pro.png" alt="SWE-bench Pro" height="20"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Same as SWE-bench. Not on the vector. The public slice is still a lab run.
 
@@ -376,7 +408,7 @@ The paper is [arXiv:2509.16941](https://arxiv.org/abs/2509.16941). Inclusion lat
 <a id="deepswe" name="deepswe"></a>
 <h2><img src="assets/glossary/deepswe.png" alt="DeepSWE" height="24"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Not on the vector. No trace, no cell.
 
@@ -394,7 +426,7 @@ The public page is [deepswe.datacurve.ai](https://deepswe.datacurve.ai/). Evalat
 <a id="aose" name="aose"></a>
 <h2><img src="assets/glossary/aose.png" alt="AOSE" height="19"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 AOSE is a field, not a score Evalathan prints.
 
@@ -412,7 +444,7 @@ The field overview is [Wikipedia: Agent-oriented software engineering](https://e
 <a id="wildbench" name="wildbench"></a>
 <h2><img src="assets/glossary/wildbench.png" alt="WildBench" height="20"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score constitution" height="17"></h3>
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 Not on the vector. WildBench grades chat replies. It is not a trace of a coding agent unless you saved one.
 
