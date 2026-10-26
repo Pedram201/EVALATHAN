@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evalathan glossary search</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Calibri, "Segoe UI", sans-serif;
+      color: #0b1220;
+      background: #f4f7fa;
+    }
+    main { width: min(720px, calc(100% - 32px)); margin: 32px auto; }
+    h1 { font-size: 22px; margin: 0 0 8px; }
+    p { margin: 0 0 16px; line-height: 1.45; }
+    label { display: block; font-size: 14px; margin-bottom: 6px; }
+    input {
+      width: 100%;
+      font: 18px Calibri, "Segoe UI", sans-serif;
+      padding: 10px 12px;
+      border: 1px solid #8aa;
+      background: #fff;
+    }
+    input:focus { outline: 2px solid #0b1220; }
+    ul {
+      list-style: none;
+      margin: 4px 0 0;
+      padding: 0;
+      background: #fff;
+      border: 1px solid #d5dde6;
+    }
+    li { padding: 8px 12px; cursor: pointer; display: flex; gap: 12px; align-items: baseline; }
+    li.is-active, li:hover { background: #e7eef6; }
+    .kind { margin-left: auto; color: #5a636e; font-size: 13px; }
+    mark { background: #ffe08a; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Glossary search</h1>
+    <p>Type a letter. Choose a word to open that entry in the glossary.</p>
+    <label for="glossary-search">Search glossary</label>
+    <input id="glossary-search" type="text" autocomplete="off" spellcheck="false" placeholder="Search glossary" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="glossary-search-list">
+    <ul id="glossary-search-list" role="listbox" hidden></ul>
+  </main>
+  <script type="application/json" id="glossary-index">[
+    {"id":"archly","label":"Archly","kind":"term"},
+    {"id":"chorely","label":"Chorely","kind":"term"},
+    {"id":"codely","label":"Codely","kind":"term"},
+    {"id":"devly","label":"Devly","kind":"term"},
+    {"id":"domly","label":"Domly","kind":"term"},
+    {"id":"levi","label":"Levi","kind":"term"},
+    {"id":"menschly","label":"Menschly","kind":"term","aliases":["fuss"]},
+    {"id":"mixly","label":"Mixly","kind":"term"},
+    {"id":"pressly","label":"Pressly","kind":"term"},
+    {"id":"refactorly","label":"Refactorly","kind":"term"},
+    {"id":"runly","label":"Runly","kind":"term"},
+    {"id":"stackly","label":"Stackly","kind":"term"},
+    {"id":"tokely","label":"Tokely","kind":"term"},
+    {"id":"trajectly","label":"Trajectly","kind":"term"},
+    {"id":"triadly","label":"Triadly","kind":"term"},
+    {"id":"warrantly","label":"Warrantly","kind":"term"},
+    {"id":"4uvals","label":"4Uvals","kind":"term","aliases":["4uvals"]},
+    {"id":"selfbelt","label":"SELFBELT","kind":"term","aliases":["selfbelt","self-safety","self-safetying"]},
+    {"id":"ed-slop","label":"Ed Slop","kind":"term","aliases":["ed slop","educational slop"]},
+    {"id":"agentic-exams-that-are-not-on-the-vector-yet","label":"Agentic exams that are not on the vector yet","kind":"section"},
+    {"id":"swe-bench","label":"SWE-bench","kind":"term"},
+    {"id":"swe-bench-pro","label":"SWE-bench Pro","kind":"term"},
+    {"id":"deepswe","label":"DeepSWE","kind":"term"},
+    {"id":"aose","label":"AOSE","kind":"term","aliases":["agent-oriented software engineering"]},
+    {"id":"wildbench","label":"WildBench","kind":"term"}
+  ]</script>
+  <script>
+    const items = JSON.parse(document.getElementById("glossary-index").textContent);
+    const input = document.getElementById("glossary-search");
+    const list = document.getElementById("glossary-search-list");
+    const page = "https://github.com/pedramgoshATgmail/EVALATHAN/blob/main/GLOSSARY.md#user-content-";
+    let current = [];
+    let active = -1;
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
+    }
+
+    function rank(q) {
+      const needle = q.trim().toLowerCase();
+      if (!needle) return [];
+      const scored = [];
+      for (const it of items) {
+        const lab = it.label.toLowerCase();
+        const aliases = (it.aliases || []).map((a) => a.toLowerCase());
+        let score = -1;
+        if (lab.startsWith(needle)) score = 300 - Math.min(lab.length, 80);
+        else if (aliases.some((a) => a === needle || a.startsWith(needle))) score = 260;
+        else if (lab.split(/[\s/.,-]+/).some((w) => w.startsWith(needle))) score = 220;
+        else if (lab.includes(needle)) score = 140 - lab.indexOf(needle);
+        else if (aliases.some((a) => a.includes(needle))) score = 120;
+        if (score >= 0) scored.push({ ...it, score });
+      }
+      scored.sort((a, b) => b.score - a.score || a.label.localeCompare(b.label));
+      return scored.slice(0, 10);
+    }
+
+    function hide() {
+      list.hidden = true;
+      list.innerHTML = "";
+      current = [];
+      active = -1;
+      input.setAttribute("aria-expanded", "false");
+    }
+
+    function render() {
+      current = rank(input.value);
+      active = current.length ? 0 : -1;
+      if (!current.length) {
+        hide();
+        return;
+      }
+      const needle = input.value.trim();
+      list.innerHTML = current.map((it, i) => {
+        const lab = it.label;
+        const at = lab.toLowerCase().indexOf(needle.toLowerCase());
+        const label = at < 0 ? escapeHtml(lab) : escapeHtml(lab.slice(0, at)) + "<mark>" + escapeHtml(lab.slice(at, at + needle.length)) + "</mark>" + escapeHtml(lab.slice(at + needle.length));
+        return '<li role="option" class="' + (i === 0 ? "is-active" : "") + '" data-idx="' + i + '"><span>' + label + '</span><span class="kind">' + escapeHtml(it.kind) + "</span></li>";
+      }).join("");
+      list.hidden = false;
+      input.setAttribute("aria-expanded", "true");
+    }
+
+    function openItem(it) {
+      if (!it) return;
+      location.href = page + it.id;
+    }
+
+    input.addEventListener("input", render);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (list.hidden) render();
+        else if (current.length) {
+          active = (active + 1) % current.length;
+          list.querySelectorAll("li").forEach((el, i) => el.classList.toggle("is-active", i === active));
+        }
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (current.length) {
+          active = (active - 1 + current.length) % current.length;
+          list.querySelectorAll("li").forEach((el, i) => el.classList.toggle("is-active", i === active));
+        }
+      } else if (e.key === "Enter" && current[active]) {
+        e.preventDefault();
+        openItem(current[active]);
+      } else if (e.key === "Escape") {
+        hide();
+      }
+    });
+    list.addEventListener("pointerdown", (e) => {
+      const opt = e.target.closest("li");
+      if (!opt) return;
+      e.preventDefault();
+      openItem(current[Number(opt.getAttribute("data-idx"))]);
+    });
+  </script>
+</body>
+</html>
