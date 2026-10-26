@@ -11,11 +11,23 @@ Evalathan grades a product across its life cycle. Evalathan is one evaluation ha
 
 **v0.2** is a local runner. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero.
 
-```bash
-[[CURRENTLY ONLY STANDIN]]
+On Windows, open Command Prompt and run these lines. They clone the program into its own folder, then open the window. `path\to\tree` in older notes was an example. It is not a folder on your PC, and these commands do not work from `C:\Users\admin`.
+
+```bat
+cd /d %USERPROFILE%\Desktop
+git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
+cd evalathan-program
+python -m venv .venv
+.venv\Scripts\activate.bat
+python -m pip install -U pip
 pip install -e ".[dev]"
-evalathan scan path\to\tree
-evalathan scan path\to\tree --json report.json
+evalathan
+```
+
+The window takes a GitHub link or a folder. The same grade from a command, once the window's folder is the one you cloned:
+
+```bat
+evalathan scan %USERPROFILE%\Desktop\evalathan-program --json report.json
 ```
 
 ## Overview & Core Philosophy

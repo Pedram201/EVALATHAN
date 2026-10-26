@@ -1,4 +1,4 @@
-"""evalathan scan <path>"""
+"""evalathan opens a window. evalathan scan <path> grades one folder."""
 
 from __future__ import annotations
 
@@ -11,9 +11,14 @@ from evalathan.hydra import conduct
 
 
 def main(argv: list[str] | None = None) -> int:
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if not argv or argv[0] == "desk":
+        from evalathan.desk import open_desk
+
+        return open_desk()
     parser = argparse.ArgumentParser(
         prog="evalathan",
-        description="Grade a software tree with Hydra. Blanks stay blank.",
+        description="Grade a software tree with Hydra. Blanks stay blank. Run evalathan with no arguments to open the window.",
     )
     parser.add_argument("command", choices=["scan"])
     parser.add_argument("path", type=Path)
