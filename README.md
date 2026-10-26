@@ -37,7 +37,7 @@ cd evalathan-program
 bash launch.sh
 ```
 
-If that Mac Python has no window library, and Homebrew is installed, `launch.sh` installs the library and then opens the window.
+If that Mac Python has no window library, install Python from https://www.python.org/downloads/macos/ and run `bash launch.sh` again. That installer includes the window library.
 
 `launch.bat` moves into `evalathan-program`, then runs:
 
