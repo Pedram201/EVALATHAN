@@ -263,3 +263,36 @@ def infer(
             score, cite = None, ""
         rows.append(Row(n, TITLES[n], score, cite))
     return rows
+
+
+# The five institutional standards that sit beside the 97. A name in a file is evidence.
+# Holding the certificate is a different claim, and this scan does not issue one.
+INSTITUTIONAL: tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...] = (
+    ("NASA TRL", ("technology readiness", "nasa trl", "trl "), ("/trl", "readiness-level")),
+    ("ISO/IEC 25010", ("25010", "product quality model"), ("25010",)),
+    ("ISO/IEC/IEEE 42030", ("42030", "architecture evaluation"), ("42030",)),
+    ("SEI ATAM", ("atam", "architecture tradeoff analysis"), ("atam",)),
+    ("AWS Well-Architected", ("well-architected", "well architected"), ("well-architected",)),
+)
+
+
+def infer_institutional(chunks: list[tuple[str, str, str]], rels: list[str]) -> list[Row]:
+    """Score the five standards from this tree. No evidence leaves the score empty."""
+    rows: list[Row] = []
+    blob = "\n".join(rels)
+    for n, (title, needles, paths) in enumerate(INSTITUTIONAL, start=1):
+        doc = _find(chunks, needles, "doc")
+        readme = _find(chunks, needles, "readme")
+        artifact = next((rel for rel in rels if any(part in rel for part in paths)), "")
+        if not artifact and any(part in blob for part in paths):
+            artifact = next(part for part in paths if part in blob)
+        if doc and artifact:
+            score, cite = 4, doc
+        elif doc or artifact:
+            score, cite = 3, doc or artifact
+        elif readme:
+            score, cite = 2, readme
+        else:
+            score, cite = None, ""
+        rows.append(Row(n, title, score, cite))
+    return rows

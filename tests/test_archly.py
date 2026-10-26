@@ -25,6 +25,9 @@ def test_readme_evidence_scores_only_the_principles_it_cites(tmp_path: Path) -> 
     assert "had citable evidence" in cell.summary
     assert "not counted as zero" in cell.summary
     assert "No gate pass is awarded." in cell.summary
+    assert "NASA TRL deferred" in cell.summary
+    assert "ISO/IEC 25010 deferred" in cell.summary
+    assert "not folded into that mean" in cell.summary
     assert "3.59" not in cell.summary
 
 
@@ -48,3 +51,17 @@ def test_a_document_and_a_test_can_score_without_copying_a_foreign_card(tmp_path
     assert by_n[15].score == 3
     assert by_n[1].score is None
     assert len(rows) == 97
+
+
+def test_a_named_standard_is_scored_and_the_other_four_stay_deferred(tmp_path: Path) -> None:
+    (tmp_path / "README.md").write_text(
+        "Requirements are listed.\nNASA TRL 4 is the recorded claim.\n",
+        encoding="utf-8",
+    )
+    cell = run(load(tmp_path))
+    assert "NASA TRL Emerging 2" in cell.summary
+    assert "ISO/IEC 25010 deferred" in cell.summary
+    assert "ISO/IEC/IEEE 42030 deferred" in cell.summary
+    assert "SEI ATAM deferred" in cell.summary
+    assert "AWS Well-Architected deferred" in cell.summary
+    assert cell.passed is None

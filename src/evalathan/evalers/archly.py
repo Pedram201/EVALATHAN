@@ -1,6 +1,6 @@
-"""G3. Score the 97 principles only where this tree cites evidence."""
+"""G3. Score the 97 principles, and the five institutional standards, only where this tree cites evidence."""
 
-from evalathan.evalers.principles97 import infer
+from evalathan.evalers.principles97 import infer, infer_institutional
 from evalathan.model import Cell, deferred, scored
 from evalathan.subject import README_NAMES, Subject
 
@@ -35,26 +35,52 @@ def _chunks(subject: Subject) -> list[tuple[str, str, str]]:
     return chunks
 
 
-def _summary(rows) -> str:
+_BAND = {2: "Emerging", 3: "Solid", 4: "Strong"}
+
+
+def _summary(rows, standards) -> str:
     scored_rows = [row for row in rows if row.score is not None]
     blank = 97 - len(scored_rows)
     if not scored_rows:
-        return (
+        principle = (
             "97-principle review ran. 0 of 97 had citable evidence, so there is no mean. "
             f"{blank} stay deferred. They are not counted as zero."
         )
-    mean = sum(row.score for row in scored_rows) / len(scored_rows)
-    emerging = sum(1 for row in scored_rows if row.score == 2)
-    solid = sum(1 for row in scored_rows if row.score == 3)
-    strong = sum(1 for row in scored_rows if row.score == 4)
-    return (
-        "97-principle review ran. "
-        f"{len(scored_rows)} of 97 had citable evidence. "
-        f"Mean {mean:.2f} out of 4 on those {len(scored_rows)} "
-        f"(Strong {strong}, Solid {solid}, Emerging {emerging}). "
-        f"{blank} had no evidence and stay deferred. They are not counted as zero. "
-        "No gate pass is awarded."
+    else:
+        mean = sum(row.score for row in scored_rows) / len(scored_rows)
+        emerging = sum(1 for row in scored_rows if row.score == 2)
+        solid = sum(1 for row in scored_rows if row.score == 3)
+        strong = sum(1 for row in scored_rows if row.score == 4)
+        principle = (
+            "97-principle review ran. "
+            f"{len(scored_rows)} of 97 had citable evidence. "
+            f"Mean {mean:.2f} out of 4 on those {len(scored_rows)} "
+            f"(Strong {strong}, Solid {solid}, Emerging {emerging}). "
+            f"{blank} had no evidence and stay deferred. They are not counted as zero. "
+            "No gate pass is awarded."
+        )
+    parts = []
+    for row in standards:
+        if row.score is None:
+            parts.append(f"{row.title} deferred")
+        else:
+            parts.append(f"{row.title} {_BAND[row.score]} {row.score}")
+    scored_standards = [row for row in standards if row.score is not None]
+    if scored_standards:
+        standard_mean = sum(row.score for row in scored_standards) / len(scored_standards)
+        standard_mean_text = (
+            f"Mean {standard_mean:.2f} out of 4 on {len(scored_standards)} of 5."
+        )
+    else:
+        standard_mean_text = "No mean, because none of the 5 had citable evidence."
+    standards_text = (
+        "Institutional five, kept beside the 97 and not folded into that mean. "
+        + "; ".join(parts)
+        + ". "
+        + standard_mean_text
+        + " A missing standard stays deferred and is not counted as zero."
     )
+    return principle + " " + standards_text
 
 
 def run(subject: Subject) -> Cell:
@@ -68,8 +94,9 @@ def run(subject: Subject) -> Cell:
             "No README, no document, and no source file. Nothing to review.",
         )
     rows = infer(chunks, rels, len(subject.by_lang), subject.commit_count)
+    standards = infer_institutional(chunks, rels)
     cites = []
-    for row in rows:
+    for row in list(rows) + list(standards):
         if row.cite and row.cite not in cites:
             cites.append(row.cite)
         if len(cites) == 8:
@@ -78,7 +105,7 @@ def run(subject: Subject) -> Cell:
         "Archly",
         GATE,
         QUESTION,
-        _summary(rows),
+        _summary(rows, standards),
         cites,
         passed=None,
     )
