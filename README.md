@@ -95,7 +95,7 @@ Pedram201/EVALATHAN is an ambitious, conceptually fresh evaluation harness. Whil
 
 ## SELFBELT
 
-[SELFBELT](docs/SELFBELT.md) is the seatbelt write-up for people who sit with software for a long time. The practice on that page is called SELFBELTING. The PDF itself is too large for GitHub to open in the browser, so the link shows the pages. It is not a seventeenth score. [Menschly](GLOSSARY.md#menschly) is the evaler that can see a timer. The analogy is the early car: lights and laws arrived before the belt. FUSS is a belt a developer can clip into a product.
+[SELFBELT](docs/SELFBELT.md) (aks Self-Safty or Self-Saftying) is the seatbelt write-up for people who sit with software for a long time. Self-check based ( motto: "It's up to YOU!"). The practice on that page is called SELFBELTING. The PDF itself is too large for GitHub to open in the browser, so the link shows the pages. It is not a seventeenth score. [Menschly](GLOSSARY.md#menschly) is the evaler that can see a timer. The analogy is the early car: lights and laws arrived before the belt. FUSS is a belt a developer can clip into a product.
 
 ## FUSS
 
