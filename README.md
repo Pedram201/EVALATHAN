@@ -13,7 +13,7 @@ Evalathan grades a product across its life cycle. Evalathan is one evaluation ha
 
 On Windows, clone the program, then run `launch.bat` inside that folder. On a Mac, run `bash launch.sh` in that same folder. Either one opens the window. If that folder already exists, skip the clone and run the launcher there. On Windows you can also double-click `launch.bat`.
 
-**Command Prompt:**
+**Command Prompt (Windows):**
 
 ```bat
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
@@ -21,7 +21,7 @@ cd evalathan-program
 launch.bat
 ```
 
-**PowerShell** (the prompt starts with `PS`). `cd /d` works only in Command Prompt, so this block uses `Set-Location`:
+**PowerShell (Windows)** (the prompt starts with `PS`). `cd /d` works only in Command Prompt, so this block uses `Set-Location`:
 
 ```powershell
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
