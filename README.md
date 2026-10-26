@@ -13,7 +13,7 @@ Evalathan grades a product across its life cycle. Evalathan is one evaluation ha
 
 On Windows, clone the program, then run `launch.bat` inside that folder. On a Mac, run `bash launch.sh` in that same folder. Either one opens the window. If that folder already exists, skip the clone and run the launcher there. On Windows you can also double-click `launch.bat`.
 
-Command Prompt:
+**Command Prompt:**
 
 ```bat
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
@@ -21,7 +21,7 @@ cd evalathan-program
 launch.bat
 ```
 
-PowerShell (the prompt starts with `PS`). `cd /d` works only in Command Prompt, so this block uses `Set-Location`:
+**PowerShell** (the prompt starts with `PS`). `cd /d` works only in Command Prompt, so this block uses `Set-Location`:
 
 ```powershell
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
@@ -29,23 +29,12 @@ Set-Location evalathan-program
 .\launch.bat
 ```
 
-Mac Terminal (the prompt ends with `%`). `launch.bat` is the Windows file. On a Mac the file is `launch.sh`.
+**Mac Terminal** (the prompt ends with `%`). `launch.bat` is the Windows file. On a Mac the file is `launch.sh`.
 
 ```bash
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
 cd evalathan-program
 bash launch.sh
-```
-
-`launch.sh` moves into `evalathan-program`, then runs:
-
-```bash
-cd evalathan-program
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -U pip
-python -m pip install -e .
-evalathan
 ```
 
 `launch.bat` moves into `evalathan-program`, then runs:
