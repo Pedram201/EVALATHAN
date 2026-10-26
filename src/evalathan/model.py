@@ -8,7 +8,8 @@ from typing import Any
 
 
 class Status(str, Enum):
-    SCORED = "scored"
+    # A count, time, or file fact was written. The printed word is measured. This is not a grade.
+    SCORED = "measured"
     PROVISIONAL = "provisional"
     DEFERRED = "deferred"
 

@@ -4,7 +4,7 @@ from evalathan.model import Cell, Status, deferred, scored
 from evalathan.subject import Subject
 
 GATE = "G6"
-QUESTION = "Does the whole system hold after the stations it depends on have scores?"
+QUESTION = "Does the whole system hold after the stations it depends on have measurements?"
 ACCEPTS_PRIOR = True
 
 

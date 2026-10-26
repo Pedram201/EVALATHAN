@@ -5,6 +5,16 @@ from evalathan.hydra import conduct
 from evalathan.model import Status
 
 
+def test_a_count_is_labeled_measured_not_scored(tmp_path: Path) -> None:
+    (tmp_path / "widget.py").write_text("def add(a, b):\n    return a + b\n", encoding="utf-8")
+    report = conduct(tmp_path)
+    rendered = report.render()
+    codely = next(line for line in rendered.splitlines() if line.startswith("Codely"))
+    assert "measured" in codely
+    assert "scored" not in codely
+    assert '"status": "scored"' not in json.dumps(report.to_dict())
+
+
 def test_empty_tree_lists_deferrals_and_does_not_pass(tmp_path: Path) -> None:
     report = conduct(tmp_path)
     assert len(report.cells) == 16
