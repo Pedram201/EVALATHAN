@@ -15,3 +15,5 @@ def test_search_index_matches_glossary_anchors() -> None:
     assert indexed == anchors
     assert "desk.py" not in html
     assert "launch.bat" not in html
+    assert "(glossary.html)" not in glossary
+    assert "https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/glossary.html" in glossary

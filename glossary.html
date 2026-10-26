@@ -158,12 +158,14 @@
         hide();
       }
     });
-    list.addEventListener("pointerdown", (e) => {
+    function pickFromEvent(e) {
       const opt = e.target.closest("li");
       if (!opt) return;
       e.preventDefault();
       openItem(current[Number(opt.getAttribute("data-idx"))]);
-    });
+    }
+    list.addEventListener("pointerdown", pickFromEvent);
+    list.addEventListener("click", pickFromEvent);
   </script>
 </body>
 </html>
