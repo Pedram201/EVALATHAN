@@ -72,14 +72,14 @@ def open_desk() -> int:
     from tkinter import filedialog, messagebox, scrolledtext, ttk
 
     root = tk.Tk()
-    root.title("Hydra")
+    root.title("HYDRA")
     root.geometry("760x560")
     root.minsize(640, 420)
 
     frame = ttk.Frame(root, padding=16)
     frame.pack(fill="both", expand=True)
 
-    ttk.Label(frame, text="Hydra", font=("Segoe UI", 18, "bold")).pack(anchor="w")
+    ttk.Label(frame, text="HYDRA", font=("Segoe UI", 18, "bold")).pack(anchor="w")
     ttk.Label(
         frame,
         text="Paste a GitHub link, or a folder on this PC. Then press Evaluate.",
@@ -135,7 +135,7 @@ def open_desk() -> int:
     def save() -> None:
         body = report.get("1.0", "end").strip()
         if not body:
-            messagebox.showinfo("Hydra", "There is no report to save yet.")
+            messagebox.showinfo("HYDRA", "There is no report to save yet.")
             return
         target = filedialog.asksaveasfilename(
             title="Save the report",
