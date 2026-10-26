@@ -12,6 +12,7 @@ Evalathan grades a product across its life cycle. Evalathan is one evaluation ha
 **v0.2** is a local runner. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero.
 
 ```bash
+[[CURRENTLY ONLY STANDIN]]
 pip install -e ".[dev]"
 evalathan scan path\to\tree
 evalathan scan path\to\tree --json report.json
