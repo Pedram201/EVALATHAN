@@ -147,6 +147,10 @@ Pedram201/EVALATHAN is an ambitious, conceptually fresh evaluation harness. Whil
 
 [FUSS](fuss/README.md) (For-User Session Switch) is a small panel. The logo sits in the center. It asks whether to time this sitting, then lets a person set minutes, reminder spacing, days, and an optional end date. Copy the `fuss` folder into a web page or a desktop web view. The same files run on Windows and Mac. FUSS is optional. A sentence that merely names it is not a timer.
 
+## [Ed Slop](GLOSSARY.md#user-content-ed-slop)
+
+'Ed Slop' is an AI nom de plume found at the bottom of some of the art and illustrations in Evalathan glossary. Ed Slop is short for Educational Slop (Generative AI visuals) and it doesn't represent any living or human artist, nor does it support trivial slop. Ed Slop's purpose is illustrative imagery and art to help readers better understand complex topics, all through ethical, nontrivial Generative AI creations.
+
 ## License
 
 Apache-2.0 for this runner and these rules. The name Evalathan is the product name. Hosted runs are not part of v0.2.

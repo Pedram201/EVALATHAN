@@ -421,6 +421,14 @@ Menschly links here. The drop-in timer is [fuss/README.md](fuss/README.md). Inst
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
 
+<a id="ed-slop" name="ed-slop"></a>
+<h2>Ed Slop</h2>
+
+'Ed Slop' is an AI nom de plume found at the bottom of some of the art and illustrations in Evalathan glossary. Ed Slop is short for Educational Slop (Generative AI visuals) and it doesn't represent any living or human artist, nor does it support trivial slop. Ed Slop's purpose is illustrative imagery and art to help readers better understand complex topics, all through ethical, nontrivial Generative AI creations.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
 <a id="agentic-exams-that-are-not-on-the-vector-yet" name="agentic-exams-that-are-not-on-the-vector-yet"></a>
 <h2><img src="assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26"></h2>
 
