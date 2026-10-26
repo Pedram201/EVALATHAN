@@ -11,22 +11,43 @@ Evalathan grades a product across its life cycle. Evalathan is one evaluation ha
 
 **v0.2** is a local runner. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero.
 
-On Windows, open Command Prompt and run these lines. They clone the program into its own folder, then open the window. `path\to\tree` in older notes was an example. It is not a folder on your PC, and these commands do not work from `C:\Users\admin`.
+On Windows, clone the program into any folder you choose, then run `launch.bat` inside that folder. It opens the window. The path below is the Desktop of whoever is logged in. It is not a path on one particular PC. If that folder already exists, skip the clone and run `launch.bat` there. You can also double-click `launch.bat`.
+
+Command Prompt:
 
 ```bat
 cd /d %USERPROFILE%\Desktop
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
 cd evalathan-program
+launch.bat
+```
+
+PowerShell (the prompt starts with `PS`). `cd /d` works only in Command Prompt, so this block uses `Set-Location`:
+
+```powershell
+Set-Location "$env:USERPROFILE\Desktop"
+git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
+Set-Location evalathan-program
+.\launch.bat
+```
+
+`launch.bat` moves into its own folder, then runs:
+
+```bat
 python -m venv .venv
 .venv\Scripts\activate.bat
 python -m pip install -U pip
-pip install -e ".[dev]"
+python -m pip install -e .
 evalathan
 ```
 
-The window takes a GitHub link or a folder. The same grade from a command, once the window's folder is the one you cloned:
+`python -m pip install -e .` installs the window command into that private environment. Python 3.10 or newer is required. Git for Windows is required to clone this program, and again when the window evaluates a GitHub link. A folder already on the PC can be evaluated without cloning it.
+
+The window takes a GitHub link or a folder. The same grade from Command Prompt, after `launch.bat` has been run once in the clone:
 
 ```bat
+cd /d %USERPROFILE%\Desktop\evalathan-program
+.venv\Scripts\activate.bat
 evalathan scan %USERPROFILE%\Desktop\evalathan-program --json report.json
 ```
 
