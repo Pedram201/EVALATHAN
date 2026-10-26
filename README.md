@@ -50,26 +50,26 @@ Sixteen evalers always appear. Hydra is the conductor and is not a seventeenth s
 
 | Evaler | What it runs |
 | :--- | :--- |
-| [Archly](GLOSSARY.md#archly) | Checks for explicit system architecture blueprints and design specs to verify that structural documentation exists alongside the source code. |
-| [Chorely](GLOSSARY.md#chorely) | Maps multi-agent AI ecosystems by inventorying agent roles, tool assignments, and explicit task boundaries. |
-| [Codely](GLOSSARY.md#codely) | Measures structural complexity by scanning decision forks (if-statements, loops, conditionals) across supported language files. |
-| [Devly](GLOSSARY.md#devly) | Audits version control activity by tallying commit history, branches, and timeline cadence without making subjective assumptions about programmer skill. |
-| [Domly](GLOSSARY.md#domly) | Evaluates domain competency by matching domain-specific test questionnaires against reference golden-answer datasets. |
-| [Levi](GLOSSARY.md#levi) | Parses verified user-first scorecards to validate that the software meets empirical usability and accessibility criteria. |
-| [Menschly](GLOSSARY.md#menschly) | Inspects the codebase for real, programmable session limiters and rest timers (like FUSS) that promote developer and user well-being. |
-| [Mixly](GLOSSARY.md#mixly) | Catalogs the exact breakdown of programming languages across the repository to reveal stack composition and maintenance footprints. |
-| [Pressly](GLOSSARY.md#pressly) | Audits media and data compression efficiency by extracting perceptual quality scores (SSIM/PSNR) and file size deltas from pre-run logs. |
-| [Refactorly](GLOSSARY.md#refactorly) | Detects codebase friction by identifying duplicated files, unused/dead code segments, and high-frequency churn hotspots. |
-| [Runly](GLOSSARY.md#runly) | Measures runtime execution speed via quick local micro-benchmarks or by parsing pre-recorded benchmark logs. |
-| [Stackly](GLOSSARY.md#stackly) | Synthesizes the full evaluation scan into a transparent status matrix showing passed, failed, and deferred checks without masking data behind an artificial composite number. |
-| [Tokely](GLOSSARY.md#tokely) | Audits LLM prompt and completion token efficiency by calculating measured consumption reductions between baseline and optimized runs. |
-| [Trajectly](GLOSSARY.md#trajectly) | Evaluates AI agent execution trajectories by parsing the step-by-step action logs, tool invocations, and completion paths of recorded runs. |
-| [Triadly](GLOSSARY.md#triadly) | Validates engineering trade-off alignments by confirming that explicit priorities among cost, latency, and impact are formally documented. |
-| [Warrantly](GLOSSARY.md#warrantly) | Verifies factual grounding by validating that assertions and benchmark results cite inspectable source artifacts, reproducible recipes, or citations. |
+| [Archly](GLOSSARY.md#user-content-archly) | Checks for explicit system architecture blueprints and design specs to verify that structural documentation exists alongside the source code. |
+| [Chorely](GLOSSARY.md#user-content-chorely) | Maps multi-agent AI ecosystems by inventorying agent roles, tool assignments, and explicit task boundaries. |
+| [Codely](GLOSSARY.md#user-content-codely) | Measures structural complexity by scanning decision forks (if-statements, loops, conditionals) across supported language files. |
+| [Devly](GLOSSARY.md#user-content-devly) | Audits version control activity by tallying commit history, branches, and timeline cadence without making subjective assumptions about programmer skill. |
+| [Domly](GLOSSARY.md#user-content-domly) | Evaluates domain competency by matching domain-specific test questionnaires against reference golden-answer datasets. |
+| [Levi](GLOSSARY.md#user-content-levi) | Parses verified user-first scorecards to validate that the software meets empirical usability and accessibility criteria. |
+| [Menschly](GLOSSARY.md#user-content-menschly) | Inspects the codebase for real, programmable session limiters and rest timers (like FUSS) that promote developer and user well-being. |
+| [Mixly](GLOSSARY.md#user-content-mixly) | Catalogs the exact breakdown of programming languages across the repository to reveal stack composition and maintenance footprints. |
+| [Pressly](GLOSSARY.md#user-content-pressly) | Audits media and data compression efficiency by extracting perceptual quality scores (SSIM/PSNR) and file size deltas from pre-run logs. |
+| [Refactorly](GLOSSARY.md#user-content-refactorly) | Detects codebase friction by identifying duplicated files, unused/dead code segments, and high-frequency churn hotspots. |
+| [Runly](GLOSSARY.md#user-content-runly) | Measures runtime execution speed via quick local micro-benchmarks or by parsing pre-recorded benchmark logs. |
+| [Stackly](GLOSSARY.md#user-content-stackly) | Synthesizes the full evaluation scan into a transparent status matrix showing passed, failed, and deferred checks without masking data behind an artificial composite number. |
+| [Tokely](GLOSSARY.md#user-content-tokely) | Audits LLM prompt and completion token efficiency by calculating measured consumption reductions between baseline and optimized runs. |
+| [Trajectly](GLOSSARY.md#user-content-trajectly) | Evaluates AI agent execution trajectories by parsing the step-by-step action logs, tool invocations, and completion paths of recorded runs. |
+| [Triadly](GLOSSARY.md#user-content-triadly) | Validates engineering trade-off alignments by confirming that explicit priorities among cost, latency, and impact are formally documented. |
+| [Warrantly](GLOSSARY.md#user-content-warrantly) | Verifies factual grounding by validating that assertions and benchmark results cite inspectable source artifacts, reproducible recipes, or citations. |
 
-Each name opens its glossary entry. An entry has three parts: what is counted, simplespeak, and techspeak. Public agent exams, and why they are not pasted in, are in the [glossary](GLOSSARY.md#agentic-exams-that-are-not-on-the-vector-yet).
+Each name opens its glossary entry. An entry has three parts: what is counted, simplespeak, and techspeak. Public agent exams, and why they are not pasted in, are in the [glossary](GLOSSARY.md#user-content-agentic-exams-that-are-not-on-the-vector-yet).
 
-Levi reads a [4Uvals](GLOSSARY.md#4uvals) card when one is in the tree. 4Uvals (Ultimate User-User-User evaluations) is a 10-check list asking whether a session put the person first. The published card, v1.2, is a pass: 9 of 10 checks Solid or Strong, mean 3.4 out of 4.
+Levi reads a [4Uvals](GLOSSARY.md#user-content-4uvals) card when one is in the tree. 4Uvals (Ultimate User-User-User evaluations) is a 10-check list asking whether a session put the person first. The published card, v1.2, is a pass: 9 of 10 checks Solid or Strong, mean 3.4 out of 4.
 
 ## Key Strengths
 
@@ -97,7 +97,7 @@ Pedram201/EVALATHAN is an ambitious, conceptually fresh evaluation harness. Whil
 
 ## SELFBELT
 
-[SELFBELT](docs/SELFBELT.md) (aks Self-Safety or Self-Safetying) is the seatbelt write-up for people who sit with software for a long time. Self-check based ( motto: "It's up to YOU!"). The practice on that page is called SELFBELTING. The PDF itself is too large for GitHub to open in the browser, so the link shows the pages. It is not a seventeenth score. [Menschly](GLOSSARY.md#menschly) is the evaler that can see a timer. The analogy is the early car: lights and laws arrived before the belt. FUSS is a belt a developer can clip into a product.
+[SELFBELT](docs/SELFBELT.md) (aks Self-Safety or Self-Safetying) is the seatbelt write-up for people who sit with software for a long time. Self-check based ( motto: "It's up to YOU!"). The practice on that page is called SELFBELTING. The PDF itself is too large for GitHub to open in the browser, so the link shows the pages. It is not a seventeenth score. [Menschly](GLOSSARY.md#user-content-menschly) is the evaler that can see a timer. The analogy is the early car: lights and laws arrived before the belt. FUSS is a belt a developer can clip into a product.
 
 ## FUSS
 
