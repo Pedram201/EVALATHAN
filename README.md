@@ -11,7 +11,7 @@ Evalathan grades a product across its life cycle. Evalathan is one evaluation ha
 
 **v0.2** is a local runner. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero.
 
-On Windows, clone the program, then run `launch.bat` inside that folder. It opens the window. If that folder already exists, skip the clone and run `launch.bat` there. You can also double-click `launch.bat`.
+On Windows, clone the program, then run `launch.bat` inside that folder. On a Mac, run `bash launch.sh` in that same folder. Either one opens the window. If that folder already exists, skip the clone and run the launcher there. On Windows you can also double-click `launch.bat`.
 
 Command Prompt:
 
@@ -29,6 +29,25 @@ Set-Location evalathan-program
 .\launch.bat
 ```
 
+Mac Terminal (the prompt ends with `%`). `launch.bat` is the Windows file. On a Mac the file is `launch.sh`.
+
+```bash
+git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
+cd evalathan-program
+bash launch.sh
+```
+
+`launch.sh` moves into `evalathan-program`, then runs:
+
+```bash
+cd evalathan-program
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -e .
+evalathan
+```
+
 `launch.bat` moves into `evalathan-program`, then runs:
 
 ```bat
@@ -40,7 +59,7 @@ python -m pip install -e .
 evalathan
 ```
 
-`cd evalathan-program` is required before `python -m pip install -e .`. The dot means the current folder. That folder must be the clone, because `pyproject.toml` is there. From a home folder, the dot is that home folder and pip stops. Python 3.10 or newer is required. Git for Windows is required to clone this program, and again when the window evaluates a GitHub link. A folder already on the PC can be evaluated without cloning it.
+`cd evalathan-program` is required before `python -m pip install -e .`. The dot means the current folder. That folder must be the clone, because `pyproject.toml` is there. From a home folder, the dot is that home folder and pip stops. Python 3.10 or newer is required. Git is required to clone this program, and again when the window evaluates a GitHub link. A folder already on the PC can be evaluated without cloning it.
 
 The window takes a GitHub link or a folder. The same grade from Command Prompt, after `launch.bat` has been run once in the clone:
 
