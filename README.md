@@ -11,9 +11,44 @@ Evalathan grades a product across its life cycle. Evalathan is one evaluation ha
 
 **v0.2** is a local runner. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero.
 
-Clone this repository. On Windows, double-click `launch.bat` in the cloned folder. It installs Evalathan in that folder and opens the window. Paste a GitHub link or choose a folder, then press Evaluate.
+On Windows, clone the program, then run `launch.bat` inside that folder. It opens the window. If that folder already exists, skip the clone and run `launch.bat` there. You can also double-click `launch.bat`.
 
-Python 3.10 or newer is required. Git is required when the window downloads a GitHub repository.
+Command Prompt:
+
+```bat
+git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
+cd evalathan-program
+launch.bat
+```
+
+PowerShell (the prompt starts with `PS`). `cd /d` works only in Command Prompt, so this block uses `Set-Location`:
+
+```powershell
+git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
+Set-Location evalathan-program
+.\launch.bat
+```
+
+`launch.bat` moves into its own folder, then runs:
+
+```bat
+python -m venv .venv
+.venv\Scripts\activate.bat
+python -m pip install -U pip
+python -m pip install -e .
+evalathan
+```
+
+`python -m pip install -e .` installs the window command into that private environment. Python 3.10 or newer is required. Git for Windows is required to clone this program, and again when the window evaluates a GitHub link. A folder already on the PC can be evaluated without cloning it.
+
+The window takes a GitHub link or a folder. The same grade from Command Prompt, after `launch.bat` has been run once in the clone:
+
+```bat
+cd evalathan-program
+.venv\Scripts\activate.bat
+evalathan scan . --json report.json
+```
+
 
 ## Overview & Core Philosophy
 
