@@ -69,6 +69,8 @@ Sixteen evalers always appear. Hydra is the conductor and is not a seventeenth s
 
 Each name opens its glossary entry. An entry has three parts: what is counted, simplespeak, and techspeak. Public agent exams, and why they are not pasted in, are in the [glossary](GLOSSARY.md#agentic-exams-that-are-not-on-the-vector-yet).
 
+Levi reads a [4Uvals](GLOSSARY.md#4uvals) card when one is in the tree. 4Uvals (Ultimate User-User-User evaluations) is a 10-check list asking whether a session put the person first. The published card, v1.2, is a pass: 9 of 10 checks Solid or Strong, mean 3.4 out of 4.
+
 ## Key Strengths
 
 Holistic Lifecycle View: Most evaluation tools are siloed into either static analysis (e.g., SonarQube, flake8), benchmark profiling (e.g., pytest-benchmark), or LLM observability (e.g., Promptfoo, DeepEval). EVALATHAN attempts to unify traditional software metrics, AI agent evaluations, and human-centric design under one roof.

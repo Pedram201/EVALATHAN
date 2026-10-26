@@ -130,7 +130,7 @@ Customer reviews backed by verifiable receipts. Instead of taking the developer'
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
-The file must be JSON whose family or brand contains `4uval`, with a `gate` object. The summary prints `gate.mean` and `gate.result`. 4Uvals (Ultimate User-User-User evaluations) is the ten-check user-first scorecard. [ISO/IEC 42001](https://www.iso.org/standard/81230.html) is an AI management system for a firm. Levi names it as a wrapper beside the sitting. It is not the grade.
+The file must be JSON whose family or brand contains `4uval`, with a `gate` object. The summary prints `gate.mean` and `gate.result`. [4Uvals](#4uvals) (Ultimate User-User-User evaluations) is the ten-check user-first scorecard, defined at that entry. [ISO/IEC 42001](https://www.iso.org/standard/81230.html) is an AI management system for a firm. Levi names it as a wrapper beside the sitting. It is not the grade. Levi prints the mean and the gate that are already on the card. It does not rescore the ten checks.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
@@ -335,6 +335,66 @@ The "show your work" math test rule. If your software claims to be 10x faster or
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 JSON may be a list of objects with a `claim` key, or an object with `claims` or `warrants`. Backing is any of `source`, `recipe`, or `evidence`. The pass flag is true only when the backed count equals the claim count and the list is not empty.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="4uvals" name="4uvals"></a>
+<h2>4Uvals</h2>
+
+4Uvals (Ultimate User-User-User evaluations) is a 10-check list. The question is whether a session with an AI actually put the person using it first. Levi reads the card when a copy is in the tree. 4Uvals is not a seventeenth evaler.
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+The published card is 4Uvals v1.2. The people who ran the sitting scored it themselves. The gate is PASS. Nine of the ten checks are Solid or Strong. The mean is 3.4 out of 4. Scores use a 1–4 scale: 4 Strong, 3 Solid, 2 Emerging, 1 Weak. U5 is Emerging because it was declared and not measured. That cell stays Emerging. It is not written down as a fail, and it is not written down as zero.
+
+A freeze, the choice to pause the session, is optional on purpose. An adult can leave it off. It is not a lock built for a child.
+
+Sixteen published usability and health standards are housed under the card as comparisons. They are not added into the ten checks, and they are not averaged into the 3.4.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+4Uvals stands for Ultimate User-User-User evaluations. It asks, in ten plain questions, whether this sitting put the user first. The published answer is a pass: 9 of 10 checks are Solid or Strong, and the average is 3.4 out of 4. One question, about retelling the work, was named and not measured. NASA-TLX (NASA Task Load Index, a short questionnaire for how hard a task felt) on this card is one educated user scoring 9 out of 100, inside the low band of 0–24. That is one person's score. It is not a NASA certificate. The card is not an ISO, IEEE, IEC, W3C, FDA, or NASA certificate.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Stamp on the card: 4Uvals v1.2. Ten checks, U1–U10. First-order means the operator scored the sitting. The pass rule used on this card is a mean of at least 3.2 and at least 8 of 10 checks Solid or Strong. This card clears both: mean 3.4, and 9 of 10. [ISO/IEC 42001](https://www.iso.org/standard/81230.html) is named beside the sitting as the firm-level wrapper (U4). It is not the sitting grade.
+
+| ID | Check | Score | Label |
+| :--- | :--- | ---: | :--- |
+| U1 | Rubric stem | 3 | Solid |
+| U2 | Loyalty language | 3 | Solid |
+| U3 | Cite the legal gap | 4 | Strong |
+| U4 | Outer wrapper, ISO/IEC 42001 | 3 | Solid |
+| U5 | Retell, map then measure then manage | 2 | Emerging |
+| U6 | FUSS (For-User Session Switch) instrument | 3 | Solid |
+| U7 | Preface discipline | 4 | Strong |
+| U8 | Honor the person, and keep freeze optional | 4 | Strong |
+| U9 | Well-being axis | 4 | Strong |
+| U10 | Footnote only, not medical | 4 | Strong |
+
+The housed sixteen are analogs. An analog is a comparison with a published standard. It is not folded into the mean.
+
+| # | Instrument | Analog |
+| :--- | :--- | :--- |
+| 1 | [ISO 9241-210:2019](https://www.iso.org/standard/77520.html) | 2 Emerging |
+| 2 | [ISO 9241-110](https://www.iso.org/standard/75258.html) | 3 Solid |
+| 3 | ISO 9241-300 series | 2 Emerging |
+| 4 | ISO 9241-400 series | 1 Weak |
+| 5 | ISO 10075-1 | 3 Solid |
+| 6 | ISO 10075-2 | 2 Emerging |
+| 7 | ISO 10075-3 | 1 Weak |
+| 8 | [ISO/IEC 25019:2023](https://www.iso.org/standard/78177.html), quality in use | 3 Solid |
+| 9 | [IEEE 7010-2020](https://standards.ieee.org/ieee/7010/7718/) | 3 Solid |
+| 10 | [WCAG 2.1](https://www.w3.org/TR/WCAG21/) (Web Content Accessibility Guidelines) | 2 Emerging |
+| 11 | [WCAG 2.2](https://www.w3.org/TR/WCAG22/) | 2 Emerging |
+| 12 | ISO/IEC 40500, the ISO adoption of WCAG | 2 Emerging |
+| 13 | IEC 62366-1 | 2 Emerging |
+| 14 | [NASA-TLX](https://ergosphere.com.au/tools-nasa-tlx.html), first-order, one person, 9/100 | 3 Solid |
+| 15 | SUS (System Usability Scale) and [UEQ+](https://www.ueq-online.org/) (User Experience Questionnaire Plus) | 2 Emerging |
+| 16 | CVS-Q (Computer Vision Syndrome Questionnaire) | 1 Weak |
+
+H14 on the card is the NASA-TLX row: one educated user, overall 9 out of 100, low band 0–24. SUS and UEQ+ are named. Their item scores are not on the card, so none are printed here. CVS-Q was not administered. None of these sixteen is a certificate.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
