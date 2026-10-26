@@ -19,7 +19,7 @@ evalathan scan path\to\tree --json report.json
 
 ## Overview & Core Philosophy
 
-EVALATHAN is an open-source (Apache-2.0), Python-based evaluation harness designed to audit and score software projects, codebases, compilers, and AI agent pipelines across their entire lifecycle.
+EVALATHAN is an open-source (Apache-2.0), Python-based (to be refractored for v1 release) evaluation harness designed to audit and score software projects, codebases, compilers, and AI agent pipelines across their entire lifecycle.
 
 The tool positions itself as a local runner (v0.2) aimed at Product-led growth (PLG) and codebase verification. Rather than generating a single aggregated or opaque score, EVALATHAN uses a conductor engine named Hydra to orchestrate 16 distinct evaluators ("evalers") and output a transparent status matrix.
 
