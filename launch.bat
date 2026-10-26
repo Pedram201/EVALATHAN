@@ -33,7 +33,7 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-python -m pip install -e .
+python -m pip install -e "%~dp0."
 if errorlevel 1 (
   echo Evalathan could not be installed.
   pause

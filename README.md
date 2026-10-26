@@ -29,9 +29,10 @@ Set-Location evalathan-program
 .\launch.bat
 ```
 
-`launch.bat` moves into its own folder, then runs:
+`launch.bat` moves into `evalathan-program`, then runs:
 
 ```bat
+cd evalathan-program
 python -m venv .venv
 .venv\Scripts\activate.bat
 python -m pip install -U pip
@@ -39,7 +40,7 @@ python -m pip install -e .
 evalathan
 ```
 
-`python -m pip install -e .` installs the window command into that private environment. Python 3.10 or newer is required. Git for Windows is required to clone this program, and again when the window evaluates a GitHub link. A folder already on the PC can be evaluated without cloning it.
+`cd evalathan-program` is required before `python -m pip install -e .`. The dot means the current folder. That folder must be the clone, because `pyproject.toml` is there. From a home folder, the dot is that home folder and pip stops. Python 3.10 or newer is required. Git for Windows is required to clone this program, and again when the window evaluates a GitHub link. A folder already on the PC can be evaluated without cloning it.
 
 The window takes a GitHub link or a folder. The same grade from Command Prompt, after `launch.bat` has been run once in the clone:
 
