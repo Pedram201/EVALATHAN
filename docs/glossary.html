@@ -80,284 +80,284 @@
   </header>
   <article class="sheet" id="glossary-body">
 <p>Evalathan is one evaluation harness. Hydra is the conductor. She governs and calls sixteen evaluators, short name evalers. Each entry below has the same three parts.</p>
-<p><img src="assets/glossary/score-constitution-dot.png" alt="Score Constitution." height="14"> What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.</p>
-<p><img src="assets/glossary/simplespeak-dot.png" alt="Simplespeak." height="17"> Explanations in simple terms.</p>
-<p><img src="assets/glossary/techspeak-dot.png" alt="Techspeak." height="17"> More technically detailed explanations.</p>
+<p><img src="../assets/glossary/score-constitution-dot.png" alt="Score Constitution." height="14"> What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.</p>
+<p><img src="../assets/glossary/simplespeak-dot.png" alt="Simplespeak." height="17"> Explanations in simple terms.</p>
+<p><img src="../assets/glossary/techspeak-dot.png" alt="Techspeak." height="17"> More technically detailed explanations.</p>
 <p>The life-cycle gate on each evaler (G0 through G12) is the station's place in the life of a product. There are not sixteen gates. There are sixteen evalers.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="archly" name="archly"></a></p>
-<h2><img src="assets/glossary/archly.png" alt="Archly" height="25"></h2>
+<h2><img src="../assets/glossary/archly.png" alt="Archly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Scans root and documentation directories for dedicated architectural manifests (e.g., ARCHITECTURE.md, /docs/architecture, C4 models, or ADR logs). Returns Pass if an architectural document exists, Fail if absent, and Deferred if docs are unparsable. It does not grade whether the architecture itself is optimal.</p>
-<p align="center"><img src="assets/glossary/cards/archly-revised.jpg" alt="The plans exist. That is all I require." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/archly-revised.jpg" alt="The plans exist. That is all I require." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>Before you buy a house, you check if blueprints exist. Archly checks if the software comes with a clear structural plan or if it was built blindly on the fly.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The public contents of the 97 principles are listed at <a href="https://yoshi389111.github.io/kinokobooks/soft_en/index.html">97 Things Every Software Architect Should Know</a>. MoE means that panel of expert authors, more than 50 of them. Their published lessons are the checklist. They do not log in and score the repository.</p>
 <p>The scan reads the README and markdown under <code>docs</code>, <code>doc</code>, <code>architecture</code>, or <code>adr</code>. A principle is scored only when a file in this tree is evidence for it: 4 Strong when a document and a matching artifact both cite it, 3 Solid when one of those is present, 2 Emerging when only the README mentions it. A principle with no evidence stays deferred and is not entered as zero. The mean is the mean of the scored principles. It is not a pass. The international description of an architecture review is <a href="https://www.iso.org/standard/73436.html">ISO/IEC/IEEE 42030</a>. Archly does not issue that certificate. The same evidence rule scores five institutional standards beside the 97, and their mean is not folded into the 97 mean: <a href="https://www.nasa.gov/directorates/somd/space-communications-navigation-program/technology-readiness-level/">NASA Technology Readiness Level</a>, <a href="https://www.iso.org/standard/78176.html">ISO/IEC 25010</a>, ISO/IEC/IEEE 42030, <a href="https://en.wikipedia.org/wiki/Architecture_tradeoff_analysis_method">SEI ATAM</a>, and <a href="https://aws.amazon.com/architecture/well-architected/">AWS Well-Architected</a>.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="chorely" name="chorely"></a></p>
-<h2><img src="assets/glossary/chorely.png" alt="Chorely" height="25"></h2>
+<h2><img src="../assets/glossary/chorely.png" alt="Chorely" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Parses agent orchestrator configurations (e.g., YAML/JSON agent rosters) to tally registered agent identities, designated system prompts, and tool authorizations. Identifies unassigned workers or overlapping, ambiguous responsibilities.</p>
-<p align="center"><img src="assets/glossary/cards/chorely-revised.jpg" alt="Mapping tasks. AI agents. Pass, fail, and deferred." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/chorely-revised.jpg" alt="Mapping tasks. AI agents. Pass, fail, and deferred." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>The organizational chart for an AI bot team. It ensures every digital worker has a specific job title, defined tools, and clear duties so they don't trip over each other while working.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>Roster files are <code>agent_registry.md</code>, <code>agents.md</code>, <code>agentic_registry.md</code>, or any markdown file inside a folder named <code>agents</code>. Rows that start with a bold table cell are counted. SASPIANT (Specific and Specialized, Pain-In-the-Ass, Non-critical Tasks) is the question the roster is for: is this a narrow chore, or a person-shaped decision. Chorely counts. It does not answer that question for you.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="codely" name="codely"></a></p>
-<h2><img src="assets/glossary/codely.png" alt="Codely" height="25"></h2>
+<h2><img src="../assets/glossary/codely.png" alt="Codely" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Parses supported Abstract Syntax Trees (ASTs) to compute cyclomatic and decision complexity points (counting if, elif, switch/match, for, while branches). Files in unsupported languages remain Blank/Deferred (which does not count as a pass or zero).</p>
-<p align="center"><img src="assets/glossary/cards/codely-revised.jpg" alt="Codely counts the forks and turns in the code." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/codely-revised.jpg" alt="Codely counts the forks and turns in the code." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>Like counting how many forks, roundabouts, and blind turns are on a road. Fewer turns make driving smooth; too many forks mean drivers (and programmers) are prone to getting lost or crashing.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The Python pack walks the syntax tree and counts <code>if</code>, <code>for</code>, <code>while</code>, <code>except</code>, <code>with</code>, and <code>assert</code> nodes inside functions. Named packs that are not executed in this version: JavaScript, TypeScript, C, C++, Rust, Go, and Java. An unknown suffix is a blank whose summary says it is not a pass. pytest, coverage, radon, and ISO/IEC 5055 are not launched. <a href="https://www.iso.org/standard/80623.html">ISO/IEC 5055</a> is automated source-code quality measures. A radon run is not a 5055 result, and this scanner does not produce one.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="devly" name="devly"></a></p>
-<h2><img src="assets/glossary/devly.png" alt="Devly" height="25"></h2>
+<h2><img src="../assets/glossary/devly.png" alt="Devly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Scans the repository's .git tree. Counts total historical commits, change intervals, and branch merges. Requires a valid local git history; repositories without git metadata return a Deferred status. This is an objective measurement of repository activity, not an assessment of developer ability or code quality.</p>
-<p align="center"><img src="assets/glossary/cards/devly-revised.jpg" alt="Devly counts commits, branches and rhythm, and does not judge the developer." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/devly-revised.jpg" alt="Devly counts commits, branches and rhythm, and does not judge the developer." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>Think of it like a construction site logbook. It doesn't judge whether the architect is a genius; it simply verifies that workers have consistently shown up and laid bricks on the schedule they claim.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The scan runs <code>git rev-list --count HEAD</code> when a <code>.git</code> folder is present and writes that integer. <code>passed</code> stays empty. If there is no git history, the cell is blank. Skills Framework for the Information Age (SFIA, a job-skill scale for technology work) is named so that nobody reads a level into the commit count. Devly does not award an SFIA level. The public framework is at <a href="https://sfia-online.org/en/about-sfia">sfia-online.org</a>.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="domly" name="domly"></a></p>
-<h2><img src="assets/glossary/domly.png" alt="Domly" height="25"></h2>
+<h2><img src="../assets/glossary/domly.png" alt="Domly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Evaluates project-supplied question-and-answer manifests. Computes the coverage ratio and exact match/similarity score against a validated golden dataset. Distinct from generic unit tests - focuses on domain/subject-matter accuracy.</p>
-<p align="center"><img src="assets/glossary/cards/domly-revised.jpg" alt="Domly quizzes the app on its subject and grades it against an answer key." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/domly-revised.jpg" alt="Domly quizzes the app on its subject and grades it against an answer key." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>A subject-matter final exam. It tests how well your application answers specialized, real-world industry questions against an official answer key.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>JSON or YAML files whose names contain <code>question</code> or <code>answer</code> are read. Questions are counted. Answers are matched by <code>id</code> when an answers file exists. <code>passed</code> stays empty. Runly and Codely remain the stations for a language conformance suite.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="levi" name="levi"></a></p>
-<h2><img src="assets/glossary/levi.png" alt="Levi" height="20"></h2>
+<h2><img src="../assets/glossary/levi.png" alt="Levi" height="20"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Scans for structured usability audit records, heuristic evaluations, or accessibility scorecards (e.g., WCAG compliance logs, UX benchmark JSONs). Marketing sentences or vague promises of "great UX" in a README yield no score.</p>
-<p align="center"><img src="assets/glossary/cards/levi-revised.jpg" alt="Real usability evidence, not a great UX promise." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/levi-revised.jpg" alt="Real usability evidence, not a great UX promise." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>Customer reviews backed by verifiable receipts. Instead of taking the developer's word that their app is "intuitive and user-friendly," Levi checks for actual recorded usability testing.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The file must be JSON whose family or brand contains <code>4uval</code>, with a <code>gate</code> object. The summary prints <code>gate.mean</code> and <code>gate.result</code>. <a href="#4uvals">4Uvals</a> (Ultimate User-User-User evaluations) is the ten-check user-first scorecard, defined at that entry. <a href="https://www.iso.org/standard/81230.html">ISO/IEC 42001</a> is an AI management system for a firm. Levi names it as a wrapper beside the sitting. It is not the grade. Levi prints the mean and the gate that are already on the card. It does not rescore the ten checks.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="menschly" name="menschly"></a></p>
-<h2><img src="assets/glossary/menschly.png" alt="Menschly" height="25"></h2>
+<h2><img src="../assets/glossary/menschly.png" alt="Menschly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Inspects client-facing components for actual code-level pacing controls, break intervals, or integrated session switches (such as the repository's fuss/ module). General wellness advice written in markdown does not count as an implementation.</p>
-<p align="center"><img src="assets/glossary/cards/menschly-revised.jpg" alt="Menschly wants real break-timer code, not wellness advice in a README." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/menschly-revised.jpg" alt="Menschly wants real break-timer code, not wellness advice in a README." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>Checking if a car comes equipped with working seatbelts and speed limit warnings. It makes sure the software contains real code that encourages healthy work breaks, rather than quietly enabling non-stop screen addiction.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>A Python function named <code>bind_fuss</code> or <code>bindfuss</code>, or an assignment to <code>session_limit_minutes</code>, is a timer. In JavaScript, <code>function bindFuss</code> is a timer, including the copy in <a href="https://github.com/pedramgoshATgmail/EVALATHAN/blob/main/fuss/fuss.js">fuss/fuss.js</a>. A file whose name is <code>fuss</code> is a timer. The provisional phrases are "take a break", "session limit", and "time budget". The bare word fuss is not enough. FUSS (For-User Session Switch) is the drop-in panel in <a href="https://github.com/pedramgoshATgmail/EVALATHAN/blob/main/fuss/README.md">fuss/README.md</a>. This is not a medical device and not an ISO certificate.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="mixly" name="mixly"></a></p>
-<h2><img src="assets/glossary/mixly.png" alt="Mixly" height="26"></h2>
+<h2><img src="../assets/glossary/mixly.png" alt="Mixly" height="26"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Scans the project tree, aggregates Source Lines of Code (SLOC) by file extension, and calculates the exact percentage distribution across languages while ignoring third-party vendor directories (e.g., node_modules/, site-packages/). Reports pure data without prescribing stack changes.</p>
-<p align="center"><img src="assets/glossary/cards/mixly-card.jpg" alt="Mixly shows exactly what languages the project is made of." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/mixly-card.jpg" alt="Mixly shows exactly what languages the project is made of." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>The ingredients label on a cereal box. It tells you exactly what percentage is wheat, corn, or sugar so you know what you are consuming before you take a bite.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>Suffixes map to a language name: Python, JavaScript, TypeScript, C, C++, Rust, Go, Java, Kotlin, Ruby, PHP, C#, Swift, MEL, and VEX. The summary is a percentage of recognized files. Mixly does not parse those files and does not rank the languages.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="pressly" name="pressly"></a></p>
-<h2><img src="assets/glossary/pressly.png" alt="Pressly" height="25"></h2>
+<h2><img src="../assets/glossary/pressly.png" alt="Pressly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Extracts metrics from existing compression logs, specifically recording raw byte reduction alongside objective image/video quality scores (e.g., SSIM, PSNR, VMAF, or CRF values). Pressly does not execute the compression pipelines during the evaluation scan.</p>
-<p align="center"><img src="assets/glossary/cards/pressly-revised.jpg" alt="Pressly reads compression logs to confirm things got smaller without losing quality." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/pressly-revised.jpg" alt="Pressly reads compression logs to confirm things got smaller without losing quality." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>Inspecting a vacuum-sealed suitcase. Pressly checks the luggage tag to confirm you actually shrank the package down to carry-on size without crushing the fragile items inside.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>Logs, text, JSON, and markdown are scanned for <code>ssim</code>, <code>vmaf</code>, or <code>bytes</code>/<code>size</code> followed by a colon or an equals sign and a number. SSIM (structural similarity, a picture-likeness score) is described at <a href="https://en.wikipedia.org/wiki/Structural_similarity">Wikipedia</a>. VMAF (Video Multi-Method Assessment Fusion, Netflix's video-quality score) is at <a href="https://github.com/Netflix/vmaf">Netflix/vmaf</a>. A match is reported as a printed figure. It is not a TOKEX result.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="refactorly" name="refactorly"></a></p>
-<h2><img src="assets/glossary/refactorly.png" alt="Refactorly" height="25"></h2>
+<h2><img src="../assets/glossary/refactorly.png" alt="Refactorly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Analyzes token-similarity and line duplication across files, cross-references internal function/class call graphs for orphaned/dead declarations, and tallies git change frequency per file. Flags files with high churn-to-complexity ratios as refactoring liabilities.</p>
-<p align="center"><img src="assets/glossary/cards/refactorly-revised.jpg" alt="Duplicates, a hotspot, and dead code." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/refactorly-revised.jpg" alt="Duplicates, a hotspot, and dead code." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>An inspector checking your house for duplicate furniture you bought twice, abandoned rooms in the attic that nobody uses, and a back door that squeaks so badly it needs weekly repairs.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>Identical-byte groups are SHA-256 matches among files between 1 and 200,000 bytes. Unused names are Python functions and classes that are defined and never referenced, skipping names that start with <code>_</code> or <code>test</code>. Change is <code>git log --numstat</code> over the last 40 commits when git exists. The unused-name walk is the one language-specific check in this version. The copy check and the change check apply to whatever files are in the tree.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="runly" name="runly"></a></p>
-<h2><img src="assets/glossary/runly.png" alt="Runly" height="25"></h2>
+<h2><img src="../assets/glossary/runly.png" alt="Runly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Measures wall-clock execution time for defined micro-benchmark routines or parses valid, pre-computed benchmark artifacts (e.g., pytest-benchmark JSON output). Defers execution if no executable targets or saved logs are present in the target directory.</p>
-<p align="center"><img src="assets/glossary/cards/runly-revised.jpg" alt="Runly times the code for real instead of trusting the brochure." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/runly-revised.jpg" alt="Runly times the code for real instead of trusting the brochure." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>A quick 100-meter sprint test. It checks how fast your software actually runs on the track right now, rather than trusting how fast the sales brochure claimed it was.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>Any tree with Python source gets a local microbench: 200,000 integer steps, reported in milliseconds, labeled as an Evalathan microbench. Files whose names contain <code>pyperformance</code>, <code>spec2017</code>, or <code>llvm-test-suite</code> are noted and not executed. SPEC CPU is the industry suite at <a href="https://www.spec.org/cpu2017/">spec.org</a>. The LLVM test suite is a compiler project, not a file this scanner invents. <a href="https://www.iso.org/standard/78176.html">ISO/IEC 25010</a> describes product quality, including performance efficiency. Runly does not compute a 25010 score.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="stackly" name="stackly"></a></p>
-<h2><img src="assets/glossary/stackly.png" alt="Stackly" height="25"></h2>
+<h2><img src="../assets/glossary/stackly.png" alt="Stackly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Aggregates findings from the other 15 evaluators into a clean report matrix. Explicitly prohibits flattening heterogeneous measurements into a misleading single 0–100 score. Preserves Pass, Fail, and Deferred states as independent data points.</p>
-<p align="center"><img src="assets/glossary/cards/stackly-revised.jpg" alt="Stackly shows the full status matrix, not one fake score." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/stackly-revised.jpg" alt="Stackly shows the full status matrix, not one fake score." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>A detailed medical blood panel instead of a single 1-to-10 wellness score. It tells you exactly what is healthy, what needs attention, and what wasn't tested, giving you total transparency.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p><code>ACCEPTS_PRIOR</code> is set, so Hydra passes the earlier cells in. <code>passed</code> stays empty on purpose. The headline of the report is the same vector: ran, passed, deferred.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="tokely" name="tokely"></a></p>
-<h2><img src="assets/glossary/tokely.png" alt="Tokely" height="25"></h2>
+<h2><img src="../assets/glossary/tokely.png" alt="Tokely" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Ingests structured LLM transaction logs containing baseline and optimized token usage pairs. Calculates the net token delta (Tokens before - Tokens after). If token records are not saved in the target path, the cell is marked Deferred rather than zero.</p>
-<p align="center"><img src="assets/glossary/cards/tokely-revised.jpg" alt="Tokely measures tokens before and after you optimized." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/tokely-revised.jpg" alt="Tokely measures tokens before and after you optimized." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>A fuel economy tracker for AI apps. It measures how much gas (tokens) your prompts burned before vs. after tuning to make sure you aren't wasting money on bloated queries.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>JSON may use <code>before</code> and <code>after</code>, or <code>total_tokex</code> and <code>tokex_this_run</code>, including those keys inside a <code>tokex</code> object. TOKEX (Token Expenditure) is the name of that count. Tokely does not import a tokenizer and does not call a model. Pressly's byte counts are a different measurement.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="trajectly" name="trajectly"></a></p>
-<h2><img src="assets/glossary/trajectly.png" alt="Trajectly" height="26"></h2>
+<h2><img src="../assets/glossary/trajectly.png" alt="Trajectly" height="26"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Analyzes sequential execution logs of agentic tasks. Counts total steps taken, tool call frequencies, backtracking loops, and final task resolution states. Disregards third-party leaderboard claims that lack inspectable raw trace files.</p>
-<p align="center"><img src="assets/glossary/cards/trajectly-revised.jpg" alt="Trajectly replays an agent's recorded journey, steps, loops and all." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/trajectly-revised.jpg" alt="Trajectly replays an agent's recorded journey, steps, loops and all." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>The flight data recorder (black box) for an autonomous agent. It tracks every turn the agent took to solve a problem so you can see whether it flew straight to the target or took five dizzying loops.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>File names containing <code>trace</code>, <code>trajectory</code>, or <code>passk</code> are read. JSONL lines that parse as JSON are counted as steps. Other matching files count as one step. The summary says the count is from files in the tree.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="triadly" name="triadly"></a></p>
-<h2><img src="assets/glossary/triadly.png" alt="Triadly" height="26"></h2>
+<h2><img src="../assets/glossary/triadly.png" alt="Triadly" height="26"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Validates the presence of an explicit Engineering Priority Triad declaration that orders Cost, Speed/Latency, and Impact. Evaluates whether the team has officially declared which compromise comes first when system constraints collide.</p>
-<p align="center"><img src="assets/glossary/cards/triadly-revised.jpg" alt="Triadly checks which matters first: cost, speed or impact." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/triadly-revised.jpg" alt="Triadly checks which matters first: cost, speed or impact." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>The golden rule of any workshop: "Cheap, Fast, or Good - pick two." Triadly verifies that your team explicitly wrote down which one matters most before building the product.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
-<p><img src="assets/glossary/m3-triad.jpg" alt="M3 Triad. Mc is min cost, Me is max efficiency, Mi is max impact. The six orders run from a cheap interceptor drone to a NASA rocket and a Patriot missile." width="100%"></p>
+<p><img src="../assets/glossary/m3-triad.jpg" alt="M3 Triad. Mc is min cost, Me is max efficiency, Mi is max impact. The six orders run from a cheap interceptor drone to a NASA rocket and a Patriot missile." width="100%"></p>
 <p>Mc (Min Cost) · Me (Max Efficiency/speed) · Mi (Max Impact/quality); order = priority left-to-right. Six orders: McMeMi cheap interceptor drone; McMiMe Shahed-style (SEISMO PoC today); MeMcMi ambulance drone; MeMiMc fighter scramble; MiMcMe SEISMO MVP target, impact then cost; MiMeMc NASA rocket and Patriot missile, impact then speed.</p>
 <p>The accepted compact orders are <code>mcmemi</code>, <code>mcmime</code>, <code>memcmi</code>, <code>memimc</code>, <code>mimcme</code>, and <code>mimemc</code>, read from the README and from markdown, JSON, and text. The scan looks for those codes with spaces removed. It does not treat the word M3, by itself, as an order.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="warrantly" name="warrantly"></a></p>
-<h2><img src="assets/glossary/warrantly.png" alt="Warrantly" height="25"></h2>
+<h2><img src="../assets/glossary/warrantly.png" alt="Warrantly" height="25"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Cross-references listed performance claims and product assertions against linked source code, test seeds, external dataset URLs, or academic citations. Claims without verifiable backing artifacts fail the check.</p>
-<p align="center"><img src="assets/glossary/cards/warrantly-revised.jpg" alt="Warrantly: claims need evidence attached, and unbacked ones fail." width="541"></p>
+<p align="center"><img src="../assets/glossary/cards/warrantly-revised.jpg" alt="Warrantly: claims need evidence attached, and unbacked ones fail." width="541"></p>
 
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>The "show your work" math test rule. If your software claims to be 10x faster or 99% accurate, Warrantly checks if you provided the actual proof or just made an empty sales pitch.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>JSON may be a list of objects with a <code>claim</code> key, or an object with <code>claims</code> or <code>warrants</code>. Backing is any of <code>source</code>, <code>recipe</code>, or <code>evidence</code>. The pass flag is true only when the backed count equals the claim count and the list is not empty.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="4uvals" name="4uvals"></a></p>
 <h2>4Uvals</h2>
 
 <p>4Uvals (Ultimate User-User-User evaluations) is a 10-check list. The question is whether a session with an AI actually put the person using it first. Levi reads the card when a copy is in the tree. 4Uvals is not a seventeenth evaler.</p>
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>The published card is 4Uvals v1.2. The people who ran the sitting scored it themselves. The gate is PASS. Nine of the ten checks are Solid or Strong. The mean is 3.4 out of 4. Scores use a 1–4 scale: 4 Strong, 3 Solid, 2 Emerging, 1 Weak. U5 is Emerging because it was declared and not measured. That cell stays Emerging. It is not written down as a fail, and it is not written down as zero.</p>
 <p>A freeze, the choice to pause the session, is optional on purpose. An adult can leave it off. It is not a lock built for a child.</p>
 <p>Sixteen published usability and health standards are housed under the card as comparisons. They are not added into the ten checks, and they are not averaged into the 3.4.</p>
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>4Uvals stands for Ultimate User-User-User evaluations. It asks, in ten plain questions, whether this sitting put the user first. The published answer is a pass: 9 of 10 checks are Solid or Strong, and the average is 3.4 out of 4. One question, about retelling the work, was named and not measured. NASA-TLX (NASA Task Load Index, a short questionnaire for how hard a task felt) on this card is one educated user scoring 9 out of 100, inside the low band of 0–24. That is one person's score. It is not a NASA certificate. The card is not an ISO, IEEE, IEC, W3C, FDA, or NASA certificate.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>Stamp on the card: 4Uvals v1.2. Ten checks, U1–U10. First-order means the operator scored the sitting. The pass rule used on this card is a mean of at least 3.2 and at least 8 of 10 checks Solid or Strong. This card clears both: mean 3.4, and 9 of 10. <a href="https://www.iso.org/standard/81230.html">ISO/IEC 42001</a> is named beside the sitting as the firm-level wrapper (U4). It is not the sitting grade.</p>
 <table>
@@ -525,102 +525,102 @@
 </tbody>
 </table>
 <p>H14 on the card is the NASA-TLX row: one educated user, overall 9 out of 100, low band 0–24. SUS and UEQ+ are named. Their item scores are not on the card, so none are printed here. CVS-Q was not administered. None of these sixteen is a certificate.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="selfbelt" name="selfbelt"></a></p>
-<h2><img src="assets/glossary/selfbelt.png" alt="SELFBELT" height="19"></h2>
+<h2><img src="../assets/glossary/selfbelt.png" alt="SELFBELT" height="19"></h2>
 
 <p>SELFBELT is the seatbelt write-up for people who sit with software, including AI tools, for a long time. The pages are on <a href="https://github.com/pedramgoshATgmail/EVALATHAN/blob/main/docs/SELFBELT.md">SELFBELT</a>. The practice named inside the document is SELFBELTING. The button name and the page name are SELFBELT.</p>
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>SELFBELT is not one of the sixteen evalers and it does not add a seventeenth score. Menschly is the evaler that can see a timer. The PDF is the explanation a developer can read and, if they choose, ship beside their own software.</p>
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>Think of the early car. Lights, signs, and laws showed up before the seatbelt. A lot of software today has the lights: filters, policies, usage caps written by the vendor. The belt is the habit the person puts on. SELFBELT is that write-up. FUSS is a belt you can clip into a product: a small panel that asks whether to time the sitting.</p>
 <p>Ralph Nader's <em>Unsafe at Any Speed</em> (1965) pushed crash safety into the car instead of leaving it as optional chrome. The analogy stops there. SELFBELT is not a law, not a medical claim, and not a statement that one sitting harms a brain.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>Menschly links here. The drop-in timer is <a href="https://github.com/pedramgoshATgmail/EVALATHAN/blob/main/fuss/README.md">fuss/README.md</a>. Installing FUSS is optional. A product can pass Menschly with any real stop, and a product with no sitting stays blank. Nothing in the PDF is scraped into a numeric grade.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="ed-slop" name="ed-slop"></a></p>
 <h2>Ed Slop</h2>
 
 <p>'Ed Slop' is an AI nom de plume found at the bottom of some of the art and illustrations in Evalathan glossary. Ed Slop is short for Educational Slop (Generative AI visuals) and it doesn't represent any living or human artist, nor does it support trivial slop. Ed Slop's purpose is illustrative imagery and art to help readers better understand complex topics, all through ethical, nontrivial Generative AI creations.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="agentic-exams-that-are-not-on-the-vector-yet" name="agentic-exams-that-are-not-on-the-vector-yet"></a></p>
-<h2><img src="assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26"></h2>
+<h2><img src="../assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26"></h2>
 
 <p>These are public exams for coding agents and for chat models. They matter in this period. Evalathan does not run them in the laptop scan, and it does not paste their leaderboards. That is a scope fact, not a dismissal. Trajectly is the station that will count one of them on the day a saved trace from that exam is in the folder you scan. A percent copied from a website is still not a grade.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="swe-bench" name="swe-bench"></a></p>
-<h2><img src="assets/glossary/swe-bench.png" alt="SWE-bench" height="20"></h2>
+<h2><img src="../assets/glossary/swe-bench.png" alt="SWE-bench" height="20"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>No Evalathan score. The public board is someone else's number. The cell stays off the vector until a trace file from a run is in the tree.</p>
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>SWE-bench (Software Engineering Benchmark) is a set of real GitHub issues a coding agent is asked to patch. The full public set is large and is graded in containers. That does not fit a laptop scan of an ordinary folder. Evalathan can say the name. It does not pretend it sat the exam.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The project site is <a href="https://www.swebench.com/">swebench.com</a>. A short public account is on <a href="https://en.wikipedia.org/wiki/SWE-bench">Wikipedia</a>. Trajectly would count a local file whose name contains <code>trace</code>, <code>trajectory</code>, or <code>passk</code>. It will not count a screenshot.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="swe-bench-pro" name="swe-bench-pro"></a></p>
-<h2><img src="assets/glossary/swe-bench-pro.png" alt="SWE-bench Pro" height="20"></h2>
+<h2><img src="../assets/glossary/swe-bench-pro.png" alt="SWE-bench Pro" height="20"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Same as SWE-bench. Not on the vector. The public slice is still a lab run.</p>
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>SWE-bench Pro is a harder, later set from the same family, with a public slice and private slices. It is the right ambition for a hosted exam on a machine that can run it. It is too much work for the current laptop scan, and a copied percent would not make Evalathan more true.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The paper is <a href="https://arxiv.org/abs/2509.16941">arXiv:2509.16941</a>. Inclusion later means a frozen task folder, the grader that ships with it, and a trace Trajectly can count. It does not mean embedding the live leaderboard.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="deepswe" name="deepswe"></a></p>
-<h2><img src="assets/glossary/deepswe.png" alt="DeepSWE" height="24"></h2>
+<h2><img src="../assets/glossary/deepswe.png" alt="DeepSWE" height="24"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Not on the vector. No trace, no cell.</p>
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>DeepSWE is a smaller public agent exam, on the order of a hundred handwritten tasks, at deepswe.datacurve.ai. Smaller does not make it a laptop feature. It joins the same menu as the SWE-bench family: host it when the grader and the trace are yours.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The public page is <a href="https://deepswe.datacurve.ai/">deepswe.datacurve.ai</a>. Evalathan does not download that board and does not average it with anything else.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="aose" name="aose"></a></p>
-<h2><img src="assets/glossary/aose.png" alt="AOSE" height="19"></h2>
+<h2><img src="../assets/glossary/aose.png" alt="AOSE" height="19"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>AOSE is a field, not a score Evalathan prints.</p>
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>AOSE (agent-oriented software engineering) is the research tradition of building software as cooperating agents. The Wikipedia page also carries a mixed table of newer benchmarks. Those rows are a catalog. They are not sixteen more evalers, and they are not a grade of the folder you just scanned.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The field overview is <a href="https://en.wikipedia.org/wiki/Agent-oriented_software_engineering">Wikipedia: Agent-oriented software engineering</a>. Names that show up in that public catalog, besides the SWE-bench family, include AgentBench, tau-bench, WebArena, WildBench, and Test of Time. Evalathan does not collapse that table into one number.</p>
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="wildbench" name="wildbench"></a></p>
-<h2><img src="assets/glossary/wildbench.png" alt="WildBench" height="20"></h2>
+<h2><img src="../assets/glossary/wildbench.png" alt="WildBench" height="20"></h2>
 
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
 <p>Not on the vector. WildBench grades chat replies. It is not a trace of a coding agent unless you saved one.</p>
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>WildBench is a public benchmark of hard chat tasks drawn from real use. It is worth knowing about. Evalathan does not host it and does not quote its board. It would show up under Trajectly only if you saved a run in the folder.</p>
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The paper is <a href="https://arxiv.org/abs/2406.04770">arXiv:2406.04770</a>. No leaderboard percent from that paper is copied into a cell.</p>
   </article>
