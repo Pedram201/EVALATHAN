@@ -82,11 +82,11 @@ EVALATHAN evaluates a project by passing a local directory path (`evalathan scan
 
 A standout aspect of the project is its integration of developer and user wellness into the evaluation criteria:
 
-SELFBELT / SELFBELTING: A methodology documented in docs/SELFBELT.md addressing developer fatigue and extended screen time.
+[SELFBELT](GLOSSARY.md#user-content-selfbelt) / [SELFBELTING](GLOSSARY.md#user-content-selfbelting): A methodology documented in docs/SELFBELT.md addressing developer fatigue and extended screen time.
 
-FUSS (For-User Session Switch): A modular front-end/desktop widget inside the repository (fuss/) that developers can embed into software to enforce scheduled rest breaks.
+[FUSS](GLOSSARY.md#user-content-fuss) (For-User Session Switch): A modular front-end/desktop widget inside the repository (fuss/) that developers can embed into software to enforce scheduled rest breaks.
 
-Menschly: The evaluator specifically tasked with verifying whether a codebase incorporates real session limiters/timers rather than just vague README promises.
+[Menschly](GLOSSARY.md#user-content-menschly): The evaluator specifically tasked with verifying whether a codebase incorporates real session limiters/timers rather than just vague README promises.
 
 ## What v0.2 runs
 
