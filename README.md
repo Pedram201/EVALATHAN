@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">E V A L A T H A N</h1>
-<p align="center"><i>Making your Product-led growth (PLG) more efficient, robust, and user-friendly!</i></p>
+<p align="center"><i><a href="GLOSSARY.md#user-content-product-led-growth">Making your Product-led growth (PLG) more efficient, robust, and user-friendly!</a></i></p>
 
 <p align="center">The one-stop evaluation platform for software, engines, agentics, codebases, compilers and languages.</p>
 

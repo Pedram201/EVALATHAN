@@ -431,6 +431,48 @@ Menschly links here. The drop-in timer is [fuss/README.md](fuss/README.md). Inst
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
 
+<a id="product-led-growth" name="product-led-growth"></a>
+<h2>Product-led growth</h2>
+
+Product-led growth (PLG) is a business strategy in which the product itself drives customer acquisition, adoption, retention, and revenue growth. Instead of relying primarily on salespeople to convince customers to buy, a PLG company lets users experience the product's value directly, often through a free tier, free trial, or self-service onboarding. The key principle is: make the product demonstrate its own value before asking the customer to commit. This entry is the definition. It is not an evaler.
+
+<p align="center"><img src="assets/glossary/plg-funnel.png" alt="How product-led growth works: 1 Acquire, 2 Activate, 3 Retain, 4 Expand." width="541"></p>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+PLG is not one of the sixteen evalers and it does not add a seventeenth score. A folder scan cannot see who discovered the product, who reached a useful outcome, who kept it in their work, or who paid. Those facts stay off the report.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The product does the introducing. Someone finds it and tries it. They reach a useful result quickly, with little setup. It becomes part of how they work. Then they upgrade, invite a teammate, or buy a larger plan.
+
+Slack: Teams adopt it, experience the value of collaboration, and expand usage across their organization.
+
+Notion: Individuals start organizing their work and later introduce the platform to their teams.
+
+Figma: Designers collaborate in the product, naturally encouraging colleagues and stakeholders to join.
+
+A sales team can still close a large account. PLG does not eliminate enterprise sales. Many successful companies combine product-led adoption with sales-led enterprise expansion.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Two public definitions agree on the engine and use a different middle word. [ProductLed](https://productled.com/blog/product-led-growth-definition), Wes Bush, 2 Aug 2023: product-led growth is a business strategy that relies on using your product as the main vehicle to acquire, activate, and retain customers. Engagement comes before payment, usually through a free tier or a free trial. [1up.ai](https://1up.ai/encyclopedia/product-led-growth), citing OpenView Partners: a go-to-market strategy that uses the product as the primary driver of customer acquisition, engagement, and retention, so users invite others. The figure uses four stations: Acquire (a user discovers and tries the product), Activate (the user quickly experiences meaningful value), Retain (the product becomes part of the user's workflow), Expand (users upgrade, invite teammates, or purchase enterprise plans).
+
+What makes the strategy hold: time to value, low-friction onboarding, a product people can use without a guide, a loop where one user brings the next, and an upgrade that follows use.
+
+| Dimension | Product-led growth | Sales-led growth |
+| :--- | :--- | :--- |
+| Primary growth engine | Product experience | Sales team |
+| Customer entry | Self-service | Sales engagement |
+| Conversion trigger | Experienced value | Sales process and business case |
+| Best fit | Products users can try independently | Complex enterprise solutions |
+| Typical challenge | Converting free users to revenue | High acquisition costs and longer sales cycles |
+
+For an AI product such as Evalathan, PLG means making the product sufficiently useful and accessible that developers discover its value, integrate it into their workflows, and become advocates - while the business converts sustained usage into paid accounts. The runner does not compute a PLG rate. Levi remains the user-first card. Warrantly remains the claim-and-source check.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
 <a id="agentic-exams-that-are-not-on-the-vector-yet" name="agentic-exams-that-are-not-on-the-vector-yet"></a>
 <h2><img src="assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26"></h2>
 
