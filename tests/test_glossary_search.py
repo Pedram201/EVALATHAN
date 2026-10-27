@@ -22,3 +22,5 @@ def test_search_index_matches_glossary_anchors() -> None:
     assert "Rubric stem" in html
     assert "GLOSSARY.md#user-content-" not in html
     assert "scrollIntoView" in html
+    assert "new URL(window.location.href)" in html
+    assert 'replaceState(null, "", "#"' not in html

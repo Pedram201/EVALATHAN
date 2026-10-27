@@ -61,7 +61,7 @@
     [hidden] { display: none; }
     .sheet { width: min(980px, calc(100% - 32px)); margin: 0 auto; padding: 8px 0 64px; }
     .sheet img { max-width: 100%; }
-    .sheet [id] { scroll-margin-top: 72px; }
+    .sheet [id], .sheet h2 { scroll-margin-top: 72px; }
     .sheet table { border-collapse: collapse; display: block; overflow-x: auto; }
     .sheet th, .sheet td { border: 1px solid #d0d7de; padding: 6px 13px; }
     .sheet code { background: #eff1f3; padding: 0.15em 0.35em; }
@@ -778,12 +778,17 @@
     function openItem(it) {
       if (!it) return;
       const el = document.getElementById(it.id);
-      hide();
-      if (!el) return;
-      const parent = el.parentElement;
+      const parent = el && el.parentElement;
       const target = parent && parent.tagName === "P" && parent.nextElementSibling ? parent.nextElementSibling : el;
-      history.replaceState(null, "", "#" + it.id);
-      target.scrollIntoView({ block: "start" });
+      hide();
+      if (target && target.scrollIntoView) target.scrollIntoView({ block: "start" });
+      try {
+        const url = new URL(window.location.href);
+        url.hash = it.id;
+        history.replaceState(null, "", url.href);
+      } catch (err) {
+        /* The preview host sets a cross-origin base. A bare hash would throw and skip the jump. */
+      }
     }
 
     input.addEventListener("input", render);
@@ -812,12 +817,12 @@
       const opt = e.target.closest("li");
       if (!opt) return;
       e.preventDefault();
+      e.stopPropagation();
       const id = opt.getAttribute("data-id");
-      openItem(items.find((it) => it.id === id));
+      openItem(current.find((it) => it.id === id) || items.find((it) => it.id === id));
     }
     document.body.appendChild(list);
-    list.addEventListener("mousedown", pickFromEvent);
-    list.addEventListener("click", pickFromEvent);
+    list.addEventListener("pointerdown", pickFromEvent);
     window.addEventListener("scroll", () => { if (!list.hidden) placeList(); }, true);
     if (location.hash.length > 1) {
       const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
