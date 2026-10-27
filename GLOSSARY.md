@@ -2,7 +2,7 @@
 
 [Search the glossary](https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html). That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
 
-Evalathan is one evaluation harness. Hydra is the conductor. She governs and calls sixteen evaluators, short name evalers. Each entry below has the same three parts.
+Evalathan is one evaluation harness. [Hydra](#hydra) is the conductor. She governs and calls sixteen evaluators, short name evalers. Each entry below has the same three parts.
 
 <img src="assets/glossary/score-constitution-dot.png" alt="Score Constitution." height="14"> What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.
 
@@ -11,6 +11,26 @@ Evalathan is one evaluation harness. Hydra is the conductor. She governs and cal
 <img src="assets/glossary/techspeak-dot.png" alt="Techspeak." height="17"> More technically detailed explanations.
 
 The life-cycle gate on each evaler (G0 through G12) is the station's place in the life of a product. There are not sixteen gates. There are sixteen evalers.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="hydra" name="hydra"></a>
+<h2>Hydra</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Hydra calls the sixteen evalers and writes each report beside the others. She counts how many ran, how many passed their own gate, and how many are deferred. She does not turn a blank into a zero, and she does not fold the sixteen into one number. She is not a seventeenth score.
+
+<p align="center"><img src="assets/glossary/cards/hydra.png" alt="She calls the sixteen. She does not add a score." width="541"></p>
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The conductor. She points at each player and writes down what that player reported. She does not hand the room a single grade for the whole concert.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+`conduct` walks the sixteen evalers in order. Stackly is the one that receives the earlier cells, because that evaler accepts them. The headline of the report is how many ran, how many passed their own gate, and how many are deferred. The saved record names the conductor Hydra. If the count is not sixteen, or a name is repeated, the run stops. The window heading is HYDRA.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>

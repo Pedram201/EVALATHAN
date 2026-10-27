@@ -7,7 +7,7 @@
 
 <p align="center">The one-stop evaluation platform for software, engines, agentics, codebases, compilers and languages.</p>
 
-Evalathan grades a product across its life cycle. Evalathan is one evaluation harness; Hydra is the conductor - she orchestrates sixteen evaluators ('evalers'); each evaluator reports against a life-cycle gate.
+Evalathan grades a product across its life cycle. Evalathan is one evaluation harness; [Hydra](GLOSSARY.md#user-content-hydra) is the conductor - she orchestrates sixteen evaluators ('evalers'); each evaluator reports against a life-cycle gate.
 
 **v0.2** is a local runner. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero.
 
