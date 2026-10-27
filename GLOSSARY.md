@@ -454,6 +454,9 @@ Figma: Designers collaborate in the product, naturally encouraging colleagues an
 
 A sales team can still close a large account. PLG does not eliminate enterprise sales. Many successful companies combine product-led adoption with sales-led enterprise expansion.
 
+<p align="center"><img src="assets/glossary/plg-companies.png" alt="Company names stacked by year, from LogMeIn in 2012 to a much taller column in 2020." width="920"></p>
+<p align="right"><sub><a href="https://productled.com/">Source: ProductLed</a></sub></p>
+
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 Two public definitions agree on the engine and use a different middle word. [ProductLed](https://productled.com/blog/product-led-growth-definition), Wes Bush, 2 Aug 2023: product-led growth is a business strategy that relies on using your product as the main vehicle to acquire, activate, and retain customers. Engagement comes before payment, usually through a free tier or a free trial. [1up.ai](https://1up.ai/encyclopedia/product-led-growth), citing OpenView Partners: a go-to-market strategy that uses the product as the primary driver of customer acquisition, engagement, and retention, so users invite others. The figure uses four stations: Acquire (a user discovers and tries the product), Activate (the user quickly experiences meaningful value), Retain (the product becomes part of the user's workflow), Expand (users upgrade, invite teammates, or purchase enterprise plans).
