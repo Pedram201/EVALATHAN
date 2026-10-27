@@ -29,7 +29,7 @@ Set-Location evalathan-program
 .\launch.bat
 ```
 
-<p><img src="assets/readme/mac.png" alt="Mac" height="32" align="absmiddle"> <img src="assets/readme/python.png" alt="Python" height="32" align="absmiddle"> <strong>Mac Terminal</strong> (the prompt ends with <code>%</code>). <code>launch.bat</code> is the Windows file. On a Mac the file is <code>launch.sh</code>.</p>
+<p><img src="assets/readme/mac.png" alt="Mac" height="32" align="absmiddle"> <strong>Mac Terminal</strong> (the prompt ends with <code>%</code>). <code>launch.bat</code> is the Windows file. On a Mac the file is <code>launch.sh</code>.</p>
 
 ```bash
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
@@ -37,7 +37,7 @@ cd evalathan-program
 bash launch.sh
 ```
 
-If that Mac Python has no window library, install Python from https://www.python.org/downloads/macos/ and run `bash launch.sh` again. That installer includes the window library.
+<p><img src="assets/readme/mac.png" alt="Mac" height="32" align="absmiddle"> <img src="assets/readme/python.png" alt="Python" height="32" align="absmiddle"> If that Mac Python has no window library, install Python from <a href="https://www.python.org/downloads/macos/">https://www.python.org/downloads/macos/</a> and run <code>bash launch.sh</code> again. That installer includes the window library.</p>
 
 `launch.bat` moves into `evalathan-program`, then runs:
 
