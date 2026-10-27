@@ -23,7 +23,7 @@ The life-cycle gate on each evaler (G0 through G12) is the station's place in th
 Hydra calls the sixteen evalers and writes each report beside the others. She counts how many ran, how many passed their own gate, and how many are deferred. She does not turn a blank into a zero, and she does not fold the sixteen into one number. She is not a seventeenth score.
 
 <p align="center"><img src="assets/glossary/cards/hydra.png" alt="Hydra" width="325"></p>
-<p align="center">She calls the sixteen. She does not add a score.</p>
+<p align="center"><i>She calls the sixteen. She does not add a score.</i></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
