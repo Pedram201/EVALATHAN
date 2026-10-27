@@ -124,7 +124,7 @@
 
 <p>Hydra calls the sixteen evalers and writes each report beside the others. She counts how many ran, how many passed their own gate, and how many are deferred. She does not turn a blank into a zero, and she does not fold the sixteen into one number. She is not a seventeenth score.</p>
 <p align="center"><img src="../assets/glossary/cards/hydra.png" alt="Hydra" width="325"></p>
-<p align="center">She calls the sixteen. She does not add a score.</p>
+<p align="center"><i>She calls the sixteen. She does not add a score.</i></p>
 <h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
 <p>The conductor. She points at each player and writes down what that player reported. She does not hand the room a single grade for the whole concert.</p>
@@ -662,6 +662,7 @@
 <h2><img src="../assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26"></h2>
 
 <p>These are public exams for coding agents and for chat models. They matter in this period. Evalathan does not run them in the laptop scan, and it does not paste their leaderboards. That is a scope fact, not a dismissal. Trajectly is the station that will count one of them on the day a saved trace from that exam is in the folder you scan. A percent copied from a website is still not a grade.</p>
+<p>The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="swe-bench" name="swe-bench"></a></p>
@@ -732,6 +733,90 @@
 <h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 <p>The paper is <a href="https://arxiv.org/abs/2406.04770">arXiv:2406.04770</a>. No leaderboard percent from that paper is copied into a cell.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="ragas" name="ragas"></a></p>
+<h2>Ragas</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+<p>No Evalathan score. v0.2 does not run a retriever and does not call the judge model these scores use. The four assessed figures stay off the sixteen. A later version can read a log a run already wrote, the way Pressly reads a compression log, and print each figure on its own line. It will not blend them.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+<p>Ragas is a public library of scores for a system that looks things up and then answers. The lookup and the answer are graded separately. Evalathan can name the scores. It does not sit the test, and it does not paste a number from someone else's run.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+<p>The retrieval list on the <a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/">Ragas metrics page</a>, read 27 Oct 2026, is Context Precision, Context Recall, Context Entities Recall, Noise Sensitivity, Response Relevancy, Faithfulness, Multimodal Faithfulness, and Multimodal Relevance. Pages in that set are dated 9 Dec 2025 and 11 Dec 2025. The same page also names other catalogs: Nvidia metrics, agent and tool scores, natural-language comparison, and SQL. Those catalogs are named so the shelf is complete. They are not more evalers. <a href="#ndcg-at-k">NDCG@k</a> (Normalized Discounted Cumulative Gain at k) was assessed with the retrieval four. It is a ranking measure. It is not a row on the Ragas list. Domly's id match is a quiz key. Warrantly's filled source field is a citation check. Neither one is Context Recall or Faithfulness.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="context-precision" name="context-precision"></a></p>
+<h2>Context Precision</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+<p>Not on the vector. A missing log stays blank. A blank is not a fail and not a zero.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+<p>Context Precision asks whether the useful chunks were placed above the useless ones. It is the mean of precision at each rank, weighted by whether the chunk at that rank is relevant.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+<p>The <a href="https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/context_precision/">Ragas page</a> defines Context Precision as the mean of precision@k times a relevance bit vk. The docs also describe a form that uses a reference, a form that uses the answer, a string-comparison form, and an id form. Evalathan does not run any of them. A saved log may be printed later. It is not blended with Domly.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="context-recall" name="context-recall"></a></p>
+<h2>Context Recall</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+<p>Not on the vector. It needs a reference. No reference, no number. A blank is not a zero.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+<p>Context Recall asks whether the retrieved text covers what the reference says. It is the claims in the reference that the retrieved text supports, divided by all claims in the reference.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+<p>The <a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/context_recall/">Ragas page</a>, dated 9 Dec 2025, also describes a non-LLM form (relevant retrieved contexts over reference contexts) and an id form (reference context ids found among retrieved ids). The assessed form is the claim form, and it needs a reference. Domly matches question ids to answer ids. That is a quiz key, not this recall.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="faithfulness" name="faithfulness"></a></p>
+<h2>Faithfulness</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+<p>Not on the vector. The scale is 0 to 1. A missing answer or a missing retrieved text stays blank.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+<p>Faithfulness asks whether the answer stayed inside the text it was given. It is the claims in the generated answer that the retrieved text supports, divided by all claims in the answer. It does not use the reference.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+<p>The <a href="https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/faithfulness/">Ragas page</a> scores claims in the response against retrieved context, from 0 to 1. Warrantly counts claim rows that carry a source, recipe, or evidence field. A filled field is a citation check. It is not this ratio.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="ndcg-at-k" name="ndcg-at-k"></a></p>
+<h2>NDCG@k</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+<p>Not on the vector. Not a Ragas row. No ideal ranking on disk, no number.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+<p>NDCG@k (Normalized Discounted Cumulative Gain at k) asks whether the best chunks were near the top. It discounts graded relevance by log rank and divides by the ideal ranking.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+<p>The public account is <a href="https://en.wikipedia.org/wiki/Discounted_cumulative_gain">Wikipedia: Discounted cumulative gain</a>. NDCG@k is DCG divided by IDCG. It was assessed with the three Ragas retrieval figures. The <a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/">Ragas retrieval list</a> does not name it. Evalathan will not invent an ideal ranking in order to print one.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="ragas-other-retrieval" name="ragas-other-retrieval"></a></p>
+<h2>Other Ragas retrieval metrics</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+<p>Not on the vector. Named here so the retrieval list is not four rows pretending to be the whole catalog. None of them is computed in v0.2.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+<p>Context Entities Recall asks what fraction of the named things in the reference also show up in the retrieved text. Noise Sensitivity asks how often the answer picks up a wrong claim. Lower is better. Response Relevancy, Multimodal Faithfulness, and Multimodal Relevance are on the same list. Their formulas are not copied here.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+<p>Context Entities Recall, <a href="https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/context_entities_recall/">Ragas page</a> dated 11 Dec 2025: entities common to the reference and the retrieved contexts, divided by entities in the reference. Noise Sensitivity, <a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/noise_sensitivity/">Ragas page</a> dated 9 Dec 2025: incorrect claims in the response divided by all claims in the response, from 0 to 1, using the question, the reference, the response, and the retrieved contexts. The page credits RAGChecker. Response Relevancy, Multimodal Faithfulness, and Multimodal Relevance are names on the retrieval list. This entry does not invent formulas for those three.</p>
   </article>
   <script type="application/json" id="glossary-index">
 [
@@ -761,7 +846,13 @@
     {"id":"swe-bench-pro","label":"SWE-bench Pro","kind":"term"},
     {"id":"deepswe","label":"DeepSWE","kind":"term"},
     {"id":"aose","label":"AOSE","kind":"term","aliases":["agent-oriented software engineering"]},
-    {"id":"wildbench","label":"WildBench","kind":"term"}
+    {"id":"wildbench","label":"WildBench","kind":"term"},
+    {"id":"ragas","label":"Ragas","kind":"term","aliases":["ragas"]},
+    {"id":"context-precision","label":"Context Precision","kind":"term","aliases":["context precision"]},
+    {"id":"context-recall","label":"Context Recall","kind":"term","aliases":["context recall"]},
+    {"id":"faithfulness","label":"Faithfulness","kind":"term"},
+    {"id":"ndcg-at-k","label":"NDCG@k","kind":"term","aliases":["ndcg","ndcg@k","ndcg at k","normalized discounted cumulative gain"]},
+    {"id":"ragas-other-retrieval","label":"Other Ragas retrieval metrics","kind":"term","aliases":["context entities recall","noise sensitivity","response relevancy","multimodal faithfulness","multimodal relevance"]}
   ]
   </script>
   <script>

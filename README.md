@@ -158,3 +158,13 @@ Apache-2.0 for this runner and these rules. The name Evalathan is the product na
 ## Not in this version
 
 No hosted site, no invented token percent, no leaderboard copied from somewhere else, and no grade for a tree that is not on disk.
+
+## Roadmap
+
+These are public evals that already exist. v0.2 does not run them and does not copy their boards. A later version may print a number a project already saved, the way Pressly reads a compression log. The sixteen stay sixteen. A blank stays blank. Nothing here is blended into one number.
+
+**Ragas.** The glossary entry is [Ragas](GLOSSARY.md#user-content-ragas). The retrieval list includes the four figures assessed for this runner: [Context Precision](GLOSSARY.md#user-content-context-precision), [Context Recall](GLOSSARY.md#user-content-context-recall), [Faithfulness](GLOSSARY.md#user-content-faithfulness), and [NDCG@k](GLOSSARY.md#user-content-ndcg-at-k) (Normalized Discounted Cumulative Gain at k). NDCG@k is a ranking measure. It is not a row on the Ragas list. The rest of that retrieval list is [catalogued with them](GLOSSARY.md#user-content-ragas-other-retrieval).
+
+**SWE family.** [SWE-bench](GLOSSARY.md#user-content-swe-bench) (Software Engineering Benchmark), [SWE-bench Pro](GLOSSARY.md#user-content-swe-bench-pro), and [DeepSWE](GLOSSARY.md#user-content-deepswe).
+
+**AOSE.** [AOSE](GLOSSARY.md#user-content-aose) (agent-oriented software engineering) is the field, not a score. The public catalog named on that entry includes [WildBench](GLOSSARY.md#user-content-wildbench).
