@@ -29,7 +29,7 @@ Set-Location evalathan-program
 .\launch.bat
 ```
 
-<p><img src="assets/readme/mac.png" alt="Mac" height="36" align="absmiddle"> <img src="assets/readme/terminal.png" alt="Terminal" height="36" align="absmiddle"> <strong>Terminal (Mac)</strong> (the prompt ends with <code>%</code>). <code>launch.bat</code> is the Windows file. On a Mac the file is <code>launch.sh</code>.</p>
+<p><img src="assets/readme/mac.png" alt="Mac" height="36" align="absmiddle"> <img src="assets/readme/terminal.png" alt="Terminal" height="39" align="absmiddle"> <strong>Terminal (Mac)</strong> (the prompt ends with <code>%</code>). <code>launch.bat</code> is the Windows file. On a Mac the file is <code>launch.sh</code>.</p>
 
 ```bash
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
