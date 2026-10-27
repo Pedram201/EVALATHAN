@@ -15,13 +15,14 @@
     .bar {
       position: sticky;
       top: 0;
-      z-index: 4;
+      z-index: 20;
       display: flex;
       align-items: center;
       gap: 16px;
       padding: 10px 16px;
       background: #fff;
       border-bottom: 1px solid #d0d7de;
+      overflow: visible;
     }
     .bar h1 {
       margin: 0;
@@ -41,11 +42,8 @@
     }
     #glossary-search:focus { outline: 2px solid #b22335; }
     #glossary-search-list {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: calc(100% + 4px);
-      z-index: 5;
+      position: fixed;
+      z-index: 40;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -54,6 +52,7 @@
       background: #fff;
       border: 1px solid #d0d7de;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      pointer-events: auto;
     }
     #glossary-search-list li { padding: 8px 12px; cursor: pointer; display: flex; gap: 12px; align-items: baseline; }
     #glossary-search-list li.is-active, #glossary-search-list li:hover { background: #f6f8fa; }
@@ -691,6 +690,13 @@
       input.setAttribute("aria-expanded", "false");
     }
 
+    function placeList() {
+      const rect = input.getBoundingClientRect();
+      list.style.left = rect.left + "px";
+      list.style.top = (rect.bottom + 4) + "px";
+      list.style.width = rect.width + "px";
+    }
+
     function render() {
       current = rank(input.value);
       active = current.length ? 0 : -1;
@@ -703,8 +709,9 @@
         const lab = it.label;
         const at = lab.toLowerCase().indexOf(needle.toLowerCase());
         const label = at < 0 ? escapeHtml(lab) : escapeHtml(lab.slice(0, at)) + "<mark>" + escapeHtml(lab.slice(at, at + needle.length)) + "</mark>" + escapeHtml(lab.slice(at + needle.length));
-        return '<li role="option" class="' + (i === 0 ? "is-active" : "") + '" data-idx="' + i + '"><span>' + label + '</span><span class="kind">' + escapeHtml(it.kind) + "</span></li>";
+        return '<li role="option" class="' + (i === 0 ? "is-active" : "") + '" data-id="' + escapeHtml(it.id) + '"><span>' + label + '</span><span class="kind">' + escapeHtml(it.kind) + "</span></li>";
       }).join("");
+      placeList();
       list.hidden = false;
       input.setAttribute("aria-expanded", "true");
     }
@@ -714,8 +721,10 @@
       const el = document.getElementById(it.id);
       hide();
       if (!el) return;
+      const parent = el.parentElement;
+      const target = parent && parent.tagName === "P" && parent.nextElementSibling ? parent.nextElementSibling : el;
       history.replaceState(null, "", "#" + it.id);
-      el.scrollIntoView({ block: "start" });
+      target.scrollIntoView({ block: "start" });
     }
 
     input.addEventListener("input", render);
@@ -744,10 +753,13 @@
       const opt = e.target.closest("li");
       if (!opt) return;
       e.preventDefault();
-      openItem(current[Number(opt.getAttribute("data-idx"))]);
+      const id = opt.getAttribute("data-id");
+      openItem(items.find((it) => it.id === id));
     }
-    list.addEventListener("pointerdown", pickFromEvent);
+    document.body.appendChild(list);
+    list.addEventListener("mousedown", pickFromEvent);
     list.addEventListener("click", pickFromEvent);
+    window.addEventListener("scroll", () => { if (!list.hidden) placeList(); }, true);
     if (location.hash.length > 1) {
       const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
       if (el) el.scrollIntoView({ block: "start" });

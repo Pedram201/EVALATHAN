@@ -68,34 +68,23 @@ def prepare(text: str, scans: Path | None = None) -> tuple[Path, str]:
 
 
 def add_heading(frame, root) -> None:
-    """HYDRA name at the left. The mark is kept for the window icon and the button row."""
+    """HYDRA at the left. The mark sits at the top-right corner."""
     import tkinter as tk
     from tkinter import ttk
 
-    ttk.Label(frame, text="HYDRA", font=("Segoe UI", 18, "bold")).pack(anchor="w")
+    head = ttk.Frame(frame)
+    head.pack(fill="x")
+    ttk.Label(head, text="HYDRA", font=("Segoe UI", 18, "bold")).pack(side="left", anchor="n")
     logo_path = Path(__file__).with_name("hydra-logo.png")
     if not logo_path.is_file():
-        root._hydra_mark = None
         return
     image = tk.PhotoImage(file=str(logo_path))
-    icon_step = max(1, round(image.width() / 32))
-    icon = image.subsample(icon_step, icon_step) if icon_step > 1 else image
-    mark_step = max(1, round(image.width() / 112))
-    mark = image.subsample(mark_step, mark_step) if mark_step > 1 else image
-    root.iconphoto(True, icon)
+    step = max(1, round(image.width() / 56))
+    shown = image.subsample(step, step) if step > 1 else image
+    root.iconphoto(True, shown)
     root._hydra_logo = image
-    root._hydra_icon = icon
-    root._hydra_mark = mark
-
-
-def place_logo(parent, root, **grid) -> None:
-    """Large mark above Browse folder and Evaluate, with a gap under the mark."""
-    from tkinter import ttk
-
-    mark = getattr(root, "_hydra_mark", None)
-    if mark is None:
-        return
-    ttk.Label(parent, image=mark).grid(**grid)
+    root._hydra_mark = shown
+    ttk.Label(head, image=shown).pack(side="right", anchor="n")
 
 
 def open_desk() -> int:
@@ -118,10 +107,9 @@ def open_desk() -> int:
 
     row = ttk.Frame(frame)
     row.pack(fill="x")
-    row.columnconfigure(0, weight=1)
     pasted = tk.StringVar()
     entry = ttk.Entry(row, textvariable=pasted)
-    entry.grid(row=1, column=0, sticky="ew")
+    entry.pack(side="left", fill="x", expand=True)
     entry.focus_set()
 
     report = scrolledtext.ScrolledText(frame, wrap="word", font=("Consolas", 10))
@@ -178,10 +166,9 @@ def open_desk() -> int:
             Path(target).write_text(body + "\n", encoding="utf-8")
             status.set(f"Saved {target}")
 
-    place_logo(row, root, row=0, column=1, columnspan=2, pady=(0, 12))
-    ttk.Button(row, text="Browse folder", command=browse).grid(row=1, column=1, padx=(8, 0))
+    ttk.Button(row, text="Browse folder", command=browse).pack(side="left", padx=(8, 0))
     evaluate_button = ttk.Button(row, text="Evaluate", command=evaluate)
-    evaluate_button.grid(row=1, column=2, padx=(8, 0))
+    evaluate_button.pack(side="left", padx=(8, 0))
     ttk.Button(frame, text="Save report", command=save).pack(anchor="e")
 
     root.bind("<Return>", lambda _event: evaluate())

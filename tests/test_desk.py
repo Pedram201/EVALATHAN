@@ -1,6 +1,6 @@
 import pytest
 
-from evalathan.desk import add_heading, checkout_name, classify, place_logo, prepare
+from evalathan.desk import add_heading, checkout_name, classify, prepare
 
 
 def test_blank_paste_is_refused() -> None:
@@ -25,7 +25,7 @@ def test_missing_folder_is_refused(tmp_path) -> None:
         prepare(str(tmp_path / "missing"))
 
 
-def test_logo_sits_above_browse_and_evaluate() -> None:
+def test_logo_sits_at_the_top_right() -> None:
     tk = pytest.importorskip("tkinter")
     from tkinter import ttk
 
@@ -34,21 +34,11 @@ def test_logo_sits_above_browse_and_evaluate() -> None:
     try:
         frame = ttk.Frame(root)
         add_heading(frame, root)
-        assert frame.winfo_children()[0].cget("text") == "HYDRA"
-        row = ttk.Frame(frame)
-        row.columnconfigure(0, weight=1)
-        entry = ttk.Entry(row)
-        entry.grid(row=1, column=0, sticky="ew")
-        place_logo(row, root, row=0, column=1, columnspan=2, pady=(0, 12))
-        browse = ttk.Button(row, text="Browse folder")
-        browse.grid(row=1, column=1, padx=(8, 0))
-        evaluate = ttk.Button(row, text="Evaluate")
-        evaluate.grid(row=1, column=2, padx=(8, 0))
-        assert entry.grid_info()["row"] == browse.grid_info()["row"] == evaluate.grid_info()["row"]
-        logo = row.grid_slaves(row=0, column=1)[0]
+        name, logo = frame.winfo_children()[0].pack_slaves()
+        assert name.cget("text") == "HYDRA"
+        assert name.pack_info()["side"] == "left"
         assert logo.cget("image")
-        assert int(logo.grid_info()["row"]) == 0
-        assert logo.grid_info()["pady"] == (0, 12)
-        assert root._hydra_mark.width() >= 96
+        assert logo.pack_info()["side"] == "right"
+        assert root._hydra_mark.width() <= 72
     finally:
         root.destroy()
