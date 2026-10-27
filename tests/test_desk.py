@@ -39,6 +39,6 @@ def test_logo_sits_at_the_top_right() -> None:
         assert name.pack_info()["side"] == "left"
         assert logo.cget("image")
         assert logo.pack_info()["side"] == "right"
-        assert root._hydra_mark.width() <= 72
+        assert 60 <= root._hydra_mark.width() <= 72
     finally:
         root.destroy()
