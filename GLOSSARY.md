@@ -27,7 +27,7 @@ Hydra calls the sixteen evalers and writes each report beside the others. She co
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-The conductor. She points at each evaluator and writes down what it assessed and reported. She does not hand the evaluator groups results a single score or grade for the whole assessment group (16 current evaluators).
+The conductor. She points at each evaluator and writes down what it assessed and reported. She does not hand the evaluator group's results ae a single score or grade for the whole assessment group (16 current evaluators).
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
