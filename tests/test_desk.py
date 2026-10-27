@@ -25,7 +25,7 @@ def test_missing_folder_is_refused(tmp_path) -> None:
         prepare(str(tmp_path / "missing"))
 
 
-def test_logo_sits_at_the_top_right() -> None:
+def test_logo_sits_at_the_top_left() -> None:
     tk = pytest.importorskip("tkinter")
     from tkinter import ttk
 
@@ -34,11 +34,11 @@ def test_logo_sits_at_the_top_right() -> None:
     try:
         frame = ttk.Frame(root)
         add_heading(frame, root)
-        name, logo = frame.winfo_children()[0].pack_slaves()
+        logo, name = frame.winfo_children()[0].pack_slaves()
+        assert logo.cget("image")
+        assert logo.pack_info()["side"] == "left"
         assert name.cget("text") == "HYDRA"
         assert name.pack_info()["side"] == "left"
-        assert logo.cget("image")
-        assert logo.pack_info()["side"] == "right"
-        assert root._hydra_mark.width() == 128
+        assert root._hydra_mark.height() == 56
     finally:
         root.destroy()
