@@ -13,7 +13,7 @@ Evalathan grades a product across its life cycle. Evalathan is one evaluation ha
 
 On Windows, clone the program, then run `launch.bat` inside that folder. On a Mac, run `bash launch.sh` in that same folder. Either one opens the window. If that folder already exists, skip the clone and run the launcher there. On Windows you can also double-click `launch.bat`.
 
-**Command Prompt (Windows):**
+<p><img src="assets/readme/windows.png" alt="Windows" height="32" align="absmiddle"> <img src="assets/readme/command-prompt.png" alt="Command Prompt" height="32" align="absmiddle"> <strong>Command Prompt (Windows):</strong></p>
 
 ```bat
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
@@ -21,7 +21,7 @@ cd evalathan-program
 launch.bat
 ```
 
-**PowerShell (Windows)** (the prompt starts with `PS`). `cd /d` works only in Command Prompt, so this block uses `Set-Location`:
+<p><img src="assets/readme/windows.png" alt="Windows" height="32" align="absmiddle"> <img src="assets/readme/powershell.png" alt="PowerShell" height="32" align="absmiddle"> <strong>PowerShell (Windows)</strong> (the prompt starts with <code>PS</code>). <code>cd /d</code> works only in Command Prompt, so this block uses <code>Set-Location</code>:</p>
 
 ```powershell
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
@@ -29,7 +29,7 @@ Set-Location evalathan-program
 .\launch.bat
 ```
 
-**Mac Terminal** (the prompt ends with `%`). `launch.bat` is the Windows file. On a Mac the file is `launch.sh`.
+<p><img src="assets/readme/mac.png" alt="Mac" height="32" align="absmiddle"> <img src="assets/readme/python.png" alt="Python" height="32" align="absmiddle"> <strong>Mac Terminal</strong> (the prompt ends with <code>%</code>). <code>launch.bat</code> is the Windows file. On a Mac the file is <code>launch.sh</code>.</p>
 
 ```bash
 git clone https://github.com/pedramgoshATgmail/EVALATHAN.git evalathan-program
