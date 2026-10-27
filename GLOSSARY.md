@@ -173,7 +173,7 @@ Checking if a car comes equipped with working seatbelts and speed limit warnings
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
-A Python function named `bind_fuss` or `bindfuss`, or an assignment to `session_limit_minutes`, is a timer. In JavaScript, `function bindFuss` is a timer, including the copy in [fuss/fuss.js](fuss/fuss.js). A file whose name is `fuss` is a timer. The provisional phrases are "take a break", "session limit", and "time budget". The bare word fuss is not enough. <a id="fuss" name="fuss"></a>FUSS (For-User Session Switch) is the drop-in panel in [fuss/README.md](fuss/README.md). This is not a medical device and not an ISO certificate.
+A Python function named `bind_fuss` or `bindfuss`, or an assignment to `session_limit_minutes`, is a timer. In JavaScript, `function bindFuss` is a timer, including the copy in [fuss/fuss.js](fuss/fuss.js). A file whose name is `fuss` is a timer. The provisional phrases are "take a break", "session limit", and "time budget". The bare word fuss is not enough. FUSS (For-User Session Switch) is the drop-in panel in [fuss/README.md](fuss/README.md). This is not a medical device and not an ISO certificate.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
@@ -425,7 +425,7 @@ H14 on the card is the NASA-TLX row: one educated user, overall 9 out of 100, lo
 <a id="selfbelt" name="selfbelt"></a>
 <h2><img src="assets/glossary/selfbelt.png" alt="SELFBELT" height="19"></h2>
 
-SELFBELT is the seatbelt write-up for people who sit with software, including AI tools, for a long time. The pages are on [SELFBELT](docs/SELFBELT.md). The practice named inside the document is <a id="selfbelting" name="selfbelting"></a>SELFBELTING. The button name and the page name are SELFBELT.
+SELFBELT is the seatbelt write-up for people who sit with software, including AI tools, for a long time. The pages are on [SELFBELT](docs/SELFBELT.md). The practice named inside the document is SELFBELTING. The button name and the page name are SELFBELT.
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
@@ -440,6 +440,26 @@ Ralph Nader's *Unsafe at Any Speed* (1965) pushed crash safety into the car inst
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 Menschly links here. The drop-in timer is [fuss/README.md](fuss/README.md). Installing FUSS is optional. A product can pass Menschly with any real stop, and a product with no sitting stays blank. Nothing in the PDF is scraped into a numeric grade.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="fuss" name="fuss"></a>
+<h2>FUSS</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+FUSS (For-User Session Switch) is not one of the sixteen evalers and it does not add a seventeenth score. It is a panel a developer can copy into a product. Menschly is the evaler that can see a timer. A sentence that merely names FUSS is not a timer.
+
+<p align="center"><img src="fuss/fuss-logo.png" alt="FUSS" width="280"></p>
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+FUSS is a timer a person can turn on inside software they use for a long time. It is not an agent, not medical advice, and not a lock. The panel is a small card. The logo sits in the center. It asks whether to time this sitting, then lets a person set the minutes, the reminder spacing, the days, and an optional end date.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Copy the `fuss` folder into a web page or a desktop web view. The same files run on Windows and Mac. Before the end of the page, one script tag loads [fuss/fuss.js](fuss/fuss.js). A desktop app shows [fuss/index.html](fuss/index.html) in a web view. The choices stay in the browser's local storage on that computer. The script's starting setup is 25 minutes a sitting, a reminder every 15 minutes, all days, and no end date. Each person still has to tick the box and press Use FUSS. The panel does not start a timer for someone who said no. Menschly treats `function bindFuss` in that file as a timer. The write-up is [fuss/README.md](fuss/README.md).
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
