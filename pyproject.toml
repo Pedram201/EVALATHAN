@@ -21,5 +21,8 @@ evalathan = "evalathan.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+evalathan = ["hydra-logo.png"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]

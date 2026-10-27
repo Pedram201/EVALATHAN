@@ -67,6 +67,25 @@ def prepare(text: str, scans: Path | None = None) -> tuple[Path, str]:
     return dest, f"Downloaded to {dest}"
 
 
+def add_heading(frame, root) -> None:
+    """Logo to the left of the HYDRA name, and the same mark on the window."""
+    import tkinter as tk
+    from tkinter import ttk
+
+    head = ttk.Frame(frame)
+    head.pack(anchor="w")
+    logo_path = Path(__file__).with_name("hydra-logo.png")
+    if logo_path.is_file():
+        image = tk.PhotoImage(file=str(logo_path))
+        step = max(1, round(image.width() / 56))
+        if step > 1:
+            image = image.subsample(step, step)
+        root.iconphoto(True, image)
+        root._hydra_logo = image
+        ttk.Label(head, image=image).pack(side="left", padx=(0, 10))
+    ttk.Label(head, text="HYDRA", font=("Segoe UI", 18, "bold")).pack(side="left")
+
+
 def open_desk() -> int:
     import tkinter as tk
     from tkinter import filedialog, messagebox, scrolledtext, ttk
@@ -79,7 +98,7 @@ def open_desk() -> int:
     frame = ttk.Frame(root, padding=16)
     frame.pack(fill="both", expand=True)
 
-    ttk.Label(frame, text="HYDRA", font=("Segoe UI", 18, "bold")).pack(anchor="w")
+    add_heading(frame, root)
     ttk.Label(
         frame,
         text="Paste a GitHub link, or a folder on this PC. Then press Evaluate.",
