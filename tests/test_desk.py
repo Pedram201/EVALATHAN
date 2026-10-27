@@ -35,16 +35,20 @@ def test_logo_sits_above_browse_and_evaluate() -> None:
         frame = ttk.Frame(root)
         add_heading(frame, root)
         assert frame.winfo_children()[0].cget("text") == "HYDRA"
-        actions = ttk.Frame(frame)
-        place_logo(actions, root)
-        buttons = ttk.Frame(actions)
-        buttons.pack(side="top")
-        ttk.Button(buttons, text="Browse folder").pack(side="left")
-        ttk.Button(buttons, text="Evaluate").pack(side="left")
-        logo, button_row = actions.pack_slaves()
+        row = ttk.Frame(frame)
+        row.columnconfigure(0, weight=1)
+        entry = ttk.Entry(row)
+        entry.grid(row=1, column=0, sticky="ew")
+        place_logo(row, root, row=0, column=1, columnspan=2, pady=(0, 12))
+        browse = ttk.Button(row, text="Browse folder")
+        browse.grid(row=1, column=1, padx=(8, 0))
+        evaluate = ttk.Button(row, text="Evaluate")
+        evaluate.grid(row=1, column=2, padx=(8, 0))
+        assert entry.grid_info()["row"] == browse.grid_info()["row"] == evaluate.grid_info()["row"]
+        logo = row.grid_slaves(row=0, column=1)[0]
         assert logo.cget("image")
-        assert button_row.winfo_children()[0].cget("text") == "Browse folder"
-        assert button_row.winfo_children()[1].cget("text") == "Evaluate"
+        assert int(logo.grid_info()["row"]) == 0
+        assert logo.grid_info()["pady"] == (0, 12)
         assert root._hydra_mark.width() >= 96
     finally:
         root.destroy()

@@ -88,14 +88,14 @@ def add_heading(frame, root) -> None:
     root._hydra_mark = mark
 
 
-def place_logo(parent, root) -> None:
-    """Large mark above Browse folder and Evaluate. No caption under it."""
+def place_logo(parent, root, **grid) -> None:
+    """Large mark above Browse folder and Evaluate, with a gap under the mark."""
     from tkinter import ttk
 
     mark = getattr(root, "_hydra_mark", None)
     if mark is None:
         return
-    ttk.Label(parent, image=mark).pack(side="top", anchor="center")
+    ttk.Label(parent, image=mark).grid(**grid)
 
 
 def open_desk() -> int:
@@ -118,9 +118,10 @@ def open_desk() -> int:
 
     row = ttk.Frame(frame)
     row.pack(fill="x")
+    row.columnconfigure(0, weight=1)
     pasted = tk.StringVar()
     entry = ttk.Entry(row, textvariable=pasted)
-    entry.pack(side="left", fill="x", expand=True)
+    entry.grid(row=1, column=0, sticky="ew")
     entry.focus_set()
 
     report = scrolledtext.ScrolledText(frame, wrap="word", font=("Consolas", 10))
@@ -177,14 +178,10 @@ def open_desk() -> int:
             Path(target).write_text(body + "\n", encoding="utf-8")
             status.set(f"Saved {target}")
 
-    actions = ttk.Frame(row)
-    actions.pack(side="left", padx=(8, 0))
-    place_logo(actions, root)
-    buttons = ttk.Frame(actions)
-    buttons.pack(side="top")
-    ttk.Button(buttons, text="Browse folder", command=browse).pack(side="left")
-    evaluate_button = ttk.Button(buttons, text="Evaluate", command=evaluate)
-    evaluate_button.pack(side="left", padx=(8, 0))
+    place_logo(row, root, row=0, column=1, columnspan=2, pady=(0, 12))
+    ttk.Button(row, text="Browse folder", command=browse).grid(row=1, column=1, padx=(8, 0))
+    evaluate_button = ttk.Button(row, text="Evaluate", command=evaluate)
+    evaluate_button.grid(row=1, column=2, padx=(8, 0))
     ttk.Button(frame, text="Save report", command=save).pack(anchor="e")
 
     root.bind("<Return>", lambda _event: evaluate())
