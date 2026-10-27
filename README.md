@@ -37,7 +37,7 @@ cd evalathan-program
 bash launch.sh
 ```
 
-<p><img src="assets/readme/mac.png" alt="Mac" height="32" align="absmiddle"> <img src="assets/readme/python.png" alt="Python" height="32" align="absmiddle"> If that Mac Python has no window library, install Python from <a href="https://www.python.org/downloads/macos/">https://www.python.org/downloads/macos/</a> and run <code>bash launch.sh</code> again. That installer includes the window library.</p>
+<p><img src="assets/readme/mac.png" alt="Mac" height="34" align="absmiddle"> <img src="assets/readme/python.png" alt="Python" height="32" align="absmiddle"> If that Mac Python has no window library, install Python from <a href="https://www.python.org/downloads/macos/">https://www.python.org/downloads/macos/</a> and run <code>bash launch.sh</code> again. That installer includes the window library.</p>
 
 `launch.bat` moves into `evalathan-program`, then runs:
 
