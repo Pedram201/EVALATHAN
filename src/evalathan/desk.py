@@ -79,7 +79,7 @@ def add_heading(frame, root) -> None:
     if not logo_path.is_file():
         return
     image = tk.PhotoImage(file=str(logo_path))
-    step = max(1, round(image.height() / round(56 * 1.12)))
+    step = max(1, round(image.height() / round(56 * 1.12 * 1.16)))
     shown = image.subsample(step, step) if step > 1 else image
     root.iconphoto(True, shown)
     root._hydra_logo = image
