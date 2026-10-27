@@ -88,14 +88,14 @@ def add_heading(frame, root) -> None:
     root._hydra_mark = mark
 
 
-def place_logo(row, root) -> None:
-    """Large mark between Browse folder and Evaluate. No caption under it."""
+def place_logo(parent, root) -> None:
+    """Large mark above Browse folder and Evaluate. No caption under it."""
     from tkinter import ttk
 
     mark = getattr(root, "_hydra_mark", None)
     if mark is None:
         return
-    ttk.Label(row, image=mark).pack(side="left", padx=(8, 0))
+    ttk.Label(parent, image=mark).pack(side="top", anchor="center")
 
 
 def open_desk() -> int:
@@ -177,9 +177,13 @@ def open_desk() -> int:
             Path(target).write_text(body + "\n", encoding="utf-8")
             status.set(f"Saved {target}")
 
-    ttk.Button(row, text="Browse folder", command=browse).pack(side="left", padx=(8, 0))
-    place_logo(row, root)
-    evaluate_button = ttk.Button(row, text="Evaluate", command=evaluate)
+    actions = ttk.Frame(row)
+    actions.pack(side="left", padx=(8, 0))
+    place_logo(actions, root)
+    buttons = ttk.Frame(actions)
+    buttons.pack(side="top")
+    ttk.Button(buttons, text="Browse folder", command=browse).pack(side="left")
+    evaluate_button = ttk.Button(buttons, text="Evaluate", command=evaluate)
     evaluate_button.pack(side="left", padx=(8, 0))
     ttk.Button(frame, text="Save report", command=save).pack(anchor="e")
 
