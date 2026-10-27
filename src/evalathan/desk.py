@@ -68,22 +68,34 @@ def prepare(text: str, scans: Path | None = None) -> tuple[Path, str]:
 
 
 def add_heading(frame, root) -> None:
-    """Logo to the left of the HYDRA name, and the same mark on the window."""
+    """HYDRA name at the left. The mark is kept for the window icon and the button row."""
     import tkinter as tk
     from tkinter import ttk
 
-    head = ttk.Frame(frame)
-    head.pack(anchor="w")
+    ttk.Label(frame, text="HYDRA", font=("Segoe UI", 18, "bold")).pack(anchor="w")
     logo_path = Path(__file__).with_name("hydra-logo.png")
-    if logo_path.is_file():
-        image = tk.PhotoImage(file=str(logo_path))
-        step = max(1, round(image.width() / 56))
-        if step > 1:
-            image = image.subsample(step, step)
-        root.iconphoto(True, image)
-        root._hydra_logo = image
-        ttk.Label(head, image=image).pack(side="left", padx=(0, 10))
-    ttk.Label(head, text="HYDRA", font=("Segoe UI", 18, "bold")).pack(side="left")
+    if not logo_path.is_file():
+        root._hydra_mark = None
+        return
+    image = tk.PhotoImage(file=str(logo_path))
+    icon_step = max(1, round(image.width() / 32))
+    icon = image.subsample(icon_step, icon_step) if icon_step > 1 else image
+    mark_step = max(1, round(image.width() / 112))
+    mark = image.subsample(mark_step, mark_step) if mark_step > 1 else image
+    root.iconphoto(True, icon)
+    root._hydra_logo = image
+    root._hydra_icon = icon
+    root._hydra_mark = mark
+
+
+def place_logo(row, root) -> None:
+    """Large mark between Browse folder and Evaluate. No caption under it."""
+    from tkinter import ttk
+
+    mark = getattr(root, "_hydra_mark", None)
+    if mark is None:
+        return
+    ttk.Label(row, image=mark).pack(side="left", padx=(8, 0))
 
 
 def open_desk() -> int:
@@ -166,6 +178,7 @@ def open_desk() -> int:
             status.set(f"Saved {target}")
 
     ttk.Button(row, text="Browse folder", command=browse).pack(side="left", padx=(8, 0))
+    place_logo(row, root)
     evaluate_button = ttk.Button(row, text="Evaluate", command=evaluate)
     evaluate_button.pack(side="left", padx=(8, 0))
     ttk.Button(frame, text="Save report", command=save).pack(anchor="e")
