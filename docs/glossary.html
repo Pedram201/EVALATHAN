@@ -43,7 +43,7 @@
     #glossary-search:focus { outline: 2px solid #b22335; }
     #glossary-search-list {
       position: fixed;
-      z-index: 40;
+      z-index: 2147483000;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -54,8 +54,23 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
       pointer-events: auto;
     }
-    #glossary-search-list li { padding: 8px 12px; cursor: pointer; display: flex; gap: 12px; align-items: baseline; }
-    #glossary-search-list li.is-active, #glossary-search-list li:hover { background: #f6f8fa; }
+    #glossary-search-list li { margin: 0; padding: 0; }
+    #glossary-search-list button {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      width: 100%;
+      margin: 0;
+      padding: 8px 12px;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+    #glossary-search-list li.is-active button,
+    #glossary-search-list button:hover { background: #f6f8fa; }
     .kind { margin-left: auto; color: #5a636e; font-size: 13px; }
     mark { background: #ffe08a; }
     [hidden] { display: none; }
@@ -743,6 +758,7 @@
 
     function hide() {
       list.hidden = true;
+      list.style.display = "none";
       list.innerHTML = "";
       current = [];
       active = -1;
@@ -753,7 +769,7 @@
       const rect = input.getBoundingClientRect();
       list.style.left = rect.left + "px";
       list.style.top = (rect.bottom + 4) + "px";
-      list.style.width = rect.width + "px";
+      list.style.width = Math.max(rect.width, 280) + "px";
     }
 
     function render() {
@@ -768,20 +784,32 @@
         const lab = it.label;
         const at = lab.toLowerCase().indexOf(needle.toLowerCase());
         const label = at < 0 ? escapeHtml(lab) : escapeHtml(lab.slice(0, at)) + "<mark>" + escapeHtml(lab.slice(at, at + needle.length)) + "</mark>" + escapeHtml(lab.slice(at + needle.length));
-        return '<li role="option" class="' + (i === 0 ? "is-active" : "") + '" data-id="' + escapeHtml(it.id) + '"><span>' + label + '</span><span class="kind">' + escapeHtml(it.kind) + "</span></li>";
+        return '<li role="presentation" class="' + (i === 0 ? "is-active" : "") + '"><button type="button" role="option" data-id="' + escapeHtml(it.id) + '"><span>' + label + '</span><span class="kind">' + escapeHtml(it.kind) + "</span></button></li>";
       }).join("");
       placeList();
       list.hidden = false;
+      list.style.display = "block";
       input.setAttribute("aria-expanded", "true");
+    }
+
+    function entryHead(id) {
+      const el = document.getElementById(id);
+      if (!el) return null;
+      if (/^H[1-6]$/.test(el.tagName)) return el;
+      let node = el.parentElement && el.parentElement.tagName === "P" ? el.parentElement : el;
+      let sib = node.nextElementSibling;
+      while (sib && !/^H[1-6]$/.test(sib.tagName)) sib = sib.nextElementSibling;
+      return sib || node;
     }
 
     function openItem(it) {
       if (!it) return;
-      const el = document.getElementById(it.id);
-      const parent = el && el.parentElement;
-      const target = parent && parent.tagName === "P" && parent.nextElementSibling ? parent.nextElementSibling : el;
+      const target = entryHead(it.id);
       hide();
-      if (target && target.scrollIntoView) target.scrollIntoView({ block: "start" });
+      if (target) {
+        target.style.scrollMarginTop = "88px";
+        target.scrollIntoView({ block: "start" });
+      }
       try {
         const url = new URL(window.location.href);
         url.hash = it.id;
@@ -789,6 +817,28 @@
       } catch (err) {
         /* The preview host sets a cross-origin base. A bare hash would throw and skip the jump. */
       }
+      if (target) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+    }
+
+    function optionAt(x, y) {
+      if (list.hidden || list.style.display === "none") return null;
+      const box = list.getBoundingClientRect();
+      if (x < box.left || x > box.right || y < box.top || y > box.bottom) return null;
+      const rows = list.querySelectorAll("button[data-id]");
+      for (let i = 0; i < rows.length; i++) {
+        const row = rows[i].getBoundingClientRect();
+        if (y >= row.top && y <= row.bottom) return rows[i];
+      }
+      return null;
+    }
+
+    function pickFromPoint(e) {
+      const opt = optionAt(e.clientX, e.clientY);
+      if (!opt) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const id = opt.getAttribute("data-id");
+      openItem(current.find((it) => it.id === id) || items.find((it) => it.id === id));
     }
 
     input.addEventListener("input", render);
@@ -813,16 +863,9 @@
         hide();
       }
     });
-    function pickFromEvent(e) {
-      const opt = e.target.closest("li");
-      if (!opt) return;
-      e.preventDefault();
-      e.stopPropagation();
-      const id = opt.getAttribute("data-id");
-      openItem(current.find((it) => it.id === id) || items.find((it) => it.id === id));
-    }
     document.body.appendChild(list);
-    list.addEventListener("pointerdown", pickFromEvent);
+    window.addEventListener("pointerdown", pickFromPoint, true);
+    window.addEventListener("mousedown", pickFromPoint, true);
     window.addEventListener("scroll", () => { if (!list.hidden) placeList(); }, true);
     if (location.hash.length > 1) {
       const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
