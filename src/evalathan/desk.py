@@ -68,22 +68,23 @@ def prepare(text: str, scans: Path | None = None) -> tuple[Path, str]:
 
 
 def add_heading(frame, root) -> None:
-    """Logo at the top left, then the HYDRA name. Same row as the first window."""
+    """HYDRA at the left. The mark sits at the top-right corner."""
     import tkinter as tk
     from tkinter import ttk
 
     head = ttk.Frame(frame)
-    head.pack(anchor="w")
-    logo_path = Path(__file__).with_name("hydra-logo.png")
-    if logo_path.is_file():
-        image = tk.PhotoImage(file=str(logo_path))
-        step = max(1, round(image.height() / 56))
-        shown = image.subsample(step, step) if step > 1 else image
-        root.iconphoto(True, shown)
-        root._hydra_logo = image
-        root._hydra_mark = shown
-        ttk.Label(head, image=shown).pack(side="left", padx=(0, 10))
+    head.pack(fill="x")
     ttk.Label(head, text="HYDRA", font=("Segoe UI", 18, "bold")).pack(side="left")
+    logo_path = Path(__file__).with_name("hydra-logo.png")
+    if not logo_path.is_file():
+        return
+    image = tk.PhotoImage(file=str(logo_path))
+    step = max(1, round(image.height() / round(56 * 1.12)))
+    shown = image.subsample(step, step) if step > 1 else image
+    root.iconphoto(True, shown)
+    root._hydra_logo = image
+    root._hydra_mark = shown
+    ttk.Label(head, image=shown).pack(side="right")
 
 
 def open_desk() -> int:
