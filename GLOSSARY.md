@@ -634,7 +634,7 @@ The agent is locked in a dated world: only the news, instruments, and papers tha
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
-Spec: [docs/LUTS.md](docs/LUTS.md). Machine cards: [exams/luts/](exams/luts/). v1 worlds are LUTS-C Copernicus (1542), LUTS-K Kepler (1608), LUTS-G Galileo (1608/1637, required), LUTS-D Darwin (1858, required), LUTS-M Mendeleev (1868), LUTS-E Einstein general relativity (1914). LUTS-N Newton is deferred until G and K both run. Two clocks: world year T, biography age A. Gold is structural. Leakage of post-cutoff facts fails the run. Claim-gated: discovery, world-models, scientific agents, or physical-world AI. Domly is the wrong station. Trajectly counts a local file whose name contains `trace`, `trajectory`, or `passk`. This pack is not AllenAI DiscoveryBench and not a prompt cutoff (ExAnte). The sixteen stay sixteen.
+The public tree names LUTS and withholds the world cards. Spec stub: [docs/LUTS.md](docs/LUTS.md). Trajectly counts a local file whose name contains `trace`, `trajectory`, or `passk`. LUTS is not a seventeenth evaler. The sixteen stay sixteen.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
