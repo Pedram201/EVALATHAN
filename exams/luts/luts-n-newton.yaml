@@ -1,0 +1,21 @@
+id: LUTS-N
+status: v2-deferred
+mode: unification
+discoverer: Isaac Newton
+target_work: Philosophiæ Naturalis Principia Mathematica (1687)
+world_clock_T: 1686
+biography:
+  birth: 1643
+  age_at_T: 43
+  post: Cambridge; access to Kepler and Galileo as prior LUTS cells
+  not_available: Einstein GR; modern vector calculus textbooks as gold
+instrument_class: 17th-c mathematics plus the outputs of LUTS-K and LUTS-G
+interaction: unify celestial tables with terrestrial mechanics
+gold_structural:
+  - inverse-square universal gravitation
+  - celestial and terrestrial the same law
+not_gold:
+  - the apple story
+why_deferred: Principia is composition of Kepler plus Galileo. Run LUTS-K and LUTS-G first. Apple is folklore, not a catalyst.
+physical_world_need: 3
+notes: Off v1. Optional v2 unification exam.

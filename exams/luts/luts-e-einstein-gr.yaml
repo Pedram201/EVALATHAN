@@ -1,0 +1,25 @@
+id: LUTS-E
+status: v1
+mode: F-anomaly-theory
+discoverer: Albert Einstein
+target_work: general relativity field equations (November 1915)
+world_clock_T: 1914
+biography:
+  birth: 1879
+  age_at_T: 35
+  post: Berlin / Prussian academy path, not the 1905 patent office
+  not_available: 1919 eclipse plates until a theory is submitted; later GR textbooks; 1905 as this cell's gold
+instrument_class: special relativity (already published), Newtonian gravity, Mercury perihelion residual, equivalence
+interaction: theory construction from the 1914 toolkit; optional 1919 verification gate only after submission
+gold_structural:
+  - field equations whose weak-field limit recovers Newton
+  - perihelion of Mercury
+  - predicted light deflection (checked only after submission)
+not_gold:
+  - the string "general relativity"
+  - photoelectric effect, Brownian motion, or 1905 special relativity as this cell's answer
+folklore_banned:
+  - dumping the miracle year into GR
+  - scoring the name GR
+physical_world_need: 4
+notes: Theory-from-anomaly. Does not replace Galileo. Split 1905 into a later cell if needed. Do not use 1919 as context before the theory exists.

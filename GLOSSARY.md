@@ -544,7 +544,7 @@ The scan looks for a file whose stem is `prd`, `product-requirements`, or `produ
 
 These are public exams for coding agents and for chat models. They matter in this period. Evalathan does not run them in the laptop scan, and it does not paste their leaderboards. That is a scope fact, not a dismissal. Trajectly is the station that will count one of them on the day a saved trace from that exam is in the folder you scan. A percent copied from a website is still not a grade.
 
-The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds [PRDBench](#prdbench), which grades an agent that builds from a [PRD](#prd).
+The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds [PRDBench](#prdbench), which grades an agent that builds from a [PRD](#prd). It also holds [LUTS](#luts) (Limited-universe Test Set), historically locked discovery worlds. LUTS is not a seventeenth evaler.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
@@ -617,6 +617,24 @@ The agent is given a product write-up and a test plan, then asked to build the s
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 The paper is [arXiv:2510.24358](https://arxiv.org/abs/2510.24358), submitted 28 Oct 2025. The public tree is [AGI-Eval-Official/PRDBench](https://github.com/AGI-Eval-Official/PRDBench). Fifty Python tasks across twenty domains. Each task keeps `src/PRD.md` and `evaluation/detailed_test_plan.json`. Evaluation uses an Agent-as-a-Judge. Evalathan does not run that judge and does not copy a percent. A named PRD file in a scanned folder is printed on its own line. That line is not this exam.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="luts" name="luts"></a>
+<h2>LUTS</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+No Evalathan score in v0.2. LUTS (Limited-universe Test Set) is a Trajectly exam family, not a seventeenth evaler. Hydra still calls sixteen. A missing LUTS run is blank, not a fail and not a zero. The cell stays off the vector until a sealed trace from a LUTS world is in the tree.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The agent is locked in a dated world: only the news, instruments, and papers that existed at that year, and only what that discoverer could have reached at that age. It then has to form the theory by acting in that world. Naming the later textbook title is not a pass. Galileo, Copernicus, and Kepler are three different tests, not one astronomy quiz. Newton waits.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Spec: [docs/LUTS.md](docs/LUTS.md). Machine cards: [exams/luts/](exams/luts/). v1 worlds are LUTS-C Copernicus (1542), LUTS-K Kepler (1608), LUTS-G Galileo (1608/1637, required), LUTS-D Darwin (1858, required), LUTS-M Mendeleev (1868), LUTS-E Einstein general relativity (1914). LUTS-N Newton is deferred until G and K both run. Two clocks: world year T, biography age A. Gold is structural. Leakage of post-cutoff facts fails the run. Claim-gated: discovery, world-models, scientific agents, or physical-world AI. Domly is the wrong station. Trajectly counts a local file whose name contains `trace`, `trajectory`, or `passk`. This pack is not AllenAI DiscoveryBench and not a prompt cutoff (ExAnte). The sixteen stay sixteen.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>

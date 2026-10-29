@@ -1,0 +1,27 @@
+id: LUTS-G
+status: v1-required
+mode: C-new-sensor-plus-experiment
+discoverer: Galileo Galilei
+target_work: Sidereus nuncius (1610); Discorsi (1638)
+world_clock_T: 1608
+world_clock_T2: 1637
+biography:
+  birth: 1564
+  age_at_T: 44
+  post: Padua / later Florence
+  not_available: Kepler's 1609 ellipse as a required premise; Newton; modern optics
+instrument_class: gated 1609 refracting optic; 17th-c incline, pendulum, falling-body kit
+interaction: point the optic; run terrestrial trials; time advances inside the world
+gold_structural:
+  - Jupiter has satellites
+  - Venus shows phases
+  - lunar surface is irregular
+  - falling-body regularity / incline law (T2)
+not_gold:
+  - the string "heliocentrism"
+  - knowledge-graph relation inversion of a Ptolemaic graph
+folklore_banned:
+  - Galileo invented heliocentrism
+  - the leaning-tower set piece as the only kinematics gold
+physical_world_need: 9
+notes: Physical-world flagship. Must ship if any LUTS ships. Split from Copernicus on purpose.
