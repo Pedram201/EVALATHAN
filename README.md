@@ -169,6 +169,6 @@ These are public evals that already exist. v0.2 does not run them and does not c
 
 **PRDBench.** [PRDBench](GLOSSARY.md#user-content-prdbench) grades an agent that builds from a [PRD](GLOSSARY.md#user-content-prd) (Product Requirements Document). Evalathan does not sit that exam and does not copy its board.
 
-**LUTS.** [LUTS](GLOSSARY.md#user-content-luts) (Limited-universe Test Set) is named on the Trajectly exam shelf. The world cards are withheld from this public tree. v0.2 does not run the worlds. It is not a seventeenth evaler.
+**LuDaTs.** [LuDaTs](GLOSSARY.md#user-content-ludats) (Limited-universe Data Test sets) is a Trajectly exam family of historically locked discovery worlds. Spec: [docs/LuDaTs.md](docs/LuDaTs.md). Cards: [exams/ludats/](exams/ludats/). v0.2 names it and does not run the worlds. It is not a seventeenth evaler.
 
 **AOSE.** [AOSE](GLOSSARY.md#user-content-aose) (agent-oriented software engineering) is the field, not a score. The public catalog named on that entry includes [WildBench](GLOSSARY.md#user-content-wildbench).

@@ -693,7 +693,7 @@
 <h2><img src="../assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26" width="488"></h2>
 
 <p>These are public exams for coding agents and for chat models. They matter in this period. Evalathan does not run them in the laptop scan, and it does not paste their leaderboards. That is a scope fact, not a dismissal. Trajectly is the station that will count one of them on the day a saved trace from that exam is in the folder you scan. A percent copied from a website is still not a grade.</p>
-<p>The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds <a href="#prdbench">PRDBench</a>, which grades an agent that builds from a <a href="#prd">PRD</a>.</p>
+<p>The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds <a href="#prdbench">PRDBench</a>, which grades an agent that builds from a <a href="#prd">PRD</a>. It also holds <a href="#ludats">LuDaTs</a> (Limited-universe Data Test sets), historically locked discovery worlds. LuDaTs is not a seventeenth evaler.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="swe-bench" name="swe-bench"></a></p>
@@ -750,6 +750,20 @@
 <h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
 
 <p>The paper is <a href="https://arxiv.org/abs/2510.24358">arXiv:2510.24358</a>, submitted 28 Oct 2025. The public tree is <a href="https://github.com/AGI-Eval-Official/PRDBench">AGI-Eval-Official/PRDBench</a>. Fifty Python tasks across twenty domains. Each task keeps <code>src/PRD.md</code> and <code>evaluation/detailed_test_plan.json</code>. Evaluation uses an Agent-as-a-Judge. Evalathan does not run that judge and does not copy a percent. A named PRD file in a scanned folder is printed on its own line. That line is not this exam.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="ludats" name="ludats"></a></p>
+<h2>LuDaTs</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+
+<p>No Evalathan score in v0.2. LuDaTs (Limited-universe Data Test sets) is a Trajectly exam family, not a seventeenth evaler. Hydra still calls sixteen. A missing LuDaTs run is blank, not a fail and not a zero. The cell stays off the vector until a sealed trace from a LuDaTs world is in the tree.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+
+<p>LuDaTs (Limited-universe Data Test sets) locks the agent in a dated world: only the news, instruments, and papers that existed at that year, and only what that discoverer could have reached at that age. It then has to form the theory by acting in that world. Naming the later textbook title is not a pass. Galileo, Copernicus, and Kepler are three different tests, not one astronomy quiz. Newton waits.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+
+<p>Spec: <a href="LuDaTs.md">docs/LuDaTs.md</a>. Machine cards: <a href="../exams/ludats/">exams/ludats/</a>. v1 worlds are LuDaTs-C Copernicus (1542), LuDaTs-K Kepler (1608), LuDaTs-G Galileo (1608/1637, required), LuDaTs-D Darwin (1858, required), LuDaTs-M Mendeleev (1868), LuDaTs-E Einstein general relativity (1914). LuDaTs-N Newton is deferred until G and K both run. Two clocks: world year T, biography age A. Gold is structural. Leakage of post-cutoff facts fails the run. Claim-gated: discovery, world-models, scientific agents, or physical-world AI. Domly is the wrong station. Trajectly counts a local file whose name contains <code>trace</code>, <code>trajectory</code>, or <code>passk</code>. This pack is not AllenAI DiscoveryBench and not a prompt cutoff (ExAnte). The sixteen stay sixteen.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="aose" name="aose"></a></p>
@@ -893,6 +907,7 @@
     {"id":"swe-bench-pro","label":"SWE-bench Pro","kind":"term"},
     {"id":"deepswe","label":"DeepSWE","kind":"term"},
     {"id":"prdbench","label":"PRDBench","kind":"term","aliases":["prdbench","prd bench"]},
+    {"id":"ludats","label":"LuDaTs","kind":"term","aliases":["ludats","luts","limited-universe data test sets","limited universe data test sets"]},
     {"id":"aose","label":"AOSE","kind":"term","aliases":["agent-oriented software engineering"]},
     {"id":"wildbench","label":"WildBench","kind":"term"},
     {"id":"ragas","label":"Ragas","kind":"term","aliases":["ragas"]},

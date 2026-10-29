@@ -544,7 +544,7 @@ The scan looks for a file whose stem is `prd`, `product-requirements`, or `produ
 
 These are public exams for coding agents and for chat models. They matter in this period. Evalathan does not run them in the laptop scan, and it does not paste their leaderboards. That is a scope fact, not a dismissal. Trajectly is the station that will count one of them on the day a saved trace from that exam is in the folder you scan. A percent copied from a website is still not a grade.
 
-The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds [PRDBench](#prdbench), which grades an agent that builds from a [PRD](#prd). It also holds [LUTS](#luts) (Limited-universe Test Set), historically locked discovery worlds. LUTS is not a seventeenth evaler.
+The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds [PRDBench](#prdbench), which grades an agent that builds from a [PRD](#prd). It also holds [LuDaTs](#ludats) (Limited-universe Data Test sets), historically locked discovery worlds. LuDaTs is not a seventeenth evaler.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
@@ -621,20 +621,20 @@ The paper is [arXiv:2510.24358](https://arxiv.org/abs/2510.24358), submitted 28 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
 
-<a id="luts" name="luts"></a>
-<h2>LUTS</h2>
+<a id="ludats" name="ludats"></a>
+<h2>LuDaTs</h2>
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
-No Evalathan score in v0.2. LUTS (Limited-universe Test Set) is a Trajectly exam family, not a seventeenth evaler. Hydra still calls sixteen. A missing LUTS run is blank, not a fail and not a zero. The cell stays off the vector until a sealed trace from a LUTS world is in the tree.
+No Evalathan score in v0.2. LuDaTs (Limited-universe Data Test sets) is a Trajectly exam family, not a seventeenth evaler. Hydra still calls sixteen. A missing LuDaTs run is blank, not a fail and not a zero. The cell stays off the vector until a sealed trace from a LuDaTs world is in the tree.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-The agent is locked in a dated world: only the news, instruments, and papers that existed at that year, and only what that discoverer could have reached at that age. It then has to form the theory by acting in that world. Naming the later textbook title is not a pass. Galileo, Copernicus, and Kepler are three different tests, not one astronomy quiz. Newton waits.
+LuDaTs (Limited-universe Data Test sets) locks the agent in a dated world: only the news, instruments, and papers that existed at that year, and only what that discoverer could have reached at that age. It then has to form the theory by acting in that world. Naming the later textbook title is not a pass. Galileo, Copernicus, and Kepler are three different tests, not one astronomy quiz. Newton waits.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
-The public tree names LUTS and withholds the world cards. Spec stub: [docs/LUTS.md](docs/LUTS.md). Trajectly counts a local file whose name contains `trace`, `trajectory`, or `passk`. LUTS is not a seventeenth evaler. The sixteen stay sixteen.
+Spec: [docs/LuDaTs.md](docs/LuDaTs.md). Machine cards: [exams/ludats/](exams/ludats/). v1 worlds are LuDaTs-C Copernicus (1542), LuDaTs-K Kepler (1608), LuDaTs-G Galileo (1608/1637, required), LuDaTs-D Darwin (1858, required), LuDaTs-M Mendeleev (1868), LuDaTs-E Einstein general relativity (1914). LuDaTs-N Newton is deferred until G and K both run. Two clocks: world year T, biography age A. Gold is structural. Leakage of post-cutoff facts fails the run. Claim-gated: discovery, world-models, scientific agents, or physical-world AI. Domly is the wrong station. Trajectly counts a local file whose name contains `trace`, `trajectory`, or `passk`. This pack is not AllenAI DiscoveryBench and not a prompt cutoff (ExAnte). The sixteen stay sixteen.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>

@@ -1,0 +1,24 @@
+id: LuDaTs-C
+status: v1
+mode: A-reinterpret-archive
+discoverer: Nicolaus Copernicus
+target_work: De revolutionibus orbium coelestium (1543)
+world_clock_T: 1542
+biography:
+  birth: 1473
+  age_at_T: 69
+  post: canon at Frombork; access to 15th/early-16th c naked-eye astronomy
+  not_available: telescope; Kepler; Galileo; Newtonian gravity
+instrument_class: naked-eye planetary longitudes already in the archive
+interaction: fit an existing observation table; no new sensor
+gold_structural:
+  - sun-centered kinematic model
+  - fewer epicycles than the Ptolemaic fit on the same archive
+  - earth as a planet among planets
+not_gold:
+  - the string "heliocentrism"
+  - any post-1542 observation
+folklore_banned:
+  - Copernicus discovered heliocentrism through a telescope
+physical_world_need: 2
+notes: Desk astronomer. Required if the astronomy suite ships. Not a substitute for Galileo.

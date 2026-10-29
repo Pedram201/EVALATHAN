@@ -1,0 +1,23 @@
+id: LuDaTs-K
+status: v1
+mode: B-precision-same-sense
+discoverer: Johannes Kepler
+target_work: Astronomia nova (1609); Harmonices mundi (1619) as a later gate
+world_clock_T: 1608
+biography:
+  birth: 1571
+  age_at_T: 37
+  post: Tycho Brahe's heir to the Mars reductions
+  not_available: Galileo's 1609 optic as a required tool; Newton
+instrument_class: Tycho-precision Mars table; still naked-eye class
+interaction: fit the Mars table; optional 1618 harmonic-law gate as LuDaTs-K2
+gold_structural:
+  - elliptical orbit
+  - equal areas in equal times
+not_gold:
+  - naming Kepler's laws
+  - using a telescope
+folklore_banned:
+  - Kepler and Copernicus are the same astronomy quiz
+physical_world_need: 5
+notes: Better data, same sense. Required with C and G. Do not merge into one sky library.
