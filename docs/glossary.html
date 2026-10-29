@@ -673,11 +673,27 @@
 <p>For an AI product such as Evalathan, PLG means making the product sufficiently useful and accessible that developers discover its value, integrate it into their workflows, and become advocates - while the business converts sustained usage into paid accounts. The runner does not compute a PLG rate. Levi remains the user-first card. Warrantly remains the claim-and-source check.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
+<p><a id="prd" name="prd"></a></p>
+<h2>PRD</h2>
+
+<p>PRD (Product Requirements Document - what a product must do, not how to build it) is a write-up of the capabilities a release must include. This entry is the definition. It is not an evaler.</p>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+
+<p>PRD is not one of the sixteen evalers and it does not add a seventeenth score. Hydra may print that a named PRD file was found. If none is in the tree, the line is No PRD found. That line is not a fail and not a zero. Archly still scores architecture evidence. A sentence that merely names a PRD is not a specification. This is not an ISO/IEC/IEEE 29148 certificate.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+
+<p>The shopping list for the product. It says what done means for the people who will use it. It does not pick the bricks. Some teams keep that list as stories instead of one long file. Missing the file is common, and the scan says so in one line.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+
+<p>Wikipedia and ProductPlan agree: the document states capabilities and use cases and should not dictate implementation. <a href="https://www.atlassian.com/agile/product-management/requirements">Atlassian</a> describes a short shared page: purpose, features, user needs, and success criteria. In <a href="https://en.wikipedia.org/wiki/Agile_software_development">Agile</a> work that page stays short, links out, and is written with the team. Feature rows may carry a <a href="https://en.wikipedia.org/wiki/MoSCoW_method">MoSCoW</a> (Must, Should, Could, Won't) priority. Engineering may then write a functional specification and an architectural design. ISO/IEC/IEEE 29148 is the software requirements specification (SRS) standard, which superseded IEEE 830.</p>
+<p>The scan looks for a file whose stem is <code>prd</code>, <code>product-requirements</code>, or <code>product_requirements</code>, with a <code>.md</code>, <code>.rst</code>, <code>.txt</code>, or <code>.adoc</code> suffix. Presence prints <code>PRD found:</code> and the relative path. Absence prints <code>No PRD found</code>. Headings are not a completeness percent. A README sentence is not a file. <a href="#prdbench">PRDBench</a> is an exam of agents that implement a PRD. It is not this line.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
 <p><a id="agentic-exams-that-are-not-on-the-vector-yet" name="agentic-exams-that-are-not-on-the-vector-yet"></a></p>
 <h2><img src="../assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26" width="488"></h2>
 
 <p>These are public exams for coding agents and for chat models. They matter in this period. Evalathan does not run them in the laptop scan, and it does not paste their leaderboards. That is a scope fact, not a dismissal. Trajectly is the station that will count one of them on the day a saved trace from that exam is in the folder you scan. A percent copied from a website is still not a grade.</p>
-<p>The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector.</p>
+<p>The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds <a href="#prdbench">PRDBench</a>, which grades an agent that builds from a <a href="#prd">PRD</a>.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="swe-bench" name="swe-bench"></a></p>
@@ -720,6 +736,20 @@
 <h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
 
 <p>The public page is <a href="https://deepswe.datacurve.ai/">deepswe.datacurve.ai</a>. Evalathan does not download that board and does not average it with anything else.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="prdbench" name="prdbench"></a></p>
+<h2>PRDBench</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+
+<p>No Evalathan score. PRDBench grades an agent that builds from a PRD. The public board is someone else's number. The cell stays off the vector. Finding a named PRD file in the tree is not sitting this exam.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+
+<p>The agent is given a product write-up and a test plan, then asked to build the software. A separate judge checks the result. Evalathan can say the name. It does not pretend it sat the exam, and it does not paste the board.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+
+<p>The paper is <a href="https://arxiv.org/abs/2510.24358">arXiv:2510.24358</a>, submitted 28 Oct 2025. The public tree is <a href="https://github.com/AGI-Eval-Official/PRDBench">AGI-Eval-Official/PRDBench</a>. Fifty Python tasks across twenty domains. Each task keeps <code>src/PRD.md</code> and <code>evaluation/detailed_test_plan.json</code>. Evaluation uses an Agent-as-a-Judge. Evalathan does not run that judge and does not copy a percent. A named PRD file in a scanned folder is printed on its own line. That line is not this exam.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="aose" name="aose"></a></p>
@@ -857,10 +887,12 @@
     {"id":"selfbelt","label":"SELFBELT","kind":"term","aliases":["selfbelt","self-safety","self-safetying"]},
     {"id":"ed-slop","label":"Ed Slop","kind":"term","aliases":["ed slop","educational slop"]},
     {"id":"product-led-growth","label":"Product-led growth","kind":"term","aliases":["plg","product led growth","product-led growth"]},
+    {"id":"prd","label":"PRD","kind":"term","aliases":["prd","product requirements document","product-requirements"]},
     {"id":"agentic-exams-that-are-not-on-the-vector-yet","label":"Agentic exams that are not on the vector yet","kind":"section"},
     {"id":"swe-bench","label":"SWE-bench","kind":"term"},
     {"id":"swe-bench-pro","label":"SWE-bench Pro","kind":"term"},
     {"id":"deepswe","label":"DeepSWE","kind":"term"},
+    {"id":"prdbench","label":"PRDBench","kind":"term","aliases":["prdbench","prd bench"]},
     {"id":"aose","label":"AOSE","kind":"term","aliases":["agent-oriented software engineering"]},
     {"id":"wildbench","label":"WildBench","kind":"term"},
     {"id":"ragas","label":"Ragas","kind":"term","aliases":["ragas"]},

@@ -7,6 +7,7 @@ from pathlib import Path
 
 from evalathan.evalers import ALL
 from evalathan.model import Cell, Status
+from evalathan.prd import note as prd_note
 from evalathan.subject import Subject, load
 
 
@@ -14,6 +15,7 @@ from evalathan.subject import Subject, load
 class Report:
     root: str
     cells: list[Cell]
+    prd: str = "No PRD found"
 
     @property
     def ran(self) -> list[Cell]:
@@ -39,6 +41,7 @@ class Report:
             "Evalathan v0.2",
             self.root,
             self.headline(),
+            self.prd,
             "",
         ]
         for cell in self.cells:
@@ -55,6 +58,7 @@ class Report:
             "conductor": "Hydra",
             "root": self.root,
             "headline": self.headline(),
+            "prd": self.prd,
             "ran": len(self.ran),
             "passed": len(self.passed),
             "deferred": len(self.deferred),
@@ -75,4 +79,4 @@ def conduct(root: Path, subject: Subject | None = None) -> Report:
     names = [cell.agent for cell in cells]
     if len(set(names)) != 16:
         raise RuntimeError("Duplicate evaler name")
-    return Report(root=str(seen.root), cells=cells)
+    return Report(root=str(seen.root), cells=cells, prd=prd_note(seen))

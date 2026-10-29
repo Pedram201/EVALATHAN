@@ -517,12 +517,34 @@ For an AI product such as Evalathan, PLG means making the product sufficiently u
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
 
+<a id="prd" name="prd"></a>
+<h2>PRD</h2>
+
+PRD (Product Requirements Document - what a product must do, not how to build it) is a write-up of the capabilities a release must include. This entry is the definition. It is not an evaler.
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+PRD is not one of the sixteen evalers and it does not add a seventeenth score. Hydra may print that a named PRD file was found. If none is in the tree, the line is No PRD found. That line is not a fail and not a zero. Archly still scores architecture evidence. A sentence that merely names a PRD is not a specification. This is not an ISO/IEC/IEEE 29148 certificate.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The shopping list for the product. It says what done means for the people who will use it. It does not pick the bricks. Some teams keep that list as stories instead of one long file. Missing the file is common, and the scan says so in one line.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Wikipedia and ProductPlan agree: the document states capabilities and use cases and should not dictate implementation. [Atlassian](https://www.atlassian.com/agile/product-management/requirements) describes a short shared page: purpose, features, user needs, and success criteria. In [Agile](https://en.wikipedia.org/wiki/Agile_software_development) work that page stays short, links out, and is written with the team. Feature rows may carry a [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) (Must, Should, Could, Won't) priority. Engineering may then write a functional specification and an architectural design. ISO/IEC/IEEE 29148 is the software requirements specification (SRS) standard, which superseded IEEE 830.
+
+The scan looks for a file whose stem is `prd`, `product-requirements`, or `product_requirements`, with a `.md`, `.rst`, `.txt`, or `.adoc` suffix. Presence prints `PRD found:` and the relative path. Absence prints `No PRD found`. Headings are not a completeness percent. A README sentence is not a file. [PRDBench](#prdbench) is an exam of agents that implement a PRD. It is not this line.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
 <a id="agentic-exams-that-are-not-on-the-vector-yet" name="agentic-exams-that-are-not-on-the-vector-yet"></a>
 <h2><img src="assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26"></h2>
 
 These are public exams for coding agents and for chat models. They matter in this period. Evalathan does not run them in the laptop scan, and it does not paste their leaderboards. That is a scope fact, not a dismissal. Trajectly is the station that will count one of them on the day a saved trace from that exam is in the folder you scan. A percent copied from a website is still not a grade.
 
-The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector.
+The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds [PRDBench](#prdbench), which grades an agent that builds from a [PRD](#prd).
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
@@ -577,6 +599,24 @@ DeepSWE is a smaller public agent exam, on the order of a hundred handwritten ta
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 The public page is [deepswe.datacurve.ai](https://deepswe.datacurve.ai/). Evalathan does not download that board and does not average it with anything else.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="prdbench" name="prdbench"></a>
+<h2>PRDBench</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+No Evalathan score. PRDBench grades an agent that builds from a PRD. The public board is someone else's number. The cell stays off the vector. Finding a named PRD file in the tree is not sitting this exam.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The agent is given a product write-up and a test plan, then asked to build the software. A separate judge checks the result. Evalathan can say the name. It does not pretend it sat the exam, and it does not paste the board.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+The paper is [arXiv:2510.24358](https://arxiv.org/abs/2510.24358), submitted 28 Oct 2025. The public tree is [AGI-Eval-Official/PRDBench](https://github.com/AGI-Eval-Official/PRDBench). Fifty Python tasks across twenty domains. Each task keeps `src/PRD.md` and `evaluation/detailed_test_plan.json`. Evaluation uses an Agent-as-a-Judge. Evalathan does not run that judge and does not copy a percent. A named PRD file in a scanned folder is printed on its own line. That line is not this exam.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>

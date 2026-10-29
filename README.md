@@ -167,4 +167,6 @@ These are public evals that already exist. v0.2 does not run them and does not c
 
 **SWE family.** [SWE-bench](GLOSSARY.md#user-content-swe-bench) (Software Engineering Benchmark), [SWE-bench Pro](GLOSSARY.md#user-content-swe-bench-pro), and [DeepSWE](GLOSSARY.md#user-content-deepswe).
 
+**PRDBench.** [PRDBench](GLOSSARY.md#user-content-prdbench) grades an agent that builds from a [PRD](GLOSSARY.md#user-content-prd) (Product Requirements Document). Evalathan does not sit that exam and does not copy its board.
+
 **AOSE.** [AOSE](GLOSSARY.md#user-content-aose) (agent-oriented software engineering) is the field, not a score. The public catalog named on that entry includes [WildBench](GLOSSARY.md#user-content-wildbench).
