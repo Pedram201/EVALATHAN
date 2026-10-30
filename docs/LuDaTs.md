@@ -7,7 +7,7 @@
 
 LuDaTs (Limited-universe Data Test sets) is a historically truncated discovery exam. The agent may only use data, instruments, news, and letters that existed at a locked **world clock T** and that the named discoverer could have reached at **biography clock A** (age, post, travel). The agent then interacts with that world over simulated time. Gold is structural (equations, predicted observables, held-out properties). Naming the later theory is not gold. Leakage of post-cutoff facts fails the run.
 
-This file retires the EurekaRAG “Galileo Test” as a knowledge-graph relation inversion, and it retires EurekaRAG’s “DiscoveryBench” name (that name is already AllenAI’s tabular hypothesis bench).
+This file retires the EurekaRAG “Galileo Test” (circa January to October 2026 devs, Pedram Goshtasbpour) as a knowledge-graph relation inversion, and it retires EurekaRAG’s “DiscoveryBench” name (that name is already AllenAI’s tabular hypothesis bench).
 
 Hydra still conducts **sixteen** evalers. LuDaTs is not a seventeenth cell. A missing LuDaTs run is blank, not a fail and not a zero. Same rule as the 29 Oct 2026 PRD note.
 
