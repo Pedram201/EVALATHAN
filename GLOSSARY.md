@@ -1,6 +1,6 @@
 <h1><img src="assets/glossary/title.png" alt="Evalathan glossary" height="33"></h1>
 
-<big><big><mark><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html?v=searchclick2">Search the glossary</a></mark></big></big>. That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
+<big><big><mark><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html?v=ludatswho">Search the glossary</a></mark></big></big>. That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
 
 Evalathan is one evaluation harness. [Hydra](#hydra) is the conductor for sixteen software evalers. [Dehydrus](#dehydrus) is the conductor for seven physical-world evalers under [PRETRUWs](#pretruws). Each entry below has the same three parts.
 
@@ -589,11 +589,11 @@ Manifesto direction: *Until Artificial Intelligence Independently Eurekas on its
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
-No gold medal in v0.3 from a filename. Copernly (code LuDaTs-C) is deferred until a sealed world file is in the tree. A blank is not a fail.
+No gold medal (the structural prize for this world: the equation, the predicted observable, or the held-out card that wins the exam, not a sports rank) in v0.3 from a filename. Copernly (code LuDaTs-C) is deferred until a sealed world file is in the tree. A blank is not a fail.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Same old sky numbers, new picture of the sky. No new telescope. The year is 1542, before [*De revolutionibus orbium coelestium*](https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium) (1543).
+Copernly is based on Copernicus, the astronomer who put the Sun at the center of the known planets. Same old sky numbers, new picture of the sky. No new telescope. The year is 1542, before [*De revolutionibus orbium coelestium*](https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium) (1543).
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -607,11 +607,11 @@ Mode A. Gold medal: sun-centered kinematic model; fewer epicycles than the Ptole
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
-Required world. No gold medal in v0.3 from a filename. Darwinly (LuDaTs-D) is deferred until a sealed 1858 field world is in the tree.
+Required world. No gold medal (the structural prize for this world: the equation, the predicted observable, or the held-out card that wins the exam, not a sports rank) in v0.3 from a filename. Darwinly (LuDaTs-D) is deferred until a sealed 1858 field world is in the tree.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Years of walking, breeding, and notes, not one night and not the finch cartoon. The book [*On the Origin of Species*](https://en.wikipedia.org/wiki/On_the_Origin_of_Species) is 1859, so the freeze is 1858.
+Darwinly is based on Darwin, the naturalist who explained how living forms change through descent with modification. Years of walking, breeding, and notes, not one night and not the finch cartoon. The book [*On the Origin of Species*](https://en.wikipedia.org/wiki/On_the_Origin_of_Species) is 1859, so the freeze is 1858.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -625,11 +625,11 @@ Mode D. Gold medal: descent with modification; a selection mechanism that can ac
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
-No gold medal in v0.3 from a filename. Einsteinly (LuDaTs-E) is General Relativity only. 1905 is a different freeze.
+No gold medal (the structural prize for this world: the equation, the predicted observable, or the held-out card that wins the exam, not a sports rank) in v0.3 from a filename. Einsteinly (LuDaTs-E) is General Relativity only. 1905 is a different freeze.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A leftover that Newton's gravity cannot eat (Mercury). Write the new field equations in 1914-1915. The 1919 eclipse is a check after the theory, not a hint before it.
+Einsteinly is based on Einstein, the physicist who wrote the field equations of general relativity. A leftover that Newton's gravity cannot eat (Mercury). Write the new field equations in 1914-1915. The 1919 eclipse is a check after the theory, not a hint before it.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -647,11 +647,11 @@ Required world. Physical-world flagship. Galileoly (LuDaTs-G) is deferred until 
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A new eye (the optic) plus experiments on earth. Not "he invented heliocentrism." That belongs to Copernly.
+Galileoly is based on Galileo, the scientist who turned a new optic on the sky and ran falling-body experiments on earth. A new eye (the optic) plus experiments on earth. Not "he invented heliocentrism." That belongs to Copernly.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
-Mode C. 1608 optic; 1637 kinematics. Gold medal: Jupiter's satellites; Venus phases; irregular Moon; incline / falling-body regularity. Not gold: the string "heliocentrism". Card: [exams/ludats/ludats-g-galileo.yaml](exams/ludats/ludats-g-galileo.yaml).
+Mode C. 1608 optic; 1637 kinematics. Gold medal (the structural prize for this world: the equation, the predicted observable, or the held-out card that wins the exam, not a sports rank): Jupiter's satellites; Venus phases; irregular Moon; incline / falling-body regularity. Not gold: the string "heliocentrism". Card: [exams/ludats/ludats-g-galileo.yaml](exams/ludats/ludats-g-galileo.yaml).
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
@@ -661,11 +661,11 @@ Mode C. 1608 optic; 1637 kinematics. Gold medal: Jupiter's satellites; Venus pha
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
-No gold medal in v0.3 from a filename. Keplerly (LuDaTs-K) is deferred until a sealed Mars-table world is in the tree.
+No gold medal (the structural prize for this world: the equation, the predicted observable, or the held-out card that wins the exam, not a sports rank) in v0.3 from a filename. Keplerly (LuDaTs-K) is deferred until a sealed Mars-table world is in the tree.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-Better numbers, same kind of eye. Tycho's Mars table, still naked-eye class. Not the same quiz as Copernly.
+Keplerly is based on Kepler, the astronomer who showed that planets travel in ellipses, not perfect circles. Better numbers, same kind of eye. Tycho's Mars table, still naked-eye class. Not the same quiz as Copernly.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -679,11 +679,11 @@ Mode B. 1608 / 1618. [*Astronomia nova*](https://en.wikipedia.org/wiki/Astronomi
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
-No gold medal in v0.3 from a filename. Mendly (LuDaTs-M) hides the later names of the missing cards.
+No gold medal (the structural prize for this world: the equation, the predicted observable, or the held-out card that wins the exam, not a sports rank) in v0.3 from a filename. Mendly (LuDaTs-M) hides the later names of the missing cards.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-A table with holes. The exam later checks whether the holes were the right shape, without saying "gallium" or "germanium" inside the 1868 room.
+Mendly is based on Mendeleev, the scientist who gave the world the elements table. A table with holes. The exam later checks whether the holes were the right shape, without saying "gallium" or "germanium" inside the 1868 room.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
@@ -701,11 +701,11 @@ On the full desk. Deferred to v2. Newtonly (LuDaTs-N) waits until Keplerly and G
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-One law for the sky and the ground. The apple story is folklore and is not the exam.
+Newtonly is based on Newton, the mathematician who united the motion of the heavens and the motion of the earth in one law. One law for the sky and the ground. The apple story is folklore and is not the exam.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
-Unification of Keplerly + Galileoly. Freeze 1686, [*Principia*](https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica) 1687. Gold medal: inverse-square universal gravitation; celestial and terrestrial the same law. Card: [exams/ludats/ludats-n-newton.yaml](exams/ludats/ludats-n-newton.yaml).
+Unification of Keplerly + Galileoly. Freeze 1686, [*Principia*](https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica) 1687. Gold medal (the structural prize for this world: the equation, the predicted observable, or the held-out card that wins the exam, not a sports rank): inverse-square universal gravitation; celestial and terrestrial the same law. Card: [exams/ludats/ludats-n-newton.yaml](exams/ludats/ludats-n-newton.yaml).
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
