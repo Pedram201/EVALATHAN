@@ -122,7 +122,7 @@
 <h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
 
 <p>Dehydrus calls the seven PRETRUWs evalers and writes each report beside the others. He counts how many ran, how many passed their own gate, and how many are deferred. He does not turn a blank into a zero, and he does not fold the seven into one number. He is not an eighteenth Hydra score. He also prints a HabTwin filename line. That line is a utility, not an eighth evaler.</p>
-<p align="center"><img src="../assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="423" height="431"></p>
+<p align="center"><img src="../assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="485" height="494"></p>
 <p align="center"><i>He routes the seven. He does not add a score.</i></p>
 <h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
 
@@ -1162,7 +1162,7 @@
         const lab = it.label;
         const at = lab.toLowerCase().indexOf(needle.toLowerCase());
         const label = at < 0 ? escapeHtml(lab) : escapeHtml(lab.slice(0, at)) + "<mark>" + escapeHtml(lab.slice(at, at + needle.length)) + "</mark>" + escapeHtml(lab.slice(at + needle.length));
-        return '<li role="presentation" class="' + (i === 0 ? "is-active" : "") + '"><button type="button" role="option" data-id="' + escapeHtml(it.id) + '"><span>' + label + '</span><span class="kind">' + escapeHtml(it.kind) + "</span></button></li>";
+        return '<li role="presentation" class="' + (i === 0 ? "is-active" : "") + '"><button type="button" role="option" data-id="' + escapeHtml(it.id) + '" onpointerdown="return window.evalathanOpenGlossary(event,\'' + escapeHtml(it.id) + '\')" onmousedown="return window.evalathanOpenGlossary(event,\'' + escapeHtml(it.id) + '\')" onclick="return window.evalathanOpenGlossary(event,\'' + escapeHtml(it.id) + '\')"><span>' + label + '</span><span class="kind">' + escapeHtml(it.kind) + "</span></button></li>";
       }).join("");
       placeList();
       list.hidden = false;
@@ -1180,14 +1180,24 @@
       return sib || node;
     }
 
+    function scrollToId(id) {
+      const target = entryHead(id);
+      if (!target) return false;
+      target.style.scrollMarginTop = "88px";
+      const top = target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || 0) - 88;
+      try { target.scrollIntoView({ block: "start" }); } catch (err) {}
+      try { window.scrollTo(0, Math.max(0, Math.round(top))); } catch (err) {}
+      return true;
+    }
+
     function openItem(it) {
       if (!it) return;
-      const target = entryHead(it.id);
       hide();
-      if (target) {
-        target.style.scrollMarginTop = "88px";
-        target.scrollIntoView({ block: "start" });
-      }
+      try { input.blur(); } catch (err) {}
+      scrollToId(it.id);
+      requestAnimationFrame(() => scrollToId(it.id));
+      setTimeout(() => scrollToId(it.id), 50);
+      setTimeout(() => scrollToId(it.id), 200);
       try {
         const url = new URL(window.location.href);
         url.hash = it.id;
@@ -1195,7 +1205,10 @@
       } catch (err) {
         /* The preview host sets a cross-origin base. A bare hash would throw and skip the jump. */
       }
-      if (target) requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+    }
+
+    function itemForId(id) {
+      return current.find((it) => it.id === id) || items.find((it) => it.id === id);
     }
 
     function optionAt(x, y) {
@@ -1210,14 +1223,24 @@
       return null;
     }
 
-    function pickFromPoint(e) {
-      const opt = optionAt(e.clientX, e.clientY);
+    function pickFromEvent(e) {
+      const fromNode = e.target && e.target.closest ? e.target.closest("#glossary-search-list button[data-id]") : null;
+      const opt = fromNode || optionAt(e.clientX, e.clientY);
       if (!opt) return;
       e.preventDefault();
       e.stopPropagation();
-      const id = opt.getAttribute("data-id");
-      openItem(current.find((it) => it.id === id) || items.find((it) => it.id === id));
+      if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+      openItem(itemForId(opt.getAttribute("data-id")));
     }
+
+    window.evalathanOpenGlossary = function (e, id) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      openItem(itemForId(id));
+      return false;
+    };
 
     input.addEventListener("input", render);
     input.addEventListener("keydown", (e) => {
@@ -1242,8 +1265,12 @@
       }
     });
     document.body.appendChild(list);
-    window.addEventListener("pointerdown", pickFromPoint, true);
-    window.addEventListener("mousedown", pickFromPoint, true);
+    list.addEventListener("pointerdown", pickFromEvent, true);
+    list.addEventListener("mousedown", pickFromEvent, true);
+    list.addEventListener("click", pickFromEvent, true);
+    window.addEventListener("pointerdown", pickFromEvent, true);
+    window.addEventListener("mousedown", pickFromEvent, true);
+    window.addEventListener("click", pickFromEvent, true);
     window.addEventListener("scroll", () => { if (!list.hidden) placeList(); }, true);
     function jumpToHash() {
       if (location.hash.length < 2) return;

@@ -24,3 +24,5 @@ def test_search_index_matches_glossary_anchors() -> None:
     assert "scrollIntoView" in html
     assert "new URL(window.location.href)" in html
     assert 'replaceState(null, "", "#"' not in html
+    assert "evalathanOpenGlossary" in html
+    assert "scrollTo" in html
