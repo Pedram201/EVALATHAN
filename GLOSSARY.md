@@ -1,6 +1,6 @@
 <h1><img src="assets/glossary/title.png" alt="Evalathan glossary" height="33"></h1>
 
-<big><big><mark><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html?v=edslop3">Search the glossary</a></mark></big></big>. That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
+<big><big><mark><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html?v=dehydrus30">Search the glossary</a></mark></big></big>. That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
 
 Evalathan is one evaluation harness. [Hydra](#hydra) is the conductor for sixteen software evalers. [Dehydrus](#dehydrus) is the conductor for seven physical-world evalers under [PRETRUWs](#pretruws). Each entry below has the same three parts.
 
@@ -43,7 +43,7 @@ The conductor. She points at each evaluator and writes down what it assessed and
 
 Dehydrus calls the seven PRETRUWs evalers and writes each report beside the others. He counts how many ran, how many passed their own gate, and how many are deferred. He does not turn a blank into a zero, and he does not fold the seven into one number. He is not an eighteenth Hydra score. He also prints a HabTwin filename line. That line is a utility, not an eighth evaler.
 
-<p align="center"><img src="assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="325"></p>
+<p align="center"><img src="assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="423"></p>
 <p align="center"><i>He routes the seven. He does not add a score.</i></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
