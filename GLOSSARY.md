@@ -494,7 +494,7 @@ Copy the `fuss` folder into a web page or a desktop web view. The same files run
 <p align="center"><img src="assets/glossary/ed-slop/ed-slop-humanoid-race.jpg" alt="Ed Slop poster of humanoid robots titled Altnoble EdSlop, Inside the Multi-Billion-Dollar Humanoid Race." width="541"></p>
 <p align="center"><img src="assets/glossary/ed-slop/ed-slop-humanoid-valuations.jpg" alt="Ed Slop grid of humanoid robots and valuations under the EdSlop wordmark." width="541"></p>
 <p align="center"><img src="assets/glossary/ed-slop/ed-slop-memms-slosh.jpg" alt="Ed Slop collage: a surprised clerk with a ruler, an ear, a chip with a bucket, and headlines about slosh dynamics." width="541"></p>
-<p>The above are sample Ed Slops from <a href="https://aito.network/en#quarterlies">aiTO</a> and <a href="https://www.facebook.com/reel/3661274200704299">Altnoble</a> PRs.</p>
+<p>The above are sample Ed Slops from [aiTO](https://aito.network/en#quarterlies) and [Altnoble](https://www.facebook.com/reel/3661274200704299) PRs.</p>
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
