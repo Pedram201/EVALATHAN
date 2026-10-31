@@ -36,6 +36,27 @@ The conductor. She points at each evaluator and writes down what it assessed and
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
 
+<a id="dehydrus" name="dehydrus"></a>
+<h2>Dehydrus</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Dehydrus calls the seven PRETRUWs evalers and writes each report beside the others. He counts how many ran, how many passed their own gate, and how many are deferred. He does not turn a blank into a zero, and he does not fold the seven into one number. He is not an eighteenth Hydra score. He also prints a HabTwin filename line. That line is a utility, not an eighth evaler.
+
+<p align="center"><img src="assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="325"></p>
+<p align="center"><i>He routes the seven. He does not add a score.</i></p>
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The other conductor. Hydra watches software. Dehydrus watches locked physical worlds. Open `evalathan dehydrus` for his window. The heading is DEHYDRUS.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+`evalathan dehydrus` opens the desk. `evalathan dehydrus scan <path>` writes seven cells: Copernly, Keplerly, Galileoly, Darwinly, Mendly, Einsteinly, Newtonly. Newtonly accepts the earlier cells and stays deferred until Keplerly and Galileoly both show a sealed world. The saved record names the conductor Dehydrus and the framework PRETRUWs. If the count is not seven, or a name is repeated, the run stops. Dehydrus is a conductor (orchestration engine / router), not a utility and not one of the seven.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
 <a id="archly" name="archly"></a>
 <h2><img src="assets/glossary/archly.png" alt="Archly" height="25"></h2>
 
@@ -559,27 +580,6 @@ A locked room from a past year. The exam has to work with what that year could s
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
 Manifesto direction: *Until Artificial Intelligence Independently Eurekas on its own*, after [Adaptive Software Development](https://en.wikipedia.org/wiki/Adaptive_software_development) (Jim Highsmith, 1997: messy, exciting, and anxiety-ridden; second world = unpredictable, nonlinear, fast). PRETRUWs states a third world: multi-predictable, bilinear and supralinear, hyperfast / instancy-nearest, and polydeterminism. Framework PRETRUWs holds methodology [LuDaTs](#ludats). Each brand is one method. Braidware (SEISMO glossary) is agentics, software, and hardware as one unit. LLM (Large Language Model) and RAG (Retrieval-Augmented Generation) stacks are plugins, not extra Hydra cells.
-
-
-<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
-
-<a id="dehydrus" name="dehydrus"></a>
-<h2>Dehydrus</h2>
-
-<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
-
-Dehydrus calls the seven PRETRUWs evalers and writes each report beside the others. He counts how many ran, how many passed their own gate, and how many are deferred. He does not turn a blank into a zero, and he does not fold the seven into one number. He is not an eighteenth Hydra score. He also prints a HabTwin filename line. That line is a utility, not an eighth evaler.
-
-<p align="center"><img src="assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="325"></p>
-<p align="center"><i>He routes the seven. He does not add a score.</i></p>
-
-<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
-
-The other conductor. Hydra watches software. Dehydrus watches locked physical worlds. Open `evalathan dehydrus` for his window. The heading is DEHYDRUS.
-
-<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
-
-`evalathan dehydrus` opens the desk. `evalathan dehydrus scan <path>` writes seven cells: Copernly, Keplerly, Galileoly, Darwinly, Mendly, Einsteinly, Newtonly. Newtonly accepts the earlier cells and stays deferred until Keplerly and Galileoly both show a sealed world. The saved record names the conductor Dehydrus and the framework PRETRUWs. If the count is not seven, or a name is repeated, the run stops. Dehydrus is a conductor (orchestration engine / router), not a utility and not one of the seven.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>

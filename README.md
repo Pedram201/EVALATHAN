@@ -9,7 +9,7 @@
 
 Evalathan grades a product across its life cycle. Evalathan is one evaluation harness; [Hydra](GLOSSARY.md#user-content-hydra) is the conductor - she orchestrates sixteen evaluators ('evalers'); each evaluator reports against a life-cycle gate.
 
-**v0.3** is a local runner. Hydra still conducts sixteen software evalers. Dehydrus conducts seven PRETRUWs (Prediscovery Truncated Universe and Worlds) evalers. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero. Roadmap: [docs/BUILDLOG.md](docs/BUILDLOG.md).
+**v0.3** is a local runner. Hydra still conducts sixteen software evalers. [Dehydrus](GLOSSARY.md#user-content-dehydrus) conducts seven PRETRUWs (Prediscovery Truncated Universe and Worlds) evalers. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero. Roadmap: [docs/BUILDLOG.md](docs/BUILDLOG.md).
 
 On Windows, clone the program, then run `launch.bat` inside that folder. On a Mac, run `bash launch.sh` in that same folder. Either one opens the Hydra window. If that folder already exists, skip the clone and run the launcher there. On Windows you can also double-click `launch.bat`. The Dehydrus window is `evalathan dehydrus`.
 
