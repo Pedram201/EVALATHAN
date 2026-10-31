@@ -1,8 +1,8 @@
 <h1><img src="assets/glossary/title.png" alt="Evalathan glossary" height="33"></h1>
 
-<big><big><mark><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html?v=ludatswho">Search the glossary</a></mark></big></big>. That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
+<big><big><mark><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html?v=evalathan1">Search the glossary</a></mark></big></big>. That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
 
-Evalathan is one evaluation harness. [Hydra](#hydra) is the conductor for sixteen software evalers. [Dehydrus](#dehydrus) is the conductor for seven physical-world evalers under [PRETRUWs](#pretruws). Each entry below has the same three parts.
+[Evalathan](#evalathan) is one evaluation harness. [Hydra](#hydra) is the conductor for sixteen software evalers. [Dehydrus](#dehydrus) is the conductor for seven physical-world evalers under [PRETRUWs](#pretruws). Each entry below has the same three parts.
 
 <img src="assets/glossary/score-constitution-dot.png" alt="Score Constitution." height="14"> What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.
 
@@ -11,6 +11,27 @@ Evalathan is one evaluation harness. [Hydra](#hydra) is the conductor for sixtee
 <img src="assets/glossary/techspeak-dot.png" alt="Techspeak." height="17"> More technically detailed explanations.
 
 The life-cycle gate on each evaler (G0 through G12) is the station's place in the life of a product. There are not sixteen gates. There are sixteen evalers.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="evalathan" name="evalathan"></a>
+<h2>Evalathan</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Evalathan is one evaluation harness. It is not a seventeenth Hydra score and not an eighth Dehydrus score. [Hydra](#hydra) writes sixteen software cells, in this order: Devly, Archly, Codely, Refactorly, Mixly, Runly, Levi, Menschly, Tokely, Pressly, Triadly, Chorely, Trajectly, Warrantly, Domly, Stackly. [Dehydrus](#dehydrus) writes seven [PRETRUWs](#pretruws) (Prediscovery Truncated Universe and Worlds) cells, in this order: Copernly, Keplerly, Galileoly, Darwinly, Mendly, Einsteinly, Newtonly. The two rooms stay apart. A blank is not a fail and not a zero. Evalathan does not fold the twenty-three cells into one number, and it does not award a state-of-the-art stamp. The Hydra PRD (Product Requirements Document) line and the Dehydrus HabTwin filename line are utilities, not extra evalers.
+
+<p align="center"><img src="assets/evalathan-logo.png" alt="Evalathan" width="325"></p>
+<p align="center"><i>One harness. Two conductors. It does not add a score.</i></p>
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The house that holds two desks. Hydra walks the software life of a product. Dehydrus walks seven locked physical worlds. You do not get one grade for the house. You get two reports, each cell named, and a missing record stays missing.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Evalathan is the local runner and the saved product name on both reports. No arguments, or `desk`, opens the Hydra window (heading HYDRA). `evalathan dehydrus` opens the Dehydrus window (heading DEHYDRUS). A Hydra scan writes sixteen cells and a PRD presence line; the report body starts with Evalathan v0.2. A Dehydrus scan writes seven cells and a HabTwin filename line; the report body starts with Evalathan v0.3. Stackly accepts the earlier Hydra cells. Newtonly accepts the earlier Dehydrus cells and stays deferred until Keplerly and Galileoly both show a sealed world. If either room's count is wrong, or a name is repeated, that run stops. The rooms do not share a vector.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
