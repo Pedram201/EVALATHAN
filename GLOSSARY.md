@@ -1,6 +1,6 @@
 <h1><img src="assets/glossary/title.png" alt="Evalathan glossary" height="33"></h1>
 
-[Search the glossary](https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html?v=plgout). That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
+<big><big><mark><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html?v=edslop3">Search the glossary</a></mark></big></big>. That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
 
 Evalathan is one evaluation harness. [Hydra](#hydra) is the conductor for sixteen software evalers. [Dehydrus](#dehydrus) is the conductor for seven physical-world evalers under [PRETRUWs](#pretruws). Each entry below has the same three parts.
 
@@ -494,7 +494,7 @@ Copy the `fuss` folder into a web page or a desktop web view. The same files run
 <p align="center"><img src="assets/glossary/ed-slop/ed-slop-humanoid-race.jpg" alt="Ed Slop poster of humanoid robots titled Altnoble EdSlop, Inside the Multi-Billion-Dollar Humanoid Race." width="541"></p>
 <p align="center"><img src="assets/glossary/ed-slop/ed-slop-humanoid-valuations.jpg" alt="Ed Slop grid of humanoid robots and valuations under the EdSlop wordmark." width="541"></p>
 <p align="center"><img src="assets/glossary/ed-slop/ed-slop-memms-slosh.jpg" alt="Ed Slop collage: a surprised clerk with a ruler, an ear, a chip with a bucket, and headlines about slosh dynamics." width="541"></p>
-<p>The above are sample Ed Slops from [aiTO](https://aito.network) Quarterlies, [Altnoble FB](https://www.facebook.com/reel/3661274200704299) and [X](https://x.com/castlestock/status/2100384583950667978?s=19) PRs.</p>
+The above are sample Ed Slops from [aiTO](https://aito.network) Quarterlies, [Altnoble FB](https://www.facebook.com/reel/3661274200704299) and [X](https://x.com/castlestock/status/2100384583950667978?s=19) PRs.
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
