@@ -9,9 +9,9 @@
 
 Evalathan grades a product across its life cycle. Evalathan is one evaluation harness; [Hydra](GLOSSARY.md#user-content-hydra) is the conductor - she orchestrates sixteen evaluators ('evalers'); each evaluator reports against a life-cycle gate.
 
-**v0.2** is a local runner. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero.
+**v0.3** is a local runner. Hydra still conducts sixteen software evalers. Dehydrus conducts seven PRETRUWs (Prediscovery Truncated Universe and Worlds) evalers. It does not award a state-of-the-art stamp. A deferred cell is not a fail and not a zero. Roadmap: [docs/BUILDLOG.md](docs/BUILDLOG.md).
 
-On Windows, clone the program, then run `launch.bat` inside that folder. On a Mac, run `bash launch.sh` in that same folder. Either one opens the window. If that folder already exists, skip the clone and run the launcher there. On Windows you can also double-click `launch.bat`.
+On Windows, clone the program, then run `launch.bat` inside that folder. On a Mac, run `bash launch.sh` in that same folder. Either one opens the Hydra window. If that folder already exists, skip the clone and run the launcher there. On Windows you can also double-click `launch.bat`. The Dehydrus window is `evalathan dehydrus`.
 
 <p><img src="assets/readme/windows.png" alt="Windows" height="32" align="absmiddle"> <img src="assets/readme/command-prompt.png" alt="Command Prompt" height="32" align="absmiddle"> <strong>Command Prompt (Windows):</strong></p>
 
@@ -161,7 +161,7 @@ No hosted site, no invented token percent, no leaderboard copied from somewhere 
 
 ## Roadmap
 
-These are public evals that already exist. v0.2 does not run them and does not copy their boards. A later version may print a number a project already saved, the way Pressly reads a compression log. The sixteen stay sixteen. A blank stays blank. Nothing here is blended into one number.
+These are public evals that already exist. Hydra does not run them and does not copy their boards. A later version may print a number a project already saved, the way Pressly reads a compression log. The sixteen stay sixteen. A blank stays blank. Nothing here is blended into one number.
 
 **Ragas.** The glossary entry is [Ragas](GLOSSARY.md#user-content-ragas). The retrieval list includes the four figures assessed for this runner: [Context Precision](GLOSSARY.md#user-content-context-precision), [Context Recall](GLOSSARY.md#user-content-context-recall), [Faithfulness](GLOSSARY.md#user-content-faithfulness), and [NDCG@k](GLOSSARY.md#user-content-ndcg-at-k) (Normalized Discounted Cumulative Gain at k). NDCG@k is a ranking measure. It is not a row on the Ragas list. The rest of that retrieval list is [catalogued with them](GLOSSARY.md#user-content-ragas-other-retrieval).
 
@@ -169,6 +169,8 @@ These are public evals that already exist. v0.2 does not run them and does not c
 
 **PRDBench.** [PRDBench](GLOSSARY.md#user-content-prdbench) grades an agent that builds from a [PRD](GLOSSARY.md#user-content-prd) (Product Requirements Document). Evalathan does not sit that exam and does not copy its board.
 
-**LuDaTs.** [LuDaTs](GLOSSARY.md#user-content-ludats) (Limited-universe Data Test sets) is a Trajectly exam family of historically locked discovery worlds. Spec: [docs/LuDaTs.md](docs/LuDaTs.md). Cards: [exams/ludats/](exams/ludats/). v0.2 names it and does not run the worlds. It is not a seventeenth evaler.
+**PRETRUWs / LuDaTs / Dehydrus.** [PRETRUWs](GLOSSARY.md#user-content-pretruws) (Prediscovery Truncated Universe and Worlds) is the v0.3 4IR (Fourth Industrial Revolution) framework. [LuDaTs](GLOSSARY.md#user-content-ludats) (Limited-universe Data Test sets) is its methodology family, not a Trajectly exam. [Dehydrus](GLOSSARY.md#user-content-dehydrus) conducts the seven brands. Spec: [docs/PRETRUWs.md](docs/PRETRUWs.md), [docs/LuDaTs.md](docs/LuDaTs.md). Cards: [exams/ludats/](exams/ludats/). v0.3 names a sealed world file and does not run the simulator. The sixteen stay sixteen.
+
+**HabTwin.** [HabTwin](GLOSSARY.md#user-content-habtwin) is the v0.4 twin-fidelity exam (person-specific, distributional, leak-gated, lab-only). v0.3 prints a filename line only. Spec: [docs/HabTwin.md](docs/HabTwin.md). It is not a Trajectly exam and not an eighth LuDaTs cell.
 
 **AOSE.** [AOSE](GLOSSARY.md#user-content-aose) (agent-oriented software engineering) is the field, not a score. The public catalog named on that entry includes [WildBench](GLOSSARY.md#user-content-wildbench).

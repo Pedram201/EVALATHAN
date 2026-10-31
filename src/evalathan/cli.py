@@ -1,4 +1,4 @@
-"""evalathan opens a window. evalathan scan <path> grades one folder."""
+"""evalathan opens Hydra. evalathan dehydrus opens Dehydrus. scan grades one folder."""
 
 from __future__ import annotations
 
@@ -7,8 +7,6 @@ import json
 import sys
 from pathlib import Path
 
-from evalathan.hydra import conduct
-
 
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
@@ -16,14 +14,31 @@ def main(argv: list[str] | None = None) -> int:
         from evalathan.desk import open_desk
 
         return open_desk()
+    if argv[0] == "dehydrus" and (len(argv) == 1 or argv[1] == "desk"):
+        from evalathan.desk_dehydrus import open_desk
+
+        return open_desk()
     parser = argparse.ArgumentParser(
         prog="evalathan",
-        description="Grade a software tree with Hydra. Blanks stay blank. Run evalathan with no arguments to open the window.",
+        description=(
+            "Grade a software tree with Hydra, or a PRETRUWs tree with Dehydrus. "
+            "Blanks stay blank. Run evalathan with no arguments to open Hydra. "
+            "Run evalathan dehydrus to open Dehydrus."
+        ),
     )
-    parser.add_argument("command", choices=["scan"])
-    parser.add_argument("path", type=Path)
-    parser.add_argument("--json", dest="json_path", type=Path)
-    args = parser.parse_args(argv)
+    if argv and argv[0] == "dehydrus":
+        parser.add_argument("conductor", choices=["dehydrus"])
+        parser.add_argument("command", choices=["scan"])
+        parser.add_argument("path", type=Path)
+        parser.add_argument("--json", dest="json_path", type=Path)
+        args = parser.parse_args(argv)
+        from evalathan.dehydrus import conduct
+    else:
+        parser.add_argument("command", choices=["scan"])
+        parser.add_argument("path", type=Path)
+        parser.add_argument("--json", dest="json_path", type=Path)
+        args = parser.parse_args(argv)
+        from evalathan.hydra import conduct
     try:
         report = conduct(args.path)
     except NotADirectoryError:

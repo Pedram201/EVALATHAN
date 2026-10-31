@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "evalathan"
-version = "0.2.0"
-description = "Hydra conducts sixteen evalers that grade a software tree only where the artifact exists."
+version = "0.3.0"
+description = "Hydra conducts sixteen software evalers. Dehydrus conducts seven PRETRUWs physical-world evalers."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
@@ -22,7 +22,7 @@ evalathan = "evalathan.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-evalathan = ["hydra-logo.png"]
+evalathan = ["hydra-logo.png", "dehydrus-logo.png"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

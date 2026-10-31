@@ -93,7 +93,7 @@
     </div>
   </header>
   <article class="sheet" id="glossary-body">
-<p>Evalathan is one evaluation harness. <a href="#hydra">Hydra</a> is the conductor. She governs and calls sixteen evaluators, short name evalers. Each entry below has the same three parts.</p>
+<p>Evalathan is one evaluation harness. <a href="#hydra">Hydra</a> is the conductor for sixteen software evalers. <a href="#dehydrus">Dehydrus</a> is the conductor for seven physical-world evalers under <a href="#pretruws">PRETRUWs</a>. Each entry below has the same three parts.</p>
 <p><img src="../assets/glossary/score-constitution-dot.png" alt="Score Constitution." height="14" width="145"> What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.</p>
 <p><img src="../assets/glossary/simplespeak-dot.png" alt="Simplespeak." height="17" width="98"> Explanations in simple terms.</p>
 <p><img src="../assets/glossary/techspeak-dot.png" alt="Techspeak." height="17" width="82"> More technically detailed explanations.</p>
@@ -355,7 +355,7 @@
 <h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
 
 <p><img src="../assets/glossary/m3-triad.jpg" alt="M3 Triad. Mc is min cost, Me is max efficiency, Mi is max impact. The six orders run from a cheap interceptor drone to a NASA rocket and a Patriot missile." width="1024" height="682"></p>
-<p>Mc (Min Cost) · Me (Max Efficiency/speed) · Mi (Max Impact/quality); order = priority left-to-right. Six orders: McMeMi cheap interceptor drone; McMiMe Shahed-style (SEISMO PoC today); MeMcMi ambulance drone; MeMiMc fighter scramble; MiMcMe SEISMO MVP target, impact then cost; MiMeMc NASA rocket and Patriot missile, impact then speed.</p>
+<p>Mc (Min Cost) · Me (Max Efficiency/speed) · Mi (Max Impact/quality); order = priority left-to-right. Six orders: McMeMi cheap interceptor drone; McMiMe Shahed-style; MeMcMi ambulance drone; MeMiMc fighter scramble; MiMcMe SEISMO MVP target, impact then cost; MiMeMc NASA rocket and Patriot missile, impact then speed.</p>
 <p>The accepted compact orders are <code>mcmemi</code>, <code>mcmime</code>, <code>memcmi</code>, <code>memimc</code>, <code>mimcme</code>, and <code>mimemc</code>, read from the README and from markdown, JSON, and text. The scan looks for those codes with spaces removed. It does not treat the word M3, by itself, as an order.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
@@ -670,11 +670,162 @@
 <p>The scan looks for a file whose stem is <code>prd</code>, <code>product-requirements</code>, or <code>product_requirements</code>, with a <code>.md</code>, <code>.rst</code>, <code>.txt</code>, or <code>.adoc</code> suffix. Presence prints <code>PRD found:</code> and the relative path. Absence prints <code>No PRD found</code>. Headings are not a completeness percent. A README sentence is not a file. <a href="#prdbench">PRDBench</a> is an exam of agents that implement a PRD. It is not this line.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="pretruws" name="pretruws"></a></p>
+<h2>PRETRUWs</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+
+<p>PRETRUWs (Prediscovery Truncated Universe and Worlds) is the v0.3 4IR (Fourth Industrial Revolution) framework. It is not a Hydra evaler. Dehydrus writes seven cells. A missing world is blank, not a fail and not a zero. Spec: <a href="PRETRUWs.md">docs/PRETRUWs.md</a>. Roadmap: <a href="BUILDLOG.md">docs/BUILDLOG.md</a>.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+
+<p>A locked room from a past year. The exam has to work with what that year could see, and with what that one person could have reached. Saying "pretend it is 1610" is not enough. Later facts have to be actually gone.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+
+<p>Manifesto direction: <i>Until Artificial Intelligence Independently Eurekas on its own</i>, after <a href="https://en.wikipedia.org/wiki/Adaptive_software_development">Adaptive Software Development</a> (Jim Highsmith, 1997: messy, exciting, and anxiety-ridden; second world = unpredictable, nonlinear, fast). PRETRUWs states a third world: multi-predictable, bilinear and supralinear, hyperfast / instancy-nearest, and polydeterminism. Framework PRETRUWs holds methodology <a href="#ludats">LuDaTs</a>. Each brand is one method. Braidware (SEISMO glossary) is agentics, software, and hardware as one unit. LLM (Large Language Model) and RAG (Retrieval-Augmented Generation) stacks are plugins, not extra Hydra cells.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="dehydrus" name="dehydrus"></a></p>
+<h2>Dehydrus</h2>
+
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+
+<p>Dehydrus calls the seven PRETRUWs evalers and writes each report beside the others. He counts how many ran, how many passed their own gate, and how many are deferred. He does not turn a blank into a zero, and he does not fold the seven into one number. He is not an eighteenth Hydra score. He also prints a HabTwin filename line. That line is a utility, not an eighth evaler.</p>
+<p align="center"><img src="../assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="325" height="331"></p>
+<p align="center"><i>He routes the seven. He does not add a score.</i></p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+
+<p>The other conductor. Hydra watches software. Dehydrus watches locked physical worlds. Open <code>evalathan dehydrus</code> for his window. The heading is DEHYDRUS.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+
+<p><code>evalathan dehydrus</code> opens the desk. <code>evalathan dehydrus scan &lt;path&gt;</code> writes seven cells: Copernly, Keplerly, Galileoly, Darwinly, Mendly, Einsteinly, Newtonly. Newtonly accepts the earlier cells and stays deferred until Keplerly and Galileoly both show a sealed world. The saved record names the conductor Dehydrus and the framework PRETRUWs. If the count is not seven, or a name is repeated, the run stops. Dehydrus is a conductor (orchestration engine / router), not a utility and not one of the seven.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="copernly" name="copernly"></a></p>
+<h2>Copernly</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>No gold medal in v0.3 from a filename. Copernly (code LuDaTs-C) is deferred until a sealed world file is in the tree. A blank is not a fail.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>Same old sky numbers, new picture of the sky. No new telescope. The year is 1542, before <a href="https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium"><i>De revolutionibus orbium coelestium</i></a> (1543).</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Mode A. Gold medal: sun-centered kinematic model; fewer epicycles than the Ptolemaic fit on the same archive; earth as a planet. Not gold: the string "heliocentrism". Card: <a href="../exams/ludats/ludats-c-copernicus.yaml">exams/ludats/ludats-c-copernicus.yaml</a>.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="darwinly" name="darwinly"></a></p>
+<h2>Darwinly</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>Required world. No gold medal in v0.3 from a filename. Darwinly (LuDaTs-D) is deferred until a sealed 1858 field world is in the tree.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>Years of walking, breeding, and notes, not one night and not the finch cartoon. The book <a href="https://en.wikipedia.org/wiki/On_the_Origin_of_Species"><i>On the Origin of Species</i></a> is 1859, so the freeze is 1858.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Mode D. Gold medal: descent with modification; a selection mechanism that can accumulate. Not gold: the string "evolution"; genetics after 1858. Card: <a href="../exams/ludats/ludats-d-darwin.yaml">exams/ludats/ludats-d-darwin.yaml</a>.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="einsteinly" name="einsteinly"></a></p>
+<h2>Einsteinly</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>No gold medal in v0.3 from a filename. Einsteinly (LuDaTs-E) is General Relativity only. 1905 is a different freeze.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>A leftover that Newton's gravity cannot eat (Mercury). Write the new field equations in 1914-1915. The 1919 eclipse is a check after the theory, not a hint before it.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Mode F. World clock 1914. Gold medal: field equations whose weak-field limit recovers Newton; Mercury perihelion; light deflection checked only after submission. Not gold: the string "general relativity"; photoelectric / Brownian / 1905 special relativity. Card: <a href="../exams/ludats/ludats-e-einstein-gr.yaml">exams/ludats/ludats-e-einstein-gr.yaml</a>.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="galileoly" name="galileoly"></a></p>
+<h2>Galileoly</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>Required world. Physical-world flagship. Galileoly (LuDaTs-G) is deferred until a sealed optic-and-kinematics world is in the tree.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>A new eye (the optic) plus experiments on earth. Not "he invented heliocentrism." That belongs to Copernly.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Mode C. 1608 optic; 1637 kinematics. Gold medal: Jupiter's satellites; Venus phases; irregular Moon; incline / falling-body regularity. Not gold: the string "heliocentrism". Card: <a href="../exams/ludats/ludats-g-galileo.yaml">exams/ludats/ludats-g-galileo.yaml</a>.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="keplerly" name="keplerly"></a></p>
+<h2>Keplerly</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>No gold medal in v0.3 from a filename. Keplerly (LuDaTs-K) is deferred until a sealed Mars-table world is in the tree.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>Better numbers, same kind of eye. Tycho's Mars table, still naked-eye class. Not the same quiz as Copernly.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Mode B. 1608 / 1618. <a href="https://en.wikipedia.org/wiki/Astronomia_nova"><i>Astronomia nova</i></a> 1609, <a href="https://en.wikipedia.org/wiki/Harmonices_Mundi"><i>Harmonices mundi</i></a> 1619. Gold medal: elliptical orbit; equal areas in equal times. Not gold: naming Kepler's laws; using a telescope. Card: <a href="../exams/ludats/ludats-k-kepler.yaml">exams/ludats/ludats-k-kepler.yaml</a>.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="mendly" name="mendly"></a></p>
+<h2>Mendly</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>No gold medal in v0.3 from a filename. Mendly (LuDaTs-M) hides the later names of the missing cards.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>A table with holes. The exam later checks whether the holes were the right shape, without saying "gallium" or "germanium" inside the 1868 room.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Mode E. 1868. Ga 1875 and Ge 1886 are hidden labels. Gold medal: periodic grouping of the 1868 set; eka-aluminium and eka-silicon property cards. Not gold: printing a modern periodic table. Card: <a href="../exams/ludats/ludats-m-mendeleev.yaml">exams/ludats/ludats-m-mendeleev.yaml</a>.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="newtonly" name="newtonly"></a></p>
+<h2>Newtonly</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>On the full desk. Deferred to v2. Newtonly (LuDaTs-N) waits until Keplerly and Galileoly both show a sealed world.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>One law for the sky and the ground. The apple story is folklore and is not the exam.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Unification of Keplerly + Galileoly. Freeze 1686, <a href="https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica"><i>Principia</i></a> 1687. Gold medal: inverse-square universal gravitation; celestial and terrestrial the same law. Card: <a href="../exams/ludats/ludats-n-newton.yaml">exams/ludats/ludats-n-newton.yaml</a>.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="conductor" name="conductor"></a></p>
+<h2>Conductor</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>Not a score. Hydra and Dehydrus are conductors. A conductor is not an extra evaler.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>The person at the front who points at each player and writes what that player reported. They do not play a seventeenth or eighth instrument.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Orchestration engine. The router job lives inside the conductor (order, prior cells, headline). See <a href="PRETRUWs.md">docs/PRETRUWs.md</a>.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="eval-engine" name="eval-engine"></a></p>
+<h2>Engine</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>Not a Hydra cell. An engine emits cells or a headline.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>The machine that writes the report, or the machine that writes one line of the report.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Hydra, Dehydrus, each evaler, and the planned HabTwin scorer are engines. A framework (PRETRUWs, HabTwin) is not itself an engine.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="eval-agent" name="eval-agent"></a></p>
+<h2>Agent</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>Not a count by itself. The sixteen and the seven are agentic evalers.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>A worker that judges or acts. Plugins that a world needs (a language model, a retriever) are also agents. They are not extra Hydra cells.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Agentic = can plan, use tools, or judge. Utility is the opposite: a deterministic look-up.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="eval-utility" name="eval-utility"></a></p>
+<h2>Utility</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>Not an evaler. The PRD line and the HabTwin filename line are utilities.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>A lookup. It does not award a gold medal.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Deterministic transform. No gate. No <code>passed</code> flag.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="eval-router" name="eval-router"></a></p>
+<h2>Router</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>Not a score. Routing is the job inside a conductor.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>Who speaks next, and who may see the earlier answers.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Dehydrus routes the seven. Hydra routes the sixteen. A router pattern is not a second product.</p>
+
 <p><a id="agentic-exams-that-are-not-on-the-vector-yet" name="agentic-exams-that-are-not-on-the-vector-yet"></a></p>
 <h2><img src="../assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26" width="488"></h2>
 
 <p>These are public exams for coding agents and for chat models. They matter in this period. Evalathan does not run them in the laptop scan, and it does not paste their leaderboards. That is a scope fact, not a dismissal. Trajectly is the station that will count one of them on the day a saved trace from that exam is in the folder you scan. A percent copied from a website is still not a grade.</p>
-<p>The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds <a href="#prdbench">PRDBench</a>, which grades an agent that builds from a <a href="#prd">PRD</a>. It also holds <a href="#ludats">LuDaTs</a> (Limited-universe Data Test sets), historically locked discovery worlds. LuDaTs is not a seventeenth evaler.</p>
+<p>The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds <a href="#prdbench">PRDBench</a>, which grades an agent that builds from a <a href="#prd">PRD</a>. <a href="#ludats">LuDaTs</a> is not on this shelf. It sits under <a href="#pretruws">PRETRUWs</a> and <a href="#dehydrus">Dehydrus</a>.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
 
 <p><a id="swe-bench" name="swe-bench"></a></p>
@@ -738,14 +889,46 @@
 
 <h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
 
-<p>No Evalathan score in v0.2. LuDaTs (Limited-universe Data Test sets) is a Trajectly exam family, not a seventeenth evaler. Hydra still calls sixteen. A missing LuDaTs run is blank, not a fail and not a zero. The cell stays off the vector until a sealed trace from a LuDaTs world is in the tree.</p>
+<p>LuDaTs (Limited-universe Data Test sets) is the PRETRUWs methodology family, not a Trajectly exam and not a seventeenth Hydra evaler. Dehydrus calls the seven brands. A missing world is blank, not a fail and not a zero. A gold medal is the structural prize for that world, not a sports rank of the product.</p>
 <h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
 
-<p>LuDaTs (Limited-universe Data Test sets) locks the agent in a dated world: only the news, instruments, and papers that existed at that year, and only what that discoverer could have reached at that age. It then has to form the theory by acting in that world. Naming the later textbook title is not a pass. Galileo, Copernicus, and Kepler are three different tests, not one astronomy quiz. Newton waits.</p>
+<p>LuDaTs locks the agent in a dated world: only the news, instruments, and papers that existed at that year, and only what that discoverer could have reached at that age. It then has to form the theory by acting in a simulator whose later facts are gone. Naming the later textbook title is not a gold medal. Galileo, Copernicus, and Kepler are three different tests, not one astronomy quiz. Newton waits.</p>
 <h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
 
-<p>Spec: <a href="LuDaTs.md">docs/LuDaTs.md</a>. Machine cards: <a href="../exams/ludats/">exams/ludats/</a>. v1 worlds are LuDaTs-C Copernicus (1542), LuDaTs-K Kepler (1608), LuDaTs-G Galileo (1608/1637, required), LuDaTs-D Darwin (1858, required), LuDaTs-M Mendeleev (1868), LuDaTs-E Einstein general relativity (1914). LuDaTs-N Newton is deferred until G and K both run. Two clocks: world year T, biography age A. Gold is structural. Leakage of post-cutoff facts fails the run. Claim-gated: discovery, world-models, scientific agents, or physical-world AI. Domly is the wrong station. Trajectly counts a local file whose name contains <code>trace</code>, <code>trajectory</code>, or <code>passk</code>. This pack is not AllenAI DiscoveryBench and not a prompt cutoff (ExAnte). The sixteen stay sixteen.</p>
+<p>Spec: <a href="LuDaTs.md">docs/LuDaTs.md</a>. Machine cards: <a href="../exams/ludats/">exams/ludats/</a>. Brands: <a href="#copernly">Copernly</a> (LuDaTs-C, 1542, pre <a href="https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium"><i>De revolutionibus orbium coelestium</i></a>), <a href="#keplerly">Keplerly</a> (LuDaTs-K, 1608), <a href="#galileoly">Galileoly</a> (LuDaTs-G, required), <a href="#darwinly">Darwinly</a> (LuDaTs-D, required), <a href="#mendly">Mendly</a> (LuDaTs-M, 1868), <a href="#einsteinly">Einsteinly</a> (LuDaTs-E, 1914, not 1905), <a href="#newtonly">Newtonly</a> (LuDaTs-N, v2). Two clocks: world year T, biography age A. <a href="https://aclanthology.org/2026.eacl-long.72/">ExAnte</a> (ACL 2026) showed prompt cutoffs leak. Domly is the wrong station. The sixteen stay sixteen.</p>
 <p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="habtwin" name="habtwin"></a></p>
+<h2>HabTwin</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>HabTwin is an innovative twin-fidelity exam: person-specific, distributional, leak-gated, lab-only. It is not a Hydra evaler and not a Trajectly exam. Dehydrus prints <code>No HabTwin lab trace</code> or the sealed filename. v0.3 does not guess. A blank is not a fail and not a zero. Spec: <a href="HabTwin.md">docs/HabTwin.md</a>.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>A twin is real when it predicts what the real person or machine would do, in a lab, more than once. <b>P</b> is the person (or machine) you claim to copy. <b>Q</b> is someone else, used as a check. The <b>crowd</b> is "people in general." Matching a live password is not the prize.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>A digital twin is validated when it predicts the counterpart's measurable outputs under a stated use (<a href="#iso-23247">ISO 23247</a> <a href="#vvuq">VVUQ</a>; NASEM digital-twin report). HabTwin scores the signature, discriminates P from Q and from the crowd, and, for machines, scores policy plus lab-generator next-sample. Exact match on synthetic secrets is a ceiling metric. It is not the definition of twin. Cells: HabTwin-C (composition), HabTwin-D (discrimination), HabTwin-S (system), HabTwin-X (exact-match ceiling), HabTwin-K (keystroke, deferred). Live login is forbidden. Human digital twins in medicine are being told to run VVUQ, not a password parlor trick (<a href="https://www.nature.com/articles/s41746-025-01447-y">npj Digital Medicine 2025</a>; <a href="https://www.iso.org/standard/94858.html">ISO/AWI 23247-8</a>).</p>
+<p>Not to do: do not target live people or production systems; do not ship wordlists or cracking loops; do not treat a password-manager user as a fail; do not mash HabTwin-C into keystrokes; do not add HabTwin to Hydra or Trajectly; do not call exact match the definition of twin.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="iso-23247" name="iso-23247"></a></p>
+<h2>ISO 23247</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>Not an Evalathan score. It is the manufacturing digital-twin framework HabTwin cites.</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>The public rulebook for what a factory-style digital twin is supposed to predict.</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p><a href="https://www.iso.org/standard/75066.html">ISO 23247</a> (Digital twin framework for manufacturing). Part 8 is <a href="https://www.iso.org/standard/94858.html">ISO/AWI 23247-8</a> VVUQ for digital twins (work item, not a finished certificate). Evalathan does not issue that certificate.</p>
+<p><img src="../assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<p><a id="vvuq" name="vvuq"></a></p>
+<h2>VVUQ</h2>
+<h3><img src="../assets/glossary/score-constitution.png" alt="Score Constitution" height="17" width="176"></h3>
+<p>Not an Evalathan score. VVUQ (Verification, Validation, and Uncertainty Quantification) is the check HabTwin uses instead of "said the password."</p>
+<h3><img src="../assets/glossary/simplespeak.png" alt="Simplespeak" height="21" width="113"></h3>
+<p>Did the model run as written? Does it predict the real thing under a stated use? How unsure is that prediction?</p>
+<h3><img src="../assets/glossary/techspeak.png" alt="Techspeak" height="21" width="95"></h3>
+<p>Verification: the code does what the spec says. Validation: the prediction matches the counterpart under a stated use. Uncertainty quantification: confidence bounds across draws. Cited from the NASEM digital-twin report and <a href="https://www.nature.com/articles/s41746-025-01447-y">npj Digital Medicine 2025</a>.</p>
 
 <p><a id="aose" name="aose"></a></p>
 <h2><img src="../assets/glossary/aose.png" alt="AOSE" height="19" width="62"></h2>
@@ -888,7 +1071,24 @@
     {"id":"swe-bench-pro","label":"SWE-bench Pro","kind":"term"},
     {"id":"deepswe","label":"DeepSWE","kind":"term"},
     {"id":"prdbench","label":"PRDBench","kind":"term","aliases":["prdbench","prd bench"]},
+    {"id":"pretruws","label":"PRETRUWs","kind":"term","aliases":["pretruw","pretruws","prediscovery truncated universe","truncated worlds"]},
+    {"id":"dehydrus","label":"Dehydrus","kind":"term","aliases":["dehydrus","physily"]},
+    {"id":"copernly","label":"Copernly","kind":"term","aliases":["ludats-c","copernicus"]},
+    {"id":"darwinly","label":"Darwinly","kind":"term","aliases":["ludats-d","darwin"]},
+    {"id":"einsteinly","label":"Einsteinly","kind":"term","aliases":["ludats-e","einstein"]},
+    {"id":"galileoly","label":"Galileoly","kind":"term","aliases":["ludats-g","galileo","galleleoly"]},
+    {"id":"keplerly","label":"Keplerly","kind":"term","aliases":["ludats-k","kepler"]},
+    {"id":"mendly","label":"Mendly","kind":"term","aliases":["ludats-m","mendeleev"]},
+    {"id":"newtonly","label":"Newtonly","kind":"term","aliases":["ludats-n","newton","newtly"]},
+    {"id":"conductor","label":"Conductor","kind":"term"},
+    {"id":"eval-engine","label":"Engine","kind":"term","aliases":["eval engine"]},
+    {"id":"eval-agent","label":"Agent","kind":"term","aliases":["agentic"]},
+    {"id":"eval-utility","label":"Utility","kind":"term"},
+    {"id":"eval-router","label":"Router","kind":"term"},
     {"id":"ludats","label":"LuDaTs","kind":"term","aliases":["ludats","luts","limited-universe data test sets","limited universe data test sets"]},
+    {"id":"habtwin","label":"HabTwin","kind":"term","aliases":["habtwin","habit twin","habit-twin"]},
+    {"id":"iso-23247","label":"ISO 23247","kind":"term","aliases":["iso 23247","iso23247"]},
+    {"id":"vvuq","label":"VVUQ","kind":"term","aliases":["verification validation uncertainty quantification"]},
     {"id":"aose","label":"AOSE","kind":"term","aliases":["agent-oriented software engineering"]},
     {"id":"wildbench","label":"WildBench","kind":"term"},
     {"id":"ragas","label":"Ragas","kind":"term","aliases":["ragas"]},

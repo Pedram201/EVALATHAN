@@ -2,7 +2,7 @@
 
 [Search the glossary](https://htmlpreview.github.io/?https://raw.githubusercontent.com/pedramgoshATgmail/EVALATHAN/main/docs/glossary.html?v=plgout). That page is the glossary, with its lettering and images, and the search slot is on the same page. Type a letter and the matching entries appear. Choosing a word moves to that entry.
 
-Evalathan is one evaluation harness. [Hydra](#hydra) is the conductor. She governs and calls sixteen evaluators, short name evalers. Each entry below has the same three parts.
+Evalathan is one evaluation harness. [Hydra](#hydra) is the conductor for sixteen software evalers. [Dehydrus](#dehydrus) is the conductor for seven physical-world evalers under [PRETRUWs](#pretruws). Each entry below has the same three parts.
 
 <img src="assets/glossary/score-constitution-dot.png" alt="Score Constitution." height="14"> What is counted, whether that count is a yes-or-no pass, and the three endings a cell can have. Measured means the file or the code was there and a result was written. Claim means a sentence is on disk and this run did not re-check it. Blank means the needed record is missing. A blank is not a fail and not a zero.
 
@@ -539,12 +539,267 @@ The scan looks for a file whose stem is `prd`, `product-requirements`, or `produ
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
 
+<a id="pretruws" name="pretruws"></a>
+<h2>PRETRUWs</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+PRETRUWs (Prediscovery Truncated Universe and Worlds) is the v0.3 4IR (Fourth Industrial Revolution) framework. It is not a Hydra evaler. Dehydrus writes seven cells. A missing world is blank, not a fail and not a zero. Spec: [docs/PRETRUWs.md](docs/PRETRUWs.md). Roadmap: [docs/BUILDLOG.md](docs/BUILDLOG.md).
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+A locked room from a past year. The exam has to work with what that year could see, and with what that one person could have reached. Saying "pretend it is 1610" is not enough. Later facts have to be actually gone.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Manifesto direction: *Until Artificial Intelligence Independently Eurekas on its own*, after [Adaptive Software Development](https://en.wikipedia.org/wiki/Adaptive_software_development) (Jim Highsmith, 1997: messy, exciting, and anxiety-ridden; second world = unpredictable, nonlinear, fast). PRETRUWs states a third world: multi-predictable, bilinear and supralinear, hyperfast / instancy-nearest, and polydeterminism. Framework PRETRUWs holds methodology [LuDaTs](#ludats). Each brand is one method. Braidware (SEISMO glossary) is agentics, software, and hardware as one unit. LLM (Large Language Model) and RAG (Retrieval-Augmented Generation) stacks are plugins, not extra Hydra cells.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="dehydrus" name="dehydrus"></a>
+<h2>Dehydrus</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Dehydrus calls the seven PRETRUWs evalers and writes each report beside the others. He counts how many ran, how many passed their own gate, and how many are deferred. He does not turn a blank into a zero, and he does not fold the seven into one number. He is not an eighteenth Hydra score. He also prints a HabTwin filename line. That line is a utility, not an eighth evaler.
+
+<p align="center"><img src="assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="325"></p>
+<p align="center"><i>He routes the seven. He does not add a score.</i></p>
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The other conductor. Hydra watches software. Dehydrus watches locked physical worlds. Open `evalathan dehydrus` for his window. The heading is DEHYDRUS.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+`evalathan dehydrus` opens the desk. `evalathan dehydrus scan <path>` writes seven cells: Copernly, Keplerly, Galileoly, Darwinly, Mendly, Einsteinly, Newtonly. Newtonly accepts the earlier cells and stays deferred until Keplerly and Galileoly both show a sealed world. The saved record names the conductor Dehydrus and the framework PRETRUWs. If the count is not seven, or a name is repeated, the run stops. Dehydrus is a conductor (orchestration engine / router), not a utility and not one of the seven.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="copernly" name="copernly"></a>
+<h2>Copernly</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+No gold medal in v0.3 from a filename. Copernly (code LuDaTs-C) is deferred until a sealed world file is in the tree. A blank is not a fail.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+Same old sky numbers, new picture of the sky. No new telescope. The year is 1542, before [*De revolutionibus orbium coelestium*](https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium) (1543).
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Mode A. Gold medal: sun-centered kinematic model; fewer epicycles than the Ptolemaic fit on the same archive; earth as a planet. Not gold: the string "heliocentrism". Card: [exams/ludats/ludats-c-copernicus.yaml](exams/ludats/ludats-c-copernicus.yaml).
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="darwinly" name="darwinly"></a>
+<h2>Darwinly</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Required world. No gold medal in v0.3 from a filename. Darwinly (LuDaTs-D) is deferred until a sealed 1858 field world is in the tree.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+Years of walking, breeding, and notes, not one night and not the finch cartoon. The book [*On the Origin of Species*](https://en.wikipedia.org/wiki/On_the_Origin_of_Species) is 1859, so the freeze is 1858.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Mode D. Gold medal: descent with modification; a selection mechanism that can accumulate. Not gold: the string "evolution"; genetics after 1858. Card: [exams/ludats/ludats-d-darwin.yaml](exams/ludats/ludats-d-darwin.yaml).
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="einsteinly" name="einsteinly"></a>
+<h2>Einsteinly</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+No gold medal in v0.3 from a filename. Einsteinly (LuDaTs-E) is General Relativity only. 1905 is a different freeze.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+A leftover that Newton's gravity cannot eat (Mercury). Write the new field equations in 1914-1915. The 1919 eclipse is a check after the theory, not a hint before it.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Mode F. World clock 1914. Gold medal: field equations whose weak-field limit recovers Newton; Mercury perihelion; light deflection checked only after submission. Not gold: the string "general relativity"; photoelectric / Brownian / 1905 special relativity. Card: [exams/ludats/ludats-e-einstein-gr.yaml](exams/ludats/ludats-e-einstein-gr.yaml).
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="galileoly" name="galileoly"></a>
+<h2>Galileoly</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Required world. Physical-world flagship. Galileoly (LuDaTs-G) is deferred until a sealed optic-and-kinematics world is in the tree.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+A new eye (the optic) plus experiments on earth. Not "he invented heliocentrism." That belongs to Copernly.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Mode C. 1608 optic; 1637 kinematics. Gold medal: Jupiter's satellites; Venus phases; irregular Moon; incline / falling-body regularity. Not gold: the string "heliocentrism". Card: [exams/ludats/ludats-g-galileo.yaml](exams/ludats/ludats-g-galileo.yaml).
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="keplerly" name="keplerly"></a>
+<h2>Keplerly</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+No gold medal in v0.3 from a filename. Keplerly (LuDaTs-K) is deferred until a sealed Mars-table world is in the tree.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+Better numbers, same kind of eye. Tycho's Mars table, still naked-eye class. Not the same quiz as Copernly.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Mode B. 1608 / 1618. [*Astronomia nova*](https://en.wikipedia.org/wiki/Astronomia_nova) 1609, [*Harmonices mundi*](https://en.wikipedia.org/wiki/Harmonices_Mundi) 1619. Gold medal: elliptical orbit; equal areas in equal times. Not gold: naming Kepler's laws; using a telescope. Card: [exams/ludats/ludats-k-kepler.yaml](exams/ludats/ludats-k-kepler.yaml).
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="mendly" name="mendly"></a>
+<h2>Mendly</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+No gold medal in v0.3 from a filename. Mendly (LuDaTs-M) hides the later names of the missing cards.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+A table with holes. The exam later checks whether the holes were the right shape, without saying "gallium" or "germanium" inside the 1868 room.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Mode E. 1868. Ga 1875 and Ge 1886 are hidden labels. Gold medal: periodic grouping of the 1868 set; eka-aluminium and eka-silicon property cards. Not gold: printing a modern periodic table. Card: [exams/ludats/ludats-m-mendeleev.yaml](exams/ludats/ludats-m-mendeleev.yaml).
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="newtonly" name="newtonly"></a>
+<h2>Newtonly</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+On the full desk. Deferred to v2. Newtonly (LuDaTs-N) waits until Keplerly and Galileoly both show a sealed world.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+One law for the sky and the ground. The apple story is folklore and is not the exam.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Unification of Keplerly + Galileoly. Freeze 1686, [*Principia*](https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica) 1687. Gold medal: inverse-square universal gravitation; celestial and terrestrial the same law. Card: [exams/ludats/ludats-n-newton.yaml](exams/ludats/ludats-n-newton.yaml).
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="conductor" name="conductor"></a>
+<h2>Conductor</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Not a score. Hydra and Dehydrus are conductors. A conductor is not an extra evaler.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The person at the front who points at each player and writes what that player reported. They do not play a seventeenth or eighth instrument.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Orchestration engine. The router job lives inside the conductor (order, prior cells, headline). See [docs/PRETRUWs.md](docs/PRETRUWs.md).
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="eval-engine" name="eval-engine"></a>
+<h2>Engine</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Not a Hydra cell. An engine emits cells or a headline.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The machine that writes the report, or the machine that writes one line of the report.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Hydra, Dehydrus, each evaler, and the planned HabTwin scorer are engines. A framework (PRETRUWs, HabTwin) is not itself an engine.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="eval-agent" name="eval-agent"></a>
+<h2>Agent</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Not a count by itself. The sixteen and the seven are agentic evalers.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+A worker that judges or acts. Plugins that a world needs (a language model, a retriever) are also agents. They are not extra Hydra cells.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Agentic = can plan, use tools, or judge. Utility is the opposite: a deterministic look-up.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="eval-utility" name="eval-utility"></a>
+<h2>Utility</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Not an evaler. The PRD line and the HabTwin filename line are utilities.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+A lookup. It does not award a gold medal.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Deterministic transform. No gate. No `passed` flag.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="eval-router" name="eval-router"></a>
+<h2>Router</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Not a score. Routing is the job inside a conductor.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+Who speaks next, and who may see the earlier answers.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Dehydrus routes the seven. Hydra routes the sixteen. A router pattern is not a second product.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
 <a id="agentic-exams-that-are-not-on-the-vector-yet" name="agentic-exams-that-are-not-on-the-vector-yet"></a>
 <h2><img src="assets/glossary/agentic-exams-that-are-not-on-the-vector-yet.png" alt="Agentic exams that are not on the vector yet" height="26"></h2>
 
 These are public exams for coding agents and for chat models. They matter in this period. Evalathan does not run them in the laptop scan, and it does not paste their leaderboards. That is a scope fact, not a dismissal. Trajectly is the station that will count one of them on the day a saved trace from that exam is in the folder you scan. A percent copied from a website is still not a grade.
 
-The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds [PRDBench](#prdbench), which grades an agent that builds from a [PRD](#prd). It also holds [LuDaTs](#ludats) (Limited-universe Data Test sets), historically locked discovery worlds. LuDaTs is not a seventeenth evaler.
+The same shelf holds retrieval catalogs. A catalog is a list of public scores. It is not an exam, and it is not on the vector. It also holds [PRDBench](#prdbench), which grades an agent that builds from a [PRD](#prd). [LuDaTs](#ludats) is not on this shelf. It sits under [PRETRUWs](#pretruws) and [Dehydrus](#dehydrus).
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
@@ -626,15 +881,71 @@ The paper is [arXiv:2510.24358](https://arxiv.org/abs/2510.24358), submitted 28 
 
 <h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
 
-No Evalathan score in v0.2. LuDaTs (Limited-universe Data Test sets) is a Trajectly exam family, not a seventeenth evaler. Hydra still calls sixteen. A missing LuDaTs run is blank, not a fail and not a zero. The cell stays off the vector until a sealed trace from a LuDaTs world is in the tree.
+LuDaTs (Limited-universe Data Test sets) is the PRETRUWs methodology family, not a Trajectly exam and not a seventeenth Hydra evaler. Dehydrus calls the seven brands. A missing world is blank, not a fail and not a zero. A gold medal is the structural prize for that world, not a sports rank of the product.
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
 
-LuDaTs (Limited-universe Data Test sets) locks the agent in a dated world: only the news, instruments, and papers that existed at that year, and only what that discoverer could have reached at that age. It then has to form the theory by acting in that world. Naming the later textbook title is not a pass. Galileo, Copernicus, and Kepler are three different tests, not one astronomy quiz. Newton waits.
+LuDaTs locks the agent in a dated world: only the news, instruments, and papers that existed at that year, and only what that discoverer could have reached at that age. It then has to form the theory by acting in a simulator whose later facts are gone. Naming the later textbook title is not a gold medal. Galileo, Copernicus, and Kepler are three different tests, not one astronomy quiz. Newton waits.
 
 <h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
 
-Spec: [docs/LuDaTs.md](docs/LuDaTs.md). Machine cards: [exams/ludats/](exams/ludats/). v1 worlds are LuDaTs-C Copernicus (1542), LuDaTs-K Kepler (1608), LuDaTs-G Galileo (1608/1637, required), LuDaTs-D Darwin (1858, required), LuDaTs-M Mendeleev (1868), LuDaTs-E Einstein general relativity (1914). LuDaTs-N Newton is deferred until G and K both run. Two clocks: world year T, biography age A. Gold is structural. Leakage of post-cutoff facts fails the run. Claim-gated: discovery, world-models, scientific agents, or physical-world AI. Domly is the wrong station. Trajectly counts a local file whose name contains `trace`, `trajectory`, or `passk`. This pack is not AllenAI DiscoveryBench and not a prompt cutoff (ExAnte). The sixteen stay sixteen.
+Spec: [docs/LuDaTs.md](docs/LuDaTs.md). Machine cards: [exams/ludats/](exams/ludats/). Brands: [Copernly](#copernly) (LuDaTs-C, 1542, pre [*De revolutionibus orbium coelestium*](https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium)), [Keplerly](#keplerly) (LuDaTs-K, 1608), [Galileoly](#galileoly) (LuDaTs-G, required), [Darwinly](#darwinly) (LuDaTs-D, required), [Mendly](#mendly) (LuDaTs-M, 1868), [Einsteinly](#einsteinly) (LuDaTs-E, 1914, not 1905), [Newtonly](#newtonly) (LuDaTs-N, v2). Two clocks: world year T, biography age A. [ExAnte](https://aclanthology.org/2026.eacl-long.72/) (ACL 2026) showed prompt cutoffs leak. Domly is the wrong station. The sixteen stay sixteen.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="habtwin" name="habtwin"></a>
+<h2>HabTwin</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+HabTwin is an innovative twin-fidelity exam: person-specific, distributional, leak-gated, lab-only. It is not a Hydra evaler and not a Trajectly exam. Dehydrus prints `No HabTwin lab trace` or the sealed filename. v0.3 does not guess. A blank is not a fail and not a zero. Spec: [docs/HabTwin.md](docs/HabTwin.md).
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+A twin is real when it predicts what the real person or machine would do, in a lab, more than once. **P** is the person (or machine) you claim to copy. **Q** is someone else, used as a check. The **crowd** is "people in general." Matching a live password is not the prize.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+A digital twin is validated when it predicts the counterpart's measurable outputs under a stated use ([ISO 23247](#iso-23247) [VVUQ](#vvuq); NASEM digital-twin report). HabTwin scores the signature, discriminates P from Q and from the crowd, and, for machines, scores policy plus lab-generator next-sample. Exact match on synthetic secrets is a ceiling metric. It is not the definition of twin. Cells: HabTwin-C (composition), HabTwin-D (discrimination), HabTwin-S (system), HabTwin-X (exact-match ceiling), HabTwin-K (keystroke, deferred). Live login is forbidden. Human digital twins in medicine are being told to run VVUQ, not a password parlor trick ([npj Digital Medicine 2025](https://www.nature.com/articles/s41746-025-01447-y); [ISO/AWI 23247-8](https://www.iso.org/standard/94858.html)).
+
+Not to do: do not target live people or production systems; do not ship wordlists or cracking loops; do not treat a password-manager user as a fail; do not mash HabTwin-C into keystrokes; do not add HabTwin to Hydra or Trajectly; do not call exact match the definition of twin.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="iso-23247" name="iso-23247"></a>
+<h2>ISO 23247</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Not an Evalathan score. It is the manufacturing digital-twin framework HabTwin cites.
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+The public rulebook for what a factory-style digital twin is supposed to predict.
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+[ISO 23247](https://www.iso.org/standard/75066.html) (Digital twin framework for manufacturing). Part 8 is [ISO/AWI 23247-8](https://www.iso.org/standard/94858.html) VVUQ for digital twins (work item, not a finished certificate). Evalathan does not issue that certificate.
+
+
+<p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
+
+<a id="vvuq" name="vvuq"></a>
+<h2>VVUQ</h2>
+
+<h3><img src="assets/glossary/score-constitution.png" alt="Score Constitution" height="17"></h3>
+
+Not an Evalathan score. VVUQ (Verification, Validation, and Uncertainty Quantification) is the check HabTwin uses instead of "said the password."
+
+<h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
+
+Did the model run as written? Does it predict the real thing under a stated use? How unsure is that prediction?
+
+<h3><img src="assets/glossary/techspeak.png" alt="Techspeak" height="21"></h3>
+
+Verification: the code does what the spec says. Validation: the prediction matches the counterpart under a stated use. Uncertainty quantification: confidence bounds across draws. Cited from the NASEM digital-twin report and [npj Digital Medicine 2025](https://www.nature.com/articles/s41746-025-01447-y).
 
 
 <p><img src="assets/term-rule.png" alt="" width="100%" height="18"></p>
