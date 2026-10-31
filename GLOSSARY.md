@@ -43,7 +43,7 @@ The conductor. She points at each evaluator and writes down what it assessed and
 
 Dehydrus calls the seven PRETRUWs evalers and writes each report beside the others. He counts how many ran, how many passed their own gate, and how many are deferred. He does not turn a blank into a zero, and he does not fold the seven into one number. He is not an eighteenth Hydra score. He also prints a HabTwin filename line. That line is a utility, not an eighth evaler.
 
-<p align="center"><img src="assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="423"></p>
+<p align="center"><img src="assets/glossary/cards/dehydrus.png" alt="Dehydrus" width="485"></p>
 <p align="center"><i>He routes the seven. He does not add a score.</i></p>
 
 <h3><img src="assets/glossary/simplespeak.png" alt="Simplespeak" height="21"></h3>
